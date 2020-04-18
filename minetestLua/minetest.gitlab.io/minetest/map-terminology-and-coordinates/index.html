@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/map-terminology-and-coordinates/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Map terminology and coordinates - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Map terminology and coordinates";
+    var mkdocs_page_input_path = "map-terminology-and-coordinates.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Map terminology and coordinates</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#nodes-mapblocks-mapchunks">Nodes, mapblocks, mapchunks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#coordinates">Coordinates</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#orientation-of-axes">Orientation of axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#node-coordinates">Node coordinates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mapblock-coordinates">Mapblock coordinates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#converting-node-position-to-the-containing-blockpos">Converting node position to the containing blockpos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#converting-blockpos-to-minmax-node-positions">Converting blockpos to min/max node positions</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Map terminology and coordinates</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="map-terminology-and-coordinates">Map terminology and coordinates<a class="headerlink" href="#map-terminology-and-coordinates" title="Permanent link">&para;</a></h1>
+<h2 id="nodes-mapblocks-mapchunks">Nodes, mapblocks, mapchunks<a class="headerlink" href="#nodes-mapblocks-mapchunks" title="Permanent link">&para;</a></h2>
+<p>A 'node' is the fundamental cubic unit of a world and appears to a player as
+roughly 1x1x1 meters in size.</p>
+<p>A 'mapblock' (often abbreviated to 'block') is 16x16x16 nodes and is the
+fundamental region of a world that is stored in the world database, sent to
+clients and handled by many parts of the engine.
+'mapblock' is preferred terminology to 'block' to help avoid confusion with
+'node', however 'block' often appears in the API.</p>
+<p>A 'mapchunk' (sometimes abbreviated to 'chunk') is usually 5x5x5 mapblocks
+(80x80x80 nodes) and is the volume of world generated in one operation by
+the map generator.
+The size in mapblocks has been chosen to optimise map generation.</p>
+<h2 id="coordinates">Coordinates<a class="headerlink" href="#coordinates" title="Permanent link">&para;</a></h2>
+<h3 id="orientation-of-axes">Orientation of axes<a class="headerlink" href="#orientation-of-axes" title="Permanent link">&para;</a></h3>
+<p>For node and mapblock coordinates, +X is East, +Y is up, +Z is North.</p>
+<h3 id="node-coordinates">Node coordinates<a class="headerlink" href="#node-coordinates" title="Permanent link">&para;</a></h3>
+<p>Almost all positions used in the API use node coordinates.</p>
+<h3 id="mapblock-coordinates">Mapblock coordinates<a class="headerlink" href="#mapblock-coordinates" title="Permanent link">&para;</a></h3>
+<p>Occasionally the API uses 'blockpos' which refers to mapblock coordinates that
+specify a particular mapblock.
+For example blockpos (0,0,0) specifies the mapblock that extends from
+node position (0,0,0) to node position (15,15,15).</p>
+<h4 id="converting-node-position-to-the-containing-blockpos">Converting node position to the containing blockpos<a class="headerlink" href="#converting-node-position-to-the-containing-blockpos" title="Permanent link">&para;</a></h4>
+<p>To calculate the blockpos of the mapblock that contains the node at 'nodepos',
+for each axis:</p>
+<ul>
+<li>blockpos = math.floor(nodepos / 16)</li>
+</ul>
+<h4 id="converting-blockpos-to-minmax-node-positions">Converting blockpos to min/max node positions<a class="headerlink" href="#converting-blockpos-to-minmax-node-positions" title="Permanent link">&para;</a></h4>
+<p>To calculate the min/max node positions contained in the mapblock at 'blockpos',
+for each axis:</p>
+<ul>
+<li>Minimum:
+  nodepos = blockpos * 16</li>
+<li>Maximum:
+  nodepos = blockpos * 16 + 15</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../hud/index.html" class="btn btn-neutral float-right" title="HUD">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../nodes/index.html" class="btn btn-neutral" title="Nodes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../nodes/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../hud/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/map-terminology-and-coordinates/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

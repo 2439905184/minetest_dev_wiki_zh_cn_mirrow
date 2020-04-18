@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/schematics/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Schematics - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Schematics";
+    var mkdocs_page_input_path = "schematics.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Schematics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#schematic-specifier">Schematic specifier</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#schematic-attributes">Schematic attributes</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Schematics</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="schematics">Schematics<a class="headerlink" href="#schematics" title="Permanent link">&para;</a></h1>
+<h2 id="schematic-specifier">Schematic specifier<a class="headerlink" href="#schematic-specifier" title="Permanent link">&para;</a></h2>
+<p>A schematic specifier identifies a schematic by either a filename to a
+Minetest Schematic file (<code>.mts</code>) or through raw data supplied through Lua,
+in the form of a table.  This table specifies the following fields:</p>
+<ul>
+<li>The <code>size</code> field is a 3D vector containing the dimensions of the provided
+  schematic. (required field)</li>
+<li>The <code>yslice_prob</code> field is a table of {ypos, prob} slice tables. A slice table
+  sets the probability of a particular horizontal slice of the schematic being
+  placed. (optional field)
+  <code>ypos</code> = 0 for the lowest horizontal slice of a schematic.
+  The default of <code>prob</code> is 255.</li>
+<li>The <code>data</code> field is a flat table of MapNode tables making up the schematic,
+  in the order of <code>[z [y [x]]]</code>. (required field)
+  Each MapNode table contains:<ul>
+<li><code>name</code>: the name of the map node to place (required)</li>
+<li><code>prob</code> (alias <code>param1</code>): the probability of this node being placed
+  (default: 255)</li>
+<li><code>param2</code>: the raw param2 value of the node being placed onto the map
+  (default: 0)</li>
+<li><code>force_place</code>: boolean representing if the node should forcibly overwrite
+  any previous contents (default: false)</li>
+</ul>
+</li>
+</ul>
+<p>About probability values:</p>
+<ul>
+<li>A probability value of <code>0</code> or <code>1</code> means that node will never appear
+  (0% chance).</li>
+<li>A probability value of <code>254</code> or <code>255</code> means the node will always appear
+  (100% chance).</li>
+<li>If the probability value <code>p</code> is greater than <code>1</code>, then there is a
+  <code>(p / 256 * 100)</code> percent chance that node will appear when the schematic is
+  placed on the map.</li>
+</ul>
+<h2 id="schematic-attributes">Schematic attributes<a class="headerlink" href="#schematic-attributes" title="Permanent link">&para;</a></h2>
+<p>See section [Flag Specifier Format].</p>
+<p>Currently supported flags: <code>place_center_x</code>, <code>place_center_y</code>, <code>place_center_z</code>,
+                           <code>force_placement</code>.</p>
+<ul>
+<li><code>place_center_x</code>: Placement of this decoration is centered along the X axis.</li>
+<li><code>place_center_y</code>: Placement of this decoration is centered along the Y axis.</li>
+<li><code>place_center_z</code>: Placement of this decoration is centered along the Z axis.</li>
+<li><code>force_placement</code>: Schematic nodes other than "ignore" will replace existing
+  nodes.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lua-voxel-manipulator/index.html" class="btn btn-neutral float-right" title="Lua Voxel Manipulator">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../decoration-types/index.html" class="btn btn-neutral" title="Decoration types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../decoration-types/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../lua-voxel-manipulator/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/schematics/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

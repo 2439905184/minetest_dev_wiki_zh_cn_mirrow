@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/nodes/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Nodes - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Nodes";
+    var mkdocs_page_input_path = "nodes.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Nodes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#node-paramtypes">Node paramtypes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#node-drawtypes">Node drawtypes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#node-boxes">Node boxes</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Nodes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h1>
+<p>Nodes are the bulk data of the world: cubes and other things that take the
+space of a cube. Huge amounts of them are handled efficiently, but they
+are quite static.</p>
+<p>The definition of a node is stored and can be accessed by using</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">registered_nodes</span><span class="p">[</span><span class="n">node</span><span class="p">.</span><span class="n">name</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>See [Registered definitions].</p>
+<p>Nodes are passed by value between Lua and the engine.
+They are represented by a table:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">param1</span><span class="o">=</span><span class="n">num</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="n">num</span><span class="p">}</span>
+</code></pre></div>
+
+
+<p><code>param1</code> and <code>param2</code> are 8-bit integers ranging from 0 to 255. The engine uses
+them for certain automated functions. If you don't use these functions, you can
+use them to store arbitrary values.</p>
+<h2 id="node-paramtypes">Node paramtypes<a class="headerlink" href="#node-paramtypes" title="Permanent link">&para;</a></h2>
+<p>The functions of <code>param1</code> and <code>param2</code> are determined by certain fields in the
+node definition.</p>
+<p>The function of <code>param1</code> is determined by <code>paramtype</code> in node definition.
+<code>param1</code> is reserved for the engine when <code>paramtype != "none"</code>.</p>
+<ul>
+<li><code>paramtype = "light"</code><ul>
+<li>The value stores light with and without sun in its upper and lower 4 bits
+  respectively.</li>
+<li>Required by a light source node to enable spreading its light.</li>
+<li>Required by the following drawtypes as they determine their visual
+  brightness from their internal light value:<ul>
+<li>torchlike</li>
+<li>signlike</li>
+<li>firelike</li>
+<li>fencelike</li>
+<li>raillike</li>
+<li>nodebox</li>
+<li>mesh</li>
+<li>plantlike</li>
+<li>plantlike_rooted</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>paramtype = "none"</code><ul>
+<li><code>param1</code> will not be used by the engine and can be used to store
+  an arbitrary value</li>
+</ul>
+</li>
+</ul>
+<p>The function of <code>param2</code> is determined by <code>paramtype2</code> in node definition.
+<code>param2</code> is reserved for the engine when <code>paramtype2 != "none"</code>.</p>
+<ul>
+<li><code>paramtype2 = "flowingliquid"</code><ul>
+<li>Used by <code>drawtype = "flowingliquid"</code> and <code>liquidtype = "flowing"</code></li>
+<li>The liquid level and a flag of the liquid are stored in <code>param2</code></li>
+<li>Bits 0-2: Liquid level (0-7). The higher, the more liquid is in this node</li>
+<li>Bit 3: If set, liquid is flowing downwards (no graphical effect)</li>
+</ul>
+</li>
+<li><code>paramtype2 = "wallmounted"</code><ul>
+<li>Supported drawtypes: "torchlike", "signlike", "normal", "nodebox", "mesh"</li>
+<li>The rotation of the node is stored in <code>param2</code></li>
+<li>You can make this value by using <code>minetest.dir_to_wallmounted()</code></li>
+<li>Values range 0 - 5</li>
+<li>The value denotes at which direction the node is "mounted":
+  0 = y+,   1 = y-,   2 = x+,   3 = x-,   4 = z+,   5 = z-</li>
+</ul>
+</li>
+<li><code>paramtype2 = "facedir"</code><ul>
+<li>Supported drawtypes: "normal", "nodebox", "mesh"</li>
+<li>The rotation of the node is stored in <code>param2</code>. Furnaces and chests are
+  rotated this way. Can be made by using <code>minetest.dir_to_facedir()</code>.</li>
+<li>Values range 0 - 23</li>
+<li>facedir / 4 = axis direction:
+  0 = y+,   1 = z+,   2 = z-,   3 = x+,   4 = x-,   5 = y-</li>
+<li>facedir modulo 4 = rotation around that axis</li>
+</ul>
+</li>
+<li><code>paramtype2 = "leveled"</code><ul>
+<li>Only valid for "nodebox" with 'type = "leveled"', and "plantlike_rooted".<ul>
+<li>Leveled nodebox:<ul>
+<li>The level of the top face of the nodebox is stored in <code>param2</code>.</li>
+<li>The other faces are defined by 'fixed = {}' like 'type = "fixed"'
+  nodeboxes.</li>
+<li>The nodebox height is (<code>param2</code> / 64) nodes.</li>
+<li>The maximum accepted value of <code>param2</code> is 127.</li>
+</ul>
+</li>
+<li>Rooted plantlike:<ul>
+<li>The height of the 'plantlike' section is stored in <code>param2</code>.</li>
+<li>The height is (<code>param2</code> / 16) nodes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>paramtype2 = "degrotate"</code><ul>
+<li>Only valid for "plantlike" drawtype. The rotation of the node is stored in
+  <code>param2</code>.</li>
+<li>Values range 0 - 179. The value stored in <code>param2</code> is multiplied by two to
+  get the actual rotation in degrees of the node.</li>
+</ul>
+</li>
+<li><code>paramtype2 = "meshoptions"</code><ul>
+<li>Only valid for "plantlike" drawtype. <code>param2</code> encodes the shape and
+  optional modifiers of the "plant". <code>param2</code> is a bitfield.</li>
+<li>Bits 0 to 2 select the shape.
+  Use only one of the values below:<ul>
+<li>0 = a "x" shaped plant (ordinary plant)</li>
+<li>1 = a "+" shaped plant (just rotated 45 degrees)</li>
+<li>2 = a "*" shaped plant with 3 faces instead of 2</li>
+<li>3 = a "#" shaped plant with 4 faces instead of 2</li>
+<li>4 = a "#" shaped plant with 4 faces that lean outwards</li>
+<li>5-7 are unused and reserved for future meshes.</li>
+</ul>
+</li>
+<li>Bits 3 to 7 are used to enable any number of optional modifiers.
+  Just add the corresponding value(s) below to <code>param2</code>:<ul>
+<li>8  - Makes the plant slightly vary placement horizontally</li>
+<li>16 - Makes the plant mesh 1.4x larger</li>
+<li>32 - Moves each face randomly a small bit down (1/8 max)</li>
+<li>values 64 and 128 (bits 6-7) are reserved for future use.</li>
+</ul>
+</li>
+<li>Example: <code>param2 = 0</code> selects a normal "x" shaped plant</li>
+<li>Example: <code>param2 = 17</code> selects a "+" shaped plant, 1.4x larger (1+16)</li>
+</ul>
+</li>
+<li><code>paramtype2 = "color"</code><ul>
+<li><code>param2</code> tells which color is picked from the palette.
+  The palette should have 256 pixels.</li>
+</ul>
+</li>
+<li><code>paramtype2 = "colorfacedir"</code><ul>
+<li>Same as <code>facedir</code>, but with colors.</li>
+<li>The first three bits of <code>param2</code> tells which color is picked from the
+  palette. The palette should have 8 pixels.</li>
+</ul>
+</li>
+<li><code>paramtype2 = "colorwallmounted"</code><ul>
+<li>Same as <code>wallmounted</code>, but with colors.</li>
+<li>The first five bits of <code>param2</code> tells which color is picked from the
+  palette. The palette should have 32 pixels.</li>
+</ul>
+</li>
+<li><code>paramtype2 = "glasslikeliquidlevel"</code><ul>
+<li>Only valid for "glasslike_framed" or "glasslike_framed_optional"
+  drawtypes.</li>
+<li><code>param2</code> values 0-63 define 64 levels of internal liquid, 0 being empty
+  and 63 being full.</li>
+<li>Liquid texture is defined using <code>special_tiles = {"modname_tilename.png"}</code></li>
+</ul>
+</li>
+<li><code>paramtype2 = "none"</code><ul>
+<li><code>param2</code> will not be used by the engine and can be used to store
+  an arbitrary value</li>
+</ul>
+</li>
+</ul>
+<p>Nodes can also contain extra data. See [Node Metadata].</p>
+<h2 id="node-drawtypes">Node drawtypes<a class="headerlink" href="#node-drawtypes" title="Permanent link">&para;</a></h2>
+<p>There are a bunch of different looking node types.</p>
+<p>Look for examples in <code>games/minimal</code> or <code>games/minetest_game</code>.</p>
+<ul>
+<li><code>normal</code><ul>
+<li>A node-sized cube.</li>
+</ul>
+</li>
+<li><code>airlike</code><ul>
+<li>Invisible, uses no texture.</li>
+</ul>
+</li>
+<li><code>liquid</code><ul>
+<li>The cubic source node for a liquid.</li>
+</ul>
+</li>
+<li><code>flowingliquid</code><ul>
+<li>The flowing version of a liquid, appears with various heights and slopes.</li>
+</ul>
+</li>
+<li><code>glasslike</code><ul>
+<li>Often used for partially-transparent nodes.</li>
+<li>Only external sides of textures are visible.</li>
+</ul>
+</li>
+<li><code>glasslike_framed</code><ul>
+<li>All face-connected nodes are drawn as one volume within a surrounding
+  frame.</li>
+<li>The frame appearance is generated from the edges of the first texture
+  specified in <code>tiles</code>. The width of the edges used are 1/16th of texture
+  size: 1 pixel for 16x16, 2 pixels for 32x32 etc.</li>
+<li>The glass 'shine' (or other desired detail) on each node face is supplied
+  by the second texture specified in <code>tiles</code>.</li>
+</ul>
+</li>
+<li><code>glasslike_framed_optional</code><ul>
+<li>This switches between the above 2 drawtypes according to the menu setting
+  'Connected Glass'.</li>
+</ul>
+</li>
+<li><code>allfaces</code><ul>
+<li>Often used for partially-transparent nodes.</li>
+<li>External and internal sides of textures are visible.</li>
+</ul>
+</li>
+<li><code>allfaces_optional</code><ul>
+<li>Often used for leaves nodes.</li>
+<li>This switches between <code>normal</code>, <code>glasslike</code> and <code>allfaces</code> according to
+  the menu setting: Opaque Leaves / Simple Leaves / Fancy Leaves.</li>
+<li>With 'Simple Leaves' selected, the texture specified in <code>special_tiles</code>
+  is used instead, if present. This allows a visually thicker texture to be
+  used to compensate for how <code>glasslike</code> reduces visual thickness.</li>
+</ul>
+</li>
+<li><code>torchlike</code><ul>
+<li>A single vertical texture.</li>
+<li>If placed on top of a node, uses the first texture specified in <code>tiles</code>.</li>
+<li>If placed against the underside of a node, uses the second texture
+  specified in <code>tiles</code>.</li>
+<li>If placed on the side of a node, uses the third texture specified in
+  <code>tiles</code> and is perpendicular to that node.</li>
+</ul>
+</li>
+<li><code>signlike</code><ul>
+<li>A single texture parallel to, and mounted against, the top, underside or
+  side of a node.</li>
+</ul>
+</li>
+<li><code>plantlike</code><ul>
+<li>Two vertical and diagonal textures at right-angles to each other.</li>
+<li>See <code>paramtype2 = "meshoptions"</code> above for other options.</li>
+</ul>
+</li>
+<li><code>firelike</code><ul>
+<li>When above a flat surface, appears as 6 textures, the central 2 as
+  <code>plantlike</code> plus 4 more surrounding those.</li>
+<li>If not above a surface the central 2 do not appear, but the texture
+  appears against the faces of surrounding nodes if they are present.</li>
+</ul>
+</li>
+<li><code>fencelike</code><ul>
+<li>A 3D model suitable for a wooden fence.</li>
+<li>One placed node appears as a single vertical post.</li>
+<li>Adjacently-placed nodes cause horizontal bars to appear between them.</li>
+</ul>
+</li>
+<li><code>raillike</code><ul>
+<li>Often used for tracks for mining carts.</li>
+<li>Requires 4 textures to be specified in <code>tiles</code>, in order: Straight,
+  curved, t-junction, crossing.</li>
+<li>Each placed node automatically switches to a suitable rotated texture
+  determined by the adjacent <code>raillike</code> nodes, in order to create a
+  continuous track network.</li>
+<li>Becomes a sloping node if placed against stepped nodes.</li>
+</ul>
+</li>
+<li><code>nodebox</code><ul>
+<li>Often used for stairs and slabs.</li>
+<li>Allows defining nodes consisting of an arbitrary number of boxes.</li>
+<li>See [Node boxes] below for more information.</li>
+</ul>
+</li>
+<li><code>mesh</code><ul>
+<li>Uses models for nodes.</li>
+<li>Tiles should hold model materials textures.</li>
+<li>Only static meshes are implemented.</li>
+<li>For supported model formats see Irrlicht engine documentation.</li>
+</ul>
+</li>
+<li><code>plantlike_rooted</code><ul>
+<li>Enables underwater <code>plantlike</code> without air bubbles around the nodes.</li>
+<li>Consists of a base cube at the co-ordinates of the node plus a
+  <code>plantlike</code> extension above with a height of <code>param2 / 16</code> nodes.</li>
+<li>The <code>plantlike</code> extension visually passes through any nodes above the
+  base cube without affecting them.</li>
+<li>The base cube texture tiles are defined as normal, the <code>plantlike</code>
+  extension uses the defined special tile, for example:
+  <code>special_tiles = {{name = "default_papyrus.png", tileable_vertical = true}},</code></li>
+</ul>
+</li>
+</ul>
+<p><code>*_optional</code> drawtypes need less rendering time if deactivated
+(always client-side).</p>
+<h2 id="node-boxes">Node boxes<a class="headerlink" href="#node-boxes" title="Permanent link">&para;</a></h2>
+<p>Node selection boxes are defined using "node boxes".</p>
+<p>A nodebox is defined as any of:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="c1">-- A normal cube; the default in most things</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;regular&quot;</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="c1">-- A fixed box (or boxes) (facedir param2 is used, if applicable)</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;fixed&quot;</span><span class="p">,</span>
+    <span class="n">fixed</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="c1">-- A variable height box (or boxes) with the top face position defined</span>
+    <span class="c1">-- by the node parameter &#39;leveled = &#39;, or if &#39;paramtype2 == &quot;leveled&quot;&#39;</span>
+    <span class="c1">-- by param2.</span>
+    <span class="c1">-- Other faces are defined by &#39;fixed = {}&#39; as with &#39;type = &quot;fixed&quot;&#39;.</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;leveled&quot;</span><span class="p">,</span>
+    <span class="n">fixed</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="c1">-- A box like the selection box for torches</span>
+    <span class="c1">-- (wallmounted param2 is used, if applicable)</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;wallmounted&quot;</span><span class="p">,</span>
+    <span class="n">wall_top</span> <span class="o">=</span> <span class="n">box</span><span class="p">,</span>
+    <span class="n">wall_bottom</span> <span class="o">=</span> <span class="n">box</span><span class="p">,</span>
+    <span class="n">wall_side</span> <span class="o">=</span> <span class="n">box</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="c1">-- A node that has optional boxes depending on neighbouring nodes&#39;</span>
+    <span class="c1">-- presence and type. See also `connects_to`.</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;connected&quot;</span><span class="p">,</span>
+    <span class="n">fixed</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">connect_top</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">connect_bottom</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">connect_front</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">connect_left</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">connect_back</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">connect_right</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="c1">-- The following `disconnected_*` boxes are the opposites of the</span>
+    <span class="c1">-- `connect_*` ones above, i.e. when a node has no suitable neighbour</span>
+    <span class="c1">-- on the respective side, the corresponding disconnected box is drawn.</span>
+    <span class="n">disconnected_top</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">disconnected_bottom</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">disconnected_front</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">disconnected_left</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">disconnected_back</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">disconnected_right</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span>
+    <span class="n">disconnected</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span> <span class="c1">-- when there is *no* neighbour</span>
+    <span class="n">disconnected_sides</span> <span class="o">=</span> <span class="n">box</span> <span class="n">OR</span> <span class="p">{</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">,</span> <span class="p">...}</span> <span class="c1">-- when there are *no*</span>
+                                                  <span class="c1">-- neighbours to the sides</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>A <code>box</code> is defined as:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">z2</span><span class="p">}</span>
+</code></pre></div>
+
+
+<p>A box of a regular node would look like:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">},</span>
+</code></pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../map-terminology-and-coordinates/index.html" class="btn btn-neutral float-right" title="Map terminology and coordinates">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../registered-definitions/index.html" class="btn btn-neutral" title="Registered definitions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../registered-definitions/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../map-terminology-and-coordinates/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/nodes/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

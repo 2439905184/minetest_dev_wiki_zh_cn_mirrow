@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/formspec/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Formspec - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Formspec";
+    var mkdocs_page_input_path = "formspec.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Formspec</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chest">Chest</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#furnace">Furnace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#minecraft-like-player-inventory">Minecraft-like player inventory</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#elements">Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#formspec_versionversion">formspec_version[&lt;version&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sizewhfixed_size">size[&lt;W&gt;,&lt;H&gt;,&lt;fixed_size&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#positionxy">position[&lt;X&gt;,&lt;Y&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#anchorxy">anchor[&lt;X&gt;,&lt;Y&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#no_prepend">no_prepend[]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#real_coordinatesbool">real_coordinates[&lt;bool&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#containerxy">container[&lt;X&gt;,&lt;Y&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#container_end">container_end[]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listinventory-locationlist-namexywh">list[&lt;inventory location&gt;;&lt;list name&gt;;&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listinventory-locationlist-namexywhstarting-item-index">list[&lt;inventory location&gt;;&lt;list name&gt;;&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;starting item index&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listringinventory-locationlist-name">listring[&lt;inventory location&gt;;&lt;list name&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listring">listring[]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listcolorsslot_bg_normalslot_bg_hover">listcolors[&lt;slot_bg_normal&gt;;&lt;slot_bg_hover&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listcolorsslot_bg_normalslot_bg_hoverslot_border">listcolors[&lt;slot_bg_normal&gt;;&lt;slot_bg_hover&gt;;&lt;slot_border&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listcolorsslot_bg_normalslot_bg_hoverslot_bordertooltip_bgcolortooltip_fontcolor">listcolors[&lt;slot_bg_normal&gt;;&lt;slot_bg_hover&gt;;&lt;slot_border&gt;;&lt;tooltip_bgcolor&gt;;&lt;tooltip_fontcolor&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tooltipgui_element_nametooltip_textbgcolorfontcolor">tooltip[&lt;gui_element_name&gt;;&lt;tooltip_text&gt;;&lt;bgcolor&gt;;&lt;fontcolor&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tooltipxywhtooltip_textbgcolorfontcolor">tooltip[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;tooltip_text&gt;;&lt;bgcolor&gt;;&lt;fontcolor&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#imagexywhtexture-name">image[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#animated_imagexywhnametexture-nameframe-countframe-durationframe-start">animated_image[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;texture name&gt;;&lt;frame count&gt;;&lt;frame duration&gt;;&lt;frame start&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#item_imagexywhitem-name">item_image[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;item name&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bgcolorbgcolorfullscreenfbgcolor">bgcolor[&lt;bgcolor&gt;;&lt;fullscreen&gt;;&lt;fbgcolor&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#backgroundxywhtexture-name">background[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#backgroundxywhtexture-nameauto_clip">background[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;auto_clip&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#background9xywhtexture-nameauto_clipmiddle">background9[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;auto_clip&gt;;&lt;middle&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pwdfieldxywhnamelabel">pwdfield[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fieldxywhnamelabeldefault">field[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;;&lt;default&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fieldnamelabeldefault">field[&lt;name&gt;;&lt;label&gt;;&lt;default&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#field_close_on_enternameclose_on_enter">field_close_on_enter[&lt;name&gt;;&lt;close_on_enter&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#textareaxywhnamelabeldefault">textarea[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;;&lt;default&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#labelxylabel">label[&lt;X&gt;,&lt;Y&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hypertextxywhnametext">hypertext[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;text&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vertlabelxylabel">vertlabel[&lt;X&gt;,&lt;Y&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#buttonxywhnamelabel">button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image_buttonxywhtexture-namenamelabel">image_button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;name&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image_buttonxywhtexture-namenamelabelnoclipdrawborderpressed-texture-name">image_button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;name&gt;;&lt;label&gt;;&lt;noclip&gt;;&lt;drawborder&gt;;&lt;pressed texture name&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#item_image_buttonxywhitem-namenamelabel">item_image_button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;item name&gt;;&lt;name&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#button_exitxywhnamelabel">button_exit[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image_button_exitxywhtexture-namenamelabel">image_button_exit[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;name&gt;;&lt;label&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#textlistxywhnamelistelem-1listelem-2listelem-n">textlist[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;listelem 1&gt;,&lt;listelem 2&gt;,...,&lt;listelem n&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#textlistxywhnamelistelem-1listelem-2listelem-nselected-idxtransparent">textlist[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;listelem 1&gt;,&lt;listelem 2&gt;,...,&lt;listelem n&gt;;&lt;selected idx&gt;;&lt;transparent&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tabheaderxynamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border">tabheader[&lt;X&gt;,&lt;Y&gt;;&lt;name&gt;;&lt;caption 1&gt;,&lt;caption 2&gt;,...,&lt;caption n&gt;;&lt;current_tab&gt;;&lt;transparent&gt;;&lt;draw_border&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tabheaderxyhnamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border">tabheader[&lt;X&gt;,&lt;Y&gt;;&lt;H&gt;;&lt;name&gt;;&lt;caption 1&gt;,&lt;caption 2&gt;,...,&lt;caption n&gt;;&lt;current_tab&gt;;&lt;transparent&gt;;&lt;draw_border&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tabheaderxywhnamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border">tabheader[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;caption 1&gt;,&lt;caption 2&gt;,...,&lt;caption n&gt;;&lt;current_tab&gt;;&lt;transparent&gt;;&lt;draw_border&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boxxywhcolor">box[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;color&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dropdownxywnameitem-1item-2-item-nselected-idx">dropdown[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;;&lt;name&gt;;&lt;item 1&gt;,&lt;item 2&gt;, ...,&lt;item n&gt;;&lt;selected idx&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dropdownxywhnameitem-1item-2-item-nselected-idx">dropdown[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;item 1&gt;,&lt;item 2&gt;, ...,&lt;item n&gt;;&lt;selected idx&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkboxxynamelabelselected">checkbox[&lt;X&gt;,&lt;Y&gt;;&lt;name&gt;;&lt;label&gt;;&lt;selected&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scrollbarxywhorientationnamevalue">scrollbar[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;orientation&gt;;&lt;name&gt;;&lt;value&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scrollbaroptionsopt1opt2">scrollbaroptions[opt1;opt2;...]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tablexywhnamecell-1cell-2cell-nselected-idx">table[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;cell 1&gt;,&lt;cell 2&gt;,...,&lt;cell n&gt;;&lt;selected idx&gt;]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tableoptionsopt-1opt-2">tableoptions[&lt;opt 1&gt;;&lt;opt 2&gt;;...]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tablecolumnstype-1opt-1aopt-1btype-2opt-2aopt-2b">tablecolumns[&lt;type 1&gt;,&lt;opt 1a&gt;,&lt;opt 1b&gt;,...;&lt;type 2&gt;,&lt;opt 2a&gt;,&lt;opt 2b&gt;;...]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#styleselector-1selector-2prop1prop2">style[&lt;selector 1&gt;,&lt;selector 2&gt;;&lt;prop1&gt;;&lt;prop2&gt;;...]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#style_typeselector-1selector-2prop1prop2">style_type[&lt;selector 1&gt;,&lt;selector 2&gt;;&lt;prop1&gt;;&lt;prop2&gt;;...]</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#migrating-to-real-coordinates">Migrating to Real Coordinates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#styling-formspecs">Styling Formspecs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#supported-element-types">Supported Element Types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#valid-properties">Valid Properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#valid-states">Valid States</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#markup-language">Markup Language</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Formspec</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="formspec">Formspec<a class="headerlink" href="#formspec" title="Permanent link">&para;</a></h1>
+<p>Formspec defines a menu. This supports inventories and some of the
+typical widgets like buttons, checkboxes, text input fields, etc.
+It is a string, with a somewhat strange format.</p>
+<p>A formspec is made out of formspec elements, which includes widgets
+like buttons but also can be used to set stuff like background color.</p>
+<p>Many formspec elements have a <code>name</code>, which is a unique identifier which
+is used when the server receives user input. You must not use the name
+"quit" for formspec elements.</p>
+<p>Spaces and newlines can be inserted between the blocks, as is used in the
+examples.</p>
+<p>Position and size units are inventory slots unless the new coordinate system
+is enabled. <code>X</code> and <code>Y</code> position the formspec element relative to the top left
+of the menu or container. <code>W</code> and <code>H</code> are its width and height values.</p>
+<p>If the new system is enabled, all elements have unified coordinates for all
+elements with no padding or spacing in between. This is highly recommended
+for new forms. See <code>real_coordinates[&lt;bool&gt;]</code> and <code>Migrating to Real
+Coordinates</code>.</p>
+<p>Inventories with a <code>player:&lt;name&gt;</code> inventory location are only sent to the
+player named <code>&lt;name&gt;</code>.</p>
+<p>When displaying text which can contain formspec code, e.g. text set by a player,
+use <code>minetest.formspec_escape</code>.
+For coloured text you can use <code>minetest.colorize</code>.</p>
+<p>Since formspec version 3, elements drawn in the order they are defined. All
+background elements are drawn before all other elements.</p>
+<p><strong>WARNING</strong>: do <em>not</em> use a element name starting with <code>key_</code>; those names are
+reserved to pass key press events to formspec!</p>
+<p><strong>WARNING</strong>: Minetest allows you to add elements to every single formspec instance
+using <code>player:set_formspec_prepend()</code>, which may be the reason backgrounds are
+appearing when you don't expect them to, or why things are styled differently
+to normal. See [<code>no_prepend[]</code>] and [Styling Formspecs].</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="chest">Chest<a class="headerlink" href="#chest" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">size</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">context</span><span class="p">;</span><span class="n">main</span><span class="p">;</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">;]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">current_player</span><span class="p">;</span><span class="n">main</span><span class="p">;</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">;</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">;]</span>
+</code></pre></div>
+
+
+<h3 id="furnace">Furnace<a class="headerlink" href="#furnace" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">size</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">context</span><span class="p">;</span><span class="n">fuel</span><span class="p">;</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">context</span><span class="p">;</span><span class="n">src</span><span class="p">;</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">context</span><span class="p">;</span><span class="n">dst</span><span class="p">;</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">;]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">current_player</span><span class="p">;</span><span class="n">main</span><span class="p">;</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">;</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">;]</span>
+</code></pre></div>
+
+
+<h3 id="minecraft-like-player-inventory">Minecraft-like player inventory<a class="headerlink" href="#minecraft-like-player-inventory" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">size</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mf">7.5</span><span class="p">]</span>
+<span class="n">image</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.6</span><span class="p">;</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">;</span><span class="n">player</span><span class="p">.</span><span class="n">png</span><span class="p">]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">current_player</span><span class="p">;</span><span class="n">main</span><span class="p">;</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.5</span><span class="p">;</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">;]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">current_player</span><span class="p">;</span><span class="n">craft</span><span class="p">;</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">;]</span>
+<span class="n">list</span><span class="p">[</span><span class="n">current_player</span><span class="p">;</span><span class="n">craftpreview</span><span class="p">;</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;]</span>
+</code></pre></div>
+
+
+<h2 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">&para;</a></h2>
+<h3 id="formspec_versionversion"><code>formspec_version[&lt;version&gt;]</code><a class="headerlink" href="#formspec_versionversion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Set the formspec version to a certain number. If not specified,
+  version 1 is assumed.</li>
+<li>Must be specified before <code>size</code> element.</li>
+<li>Clients older than this version can neither show newer elements nor display
+  elements with new arguments correctly.</li>
+<li>Available since feature <code>formspec_version_element</code>.</li>
+</ul>
+<h3 id="sizewhfixed_size"><code>size[&lt;W&gt;,&lt;H&gt;,&lt;fixed_size&gt;]</code><a class="headerlink" href="#sizewhfixed_size" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Define the size of the menu in inventory slots</li>
+<li><code>fixed_size</code>: <code>true</code>/<code>false</code> (optional)</li>
+<li>deprecated: <code>invsize[&lt;W&gt;,&lt;H&gt;;]</code></li>
+</ul>
+<h3 id="positionxy"><code>position[&lt;X&gt;,&lt;Y&gt;]</code><a class="headerlink" href="#positionxy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Must be used after <code>size</code> element.</li>
+<li>Defines the position on the game window of the formspec's <code>anchor</code> point.</li>
+<li>For X and Y, 0.0 and 1.0 represent opposite edges of the game window,
+  for example:<ul>
+<li>[0.0, 0.0] sets the position to the top left corner of the game window.</li>
+<li>[1.0, 1.0] sets the position to the bottom right of the game window.</li>
+</ul>
+</li>
+<li>Defaults to the center of the game window [0.5, 0.5].</li>
+</ul>
+<h3 id="anchorxy"><code>anchor[&lt;X&gt;,&lt;Y&gt;]</code><a class="headerlink" href="#anchorxy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Must be used after both <code>size</code> and <code>position</code> (if present) elements.</li>
+<li>Defines the location of the anchor point within the formspec.</li>
+<li>For X and Y, 0.0 and 1.0 represent opposite edges of the formspec,
+  for example:<ul>
+<li>[0.0, 1.0] sets the anchor to the bottom left corner of the formspec.</li>
+<li>[1.0, 0.0] sets the anchor to the top right of the formspec.</li>
+</ul>
+</li>
+<li>
+<p>Defaults to the center of the formspec [0.5, 0.5].</p>
+</li>
+<li>
+<p><code>position</code> and <code>anchor</code> elements need suitable values to avoid a formspec
+  extending off the game window due to particular game window sizes.</p>
+</li>
+</ul>
+<h3 id="no_prepend"><code>no_prepend[]</code><a class="headerlink" href="#no_prepend" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Must be used after the <code>size</code>, <code>position</code>, and <code>anchor</code> elements (if present).</li>
+<li>Disables player:set_formspec_prepend() from applying to this formspec.</li>
+</ul>
+<h3 id="real_coordinatesbool"><code>real_coordinates[&lt;bool&gt;]</code><a class="headerlink" href="#real_coordinatesbool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>INFORMATION: Enable it automatically using <code>formspec_version</code> version 2 or newer.</li>
+<li>When set to true, all following formspec elements will use the new coordinate system.</li>
+<li>If used immediately after <code>size</code>, <code>position</code>, <code>anchor</code>, and <code>no_prepend</code> elements
+  (if present), the form size will use the new coordinate system.</li>
+<li><strong>Note</strong>: Formspec prepends are not affected by the coordinates in the main form.
+  They must enable it explicitly.</li>
+<li>For information on converting forms to the new coordinate system, see <code>Migrating
+  to Real Coordinates</code>.</li>
+</ul>
+<h3 id="containerxy"><code>container[&lt;X&gt;,&lt;Y&gt;]</code><a class="headerlink" href="#containerxy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Start of a container block, moves all physical elements in the container by
+  (X, Y).</li>
+<li>Must have matching <code>container_end</code></li>
+<li>Containers can be nested, in which case the offsets are added
+  (child containers are relative to parent containers)</li>
+</ul>
+<h3 id="container_end"><code>container_end[]</code><a class="headerlink" href="#container_end" title="Permanent link">&para;</a></h3>
+<ul>
+<li>End of a container, following elements are no longer relative to this
+  container.</li>
+</ul>
+<h3 id="listinventory-locationlist-namexywh"><code>list[&lt;inventory location&gt;;&lt;list name&gt;;&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;]</code><a class="headerlink" href="#listinventory-locationlist-namexywh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show an inventory list if it has been sent to the client. Nothing will
+  be shown if the inventory list is of size 0.</li>
+<li><strong>Note</strong>: With the new coordinate system, the spacing between inventory
+  slots is one-fourth the size of an inventory slot.</li>
+</ul>
+<h3 id="listinventory-locationlist-namexywhstarting-item-index"><code>list[&lt;inventory location&gt;;&lt;list name&gt;;&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;starting item index&gt;]</code><a class="headerlink" href="#listinventory-locationlist-namexywhstarting-item-index" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show an inventory list if it has been sent to the client. Nothing will
+  be shown if the inventory list is of size 0.</li>
+<li><strong>Note</strong>: With the new coordinate system, the spacing between inventory
+  slots is one-fourth the size of an inventory slot.</li>
+</ul>
+<h3 id="listringinventory-locationlist-name"><code>listring[&lt;inventory location&gt;;&lt;list name&gt;]</code><a class="headerlink" href="#listringinventory-locationlist-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allows to create a ring of inventory lists</li>
+<li>Shift-clicking on items in one element of the ring
+  will send them to the next inventory list inside the ring</li>
+<li>The first occurrence of an element inside the ring will
+  determine the inventory where items will be sent to</li>
+</ul>
+<h3 id="listring"><code>listring[]</code><a class="headerlink" href="#listring" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Shorthand for doing <code>listring[&lt;inventory location&gt;;&lt;list name&gt;]</code>
+  for the last two inventory lists added by list[...]</li>
+</ul>
+<h3 id="listcolorsslot_bg_normalslot_bg_hover"><code>listcolors[&lt;slot_bg_normal&gt;;&lt;slot_bg_hover&gt;]</code><a class="headerlink" href="#listcolorsslot_bg_normalslot_bg_hover" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets background color of slots as <code>ColorString</code></li>
+<li>Sets background color of slots on mouse hovering</li>
+</ul>
+<h3 id="listcolorsslot_bg_normalslot_bg_hoverslot_border"><code>listcolors[&lt;slot_bg_normal&gt;;&lt;slot_bg_hover&gt;;&lt;slot_border&gt;]</code><a class="headerlink" href="#listcolorsslot_bg_normalslot_bg_hoverslot_border" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets background color of slots as <code>ColorString</code></li>
+<li>Sets background color of slots on mouse hovering</li>
+<li>Sets color of slots border</li>
+</ul>
+<h3 id="listcolorsslot_bg_normalslot_bg_hoverslot_bordertooltip_bgcolortooltip_fontcolor"><code>listcolors[&lt;slot_bg_normal&gt;;&lt;slot_bg_hover&gt;;&lt;slot_border&gt;;&lt;tooltip_bgcolor&gt;;&lt;tooltip_fontcolor&gt;]</code><a class="headerlink" href="#listcolorsslot_bg_normalslot_bg_hoverslot_bordertooltip_bgcolortooltip_fontcolor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets background color of slots as <code>ColorString</code></li>
+<li>Sets background color of slots on mouse hovering</li>
+<li>Sets color of slots border</li>
+<li>Sets default background color of tooltips</li>
+<li>Sets default font color of tooltips</li>
+</ul>
+<h3 id="tooltipgui_element_nametooltip_textbgcolorfontcolor"><code>tooltip[&lt;gui_element_name&gt;;&lt;tooltip_text&gt;;&lt;bgcolor&gt;;&lt;fontcolor&gt;]</code><a class="headerlink" href="#tooltipgui_element_nametooltip_textbgcolorfontcolor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adds tooltip for an element</li>
+<li><code>bgcolor</code> tooltip background color as <code>ColorString</code> (optional)</li>
+<li><code>fontcolor</code> tooltip font color as <code>ColorString</code> (optional)</li>
+</ul>
+<h3 id="tooltipxywhtooltip_textbgcolorfontcolor"><code>tooltip[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;tooltip_text&gt;;&lt;bgcolor&gt;;&lt;fontcolor&gt;]</code><a class="headerlink" href="#tooltipxywhtooltip_textbgcolorfontcolor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adds tooltip for an area. Other tooltips will take priority when present.</li>
+<li><code>bgcolor</code> tooltip background color as <code>ColorString</code> (optional)</li>
+<li><code>fontcolor</code> tooltip font color as <code>ColorString</code> (optional)</li>
+</ul>
+<h3 id="imagexywhtexture-name"><code>image[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;]</code><a class="headerlink" href="#imagexywhtexture-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show an image</li>
+</ul>
+<h3 id="animated_imagexywhnametexture-nameframe-countframe-durationframe-start"><code>animated_image[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;texture name&gt;;&lt;frame count&gt;;&lt;frame duration&gt;;&lt;frame start&gt;]</code><a class="headerlink" href="#animated_imagexywhnametexture-nameframe-countframe-durationframe-start" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show an animated image. The image is drawn like a "vertical_frames" tile
+    animation (See [Tile animation definition]), but uses a frame count/duration
+    for simplicity</li>
+<li><code>name</code>: Element name to send when an event occurs. The event value is the index of the current frame.</li>
+<li><code>texture name</code>: The image to use.</li>
+<li><code>frame count</code>: The number of frames animating the image.</li>
+<li><code>frame duration</code>: Milliseconds between each frame. <code>0</code> means the frames don't advance.</li>
+<li><code>frame start</code> (Optional): The index of the frame to start on. Default <code>1</code>.</li>
+</ul>
+<h3 id="item_imagexywhitem-name"><code>item_image[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;item name&gt;]</code><a class="headerlink" href="#item_imagexywhitem-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show an inventory image of registered item/node</li>
+</ul>
+<h3 id="bgcolorbgcolorfullscreenfbgcolor"><code>bgcolor[&lt;bgcolor&gt;;&lt;fullscreen&gt;;&lt;fbgcolor&gt;]</code><a class="headerlink" href="#bgcolorbgcolorfullscreenfbgcolor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets background color of formspec.</li>
+<li><code>bgcolor</code> and <code>fbgcolor</code> (optional) are <code>ColorString</code>s, they define the color
+  of the non-fullscreen and the fullscreen background.</li>
+<li><code>fullscreen</code> (optional) can be one of the following:</li>
+<li><code>false</code>: Only the non-fullscreen background color is drawn. (default)</li>
+<li><code>true</code>: Only the fullscreen background color is drawn.</li>
+<li><code>both</code>: The non-fullscreen and the fullscreen background color are drawn.</li>
+<li><code>neither</code>: No background color is drawn.</li>
+<li>Note: Leave a parameter empty to not modify the value.</li>
+<li>Note: <code>fbgcolor</code>, leaving parameters empty and values for <code>fullscreen</code> that
+  are not bools are only available since formspec version 3.</li>
+</ul>
+<h3 id="backgroundxywhtexture-name"><code>background[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;]</code><a class="headerlink" href="#backgroundxywhtexture-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Example for formspec 8x4 in 16x resolution: image shall be sized
+  8 times 16px  times  4 times 16px.</li>
+</ul>
+<h3 id="backgroundxywhtexture-nameauto_clip"><code>background[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;auto_clip&gt;]</code><a class="headerlink" href="#backgroundxywhtexture-nameauto_clip" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Example for formspec 8x4 in 16x resolution:
+  image shall be sized 8 times 16px  times  4 times 16px</li>
+<li>If <code>auto_clip</code> is <code>true</code>, the background is clipped to the formspec size
+  (<code>x</code> and <code>y</code> are used as offset values, <code>w</code> and <code>h</code> are ignored)</li>
+</ul>
+<h3 id="background9xywhtexture-nameauto_clipmiddle"><code>background9[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;auto_clip&gt;;&lt;middle&gt;]</code><a class="headerlink" href="#background9xywhtexture-nameauto_clipmiddle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>9-sliced background. See https://en.wikipedia.org/wiki/9-slice_scaling</li>
+<li>Middle is a rect which defines the middle of the 9-slice.<ul>
+<li><code>x</code> - The middle will be x pixels from all sides.</li>
+<li><code>x,y</code> - The middle will be x pixels from the horizontal and y from the vertical.</li>
+<li><code>x,y,x2,y2</code> - The middle will start at x,y, and end at x2, y2. Negative x2 and y2 values
+    will be added to the width and height of the texture, allowing it to be used as the
+    distance from the far end.</li>
+<li>All numbers in middle are integers.</li>
+</ul>
+</li>
+<li>Example for formspec 8x4 in 16x resolution:
+  image shall be sized 8 times 16px  times  4 times 16px</li>
+<li>If <code>auto_clip</code> is <code>true</code>, the background is clipped to the formspec size
+  (<code>x</code> and <code>y</code> are used as offset values, <code>w</code> and <code>h</code> are ignored)</li>
+<li>Available since formspec version 2</li>
+</ul>
+<h3 id="pwdfieldxywhnamelabel"><code>pwdfield[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;]</code><a class="headerlink" href="#pwdfieldxywhnamelabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Textual password style field; will be sent to server when a button is clicked</li>
+<li>When enter is pressed in field, fields.key_enter_field will be sent with the
+  name of this field.</li>
+<li>With the old coordinate system, fields are a set height, but will be vertically
+  centred on <code>H</code>. With the new coordinate system, <code>H</code> will modify the height.</li>
+<li><code>name</code> is the name of the field as returned in fields to <code>on_receive_fields</code></li>
+<li><code>label</code>, if not blank, will be text printed on the top left above the field</li>
+<li>See <code>field_close_on_enter</code> to stop enter closing the formspec</li>
+</ul>
+<h3 id="fieldxywhnamelabeldefault"><code>field[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;;&lt;default&gt;]</code><a class="headerlink" href="#fieldxywhnamelabeldefault" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Textual field; will be sent to server when a button is clicked</li>
+<li>When enter is pressed in field, <code>fields.key_enter_field</code> will be sent with
+  the name of this field.</li>
+<li>With the old coordinate system, fields are a set height, but will be vertically
+  centred on <code>H</code>. With the new coordinate system, <code>H</code> will modify the height.</li>
+<li><code>name</code> is the name of the field as returned in fields to <code>on_receive_fields</code></li>
+<li><code>label</code>, if not blank, will be text printed on the top left above the field</li>
+<li><code>default</code> is the default value of the field<ul>
+<li><code>default</code> may contain variable references such as <code>${text}</code> which
+  will fill the value from the metadata value <code>text</code></li>
+<li><strong>Note</strong>: no extra text or more than a single variable is supported ATM.</li>
+</ul>
+</li>
+<li>See <code>field_close_on_enter</code> to stop enter closing the formspec</li>
+</ul>
+<h3 id="fieldnamelabeldefault"><code>field[&lt;name&gt;;&lt;label&gt;;&lt;default&gt;]</code><a class="headerlink" href="#fieldnamelabeldefault" title="Permanent link">&para;</a></h3>
+<ul>
+<li>As above, but without position/size units</li>
+<li>When enter is pressed in field, <code>fields.key_enter_field</code> will be sent with
+  the name of this field.</li>
+<li>Special field for creating simple forms, such as sign text input</li>
+<li>Must be used without a <code>size[]</code> element</li>
+<li>A "Proceed" button will be added automatically</li>
+<li>See <code>field_close_on_enter</code> to stop enter closing the formspec</li>
+</ul>
+<h3 id="field_close_on_enternameclose_on_enter"><code>field_close_on_enter[&lt;name&gt;;&lt;close_on_enter&gt;]</code><a class="headerlink" href="#field_close_on_enternameclose_on_enter" title="Permanent link">&para;</a></h3>
+<ul>
+<li><name> is the name of the field</li>
+<li>if <close_on_enter> is false, pressing enter in the field will submit the
+  form but not close it.</li>
+<li>defaults to true when not specified (ie: no tag for a field)</li>
+</ul>
+<h3 id="textareaxywhnamelabeldefault"><code>textarea[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;;&lt;default&gt;]</code><a class="headerlink" href="#textareaxywhnamelabeldefault" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Same as fields above, but with multi-line input</li>
+<li>If the text overflows, a vertical scrollbar is added.</li>
+<li>If the name is empty, the textarea is read-only and
+  the background is not shown, which corresponds to a multi-line label.</li>
+</ul>
+<h3 id="labelxylabel"><code>label[&lt;X&gt;,&lt;Y&gt;;&lt;label&gt;]</code><a class="headerlink" href="#labelxylabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The label formspec element displays the text set in <code>label</code>
+  at the specified position.</li>
+<li><strong>Note</strong>: If the new coordinate system is enabled, labels are
+  positioned from the center of the text, not the top.</li>
+<li>The text is displayed directly without automatic line breaking,
+  so label should not be used for big text chunks.  Newlines can be
+  used to make labels multiline.</li>
+<li><strong>Note</strong>: With the new coordinate system, newlines are spaced with
+  half a coordinate.  With the old system, newlines are spaced 2/5 of
+  an inventory slot.</li>
+</ul>
+<h3 id="hypertextxywhnametext"><code>hypertext[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;text&gt;]</code><a class="headerlink" href="#hypertextxywhnametext" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Displays a static formatted text with hyperlinks.</li>
+<li><strong>Note</strong>: This element is currently unstable and subject to change.</li>
+<li><code>x</code>, <code>y</code>, <code>w</code> and <code>h</code> work as per field</li>
+<li><code>name</code> is the name of the field as returned in fields to <code>on_receive_fields</code> in case of action in text.</li>
+<li><code>text</code> is the formatted text using <code>Markup Language</code> described below.</li>
+</ul>
+<h3 id="vertlabelxylabel"><code>vertlabel[&lt;X&gt;,&lt;Y&gt;;&lt;label&gt;]</code><a class="headerlink" href="#vertlabelxylabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Textual label drawn vertically</li>
+<li><code>label</code> is the text on the label</li>
+<li><strong>Note</strong>: If the new coordinate system is enabled, vertlabels are
+  positioned from the center of the text, not the left.</li>
+</ul>
+<h3 id="buttonxywhnamelabel"><code>button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;]</code><a class="headerlink" href="#buttonxywhnamelabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Clickable button. When clicked, fields will be sent.</li>
+<li>With the old coordinate system, buttons are a set height, but will be vertically
+  centred on <code>H</code>. With the new coordinate system, <code>H</code> will modify the height.</li>
+<li><code>label</code> is the text on the button</li>
+</ul>
+<h3 id="image_buttonxywhtexture-namenamelabel"><code>image_button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;name&gt;;&lt;label&gt;]</code><a class="headerlink" href="#image_buttonxywhtexture-namenamelabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>texture name</code> is the filename of an image</li>
+<li><strong>Note</strong>: Height is supported on both the old and new coordinate systems
+  for image_buttons.</li>
+</ul>
+<h3 id="image_buttonxywhtexture-namenamelabelnoclipdrawborderpressed-texture-name"><code>image_button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;name&gt;;&lt;label&gt;;&lt;noclip&gt;;&lt;drawborder&gt;;&lt;pressed texture name&gt;]</code><a class="headerlink" href="#image_buttonxywhtexture-namenamelabelnoclipdrawborderpressed-texture-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>texture name</code> is the filename of an image</li>
+<li><code>noclip=true</code> means the image button doesn't need to be within specified
+  formsize.</li>
+<li><code>drawborder</code>: draw button border or not</li>
+<li><code>pressed texture name</code> is the filename of an image on pressed state</li>
+</ul>
+<h3 id="item_image_buttonxywhitem-namenamelabel"><code>item_image_button[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;item name&gt;;&lt;name&gt;;&lt;label&gt;]</code><a class="headerlink" href="#item_image_buttonxywhitem-namenamelabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>item name</code> is the registered name of an item/node</li>
+<li>The item description will be used as the tooltip. This can be overridden with
+  a tooltip element.</li>
+</ul>
+<h3 id="button_exitxywhnamelabel"><code>button_exit[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;label&gt;]</code><a class="headerlink" href="#button_exitxywhnamelabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When clicked, fields will be sent and the form will quit.</li>
+<li>Same as <code>button</code> in all other respects.</li>
+</ul>
+<h3 id="image_button_exitxywhtexture-namenamelabel"><code>image_button_exit[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;texture name&gt;;&lt;name&gt;;&lt;label&gt;]</code><a class="headerlink" href="#image_button_exitxywhtexture-namenamelabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When clicked, fields will be sent and the form will quit.</li>
+<li>Same as <code>image_button</code> in all other respects.</li>
+</ul>
+<h3 id="textlistxywhnamelistelem-1listelem-2listelem-n"><code>textlist[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;listelem 1&gt;,&lt;listelem 2&gt;,...,&lt;listelem n&gt;]</code><a class="headerlink" href="#textlistxywhnamelistelem-1listelem-2listelem-n" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scrollable item list showing arbitrary text elements</li>
+<li><code>name</code> fieldname sent to server on doubleclick value is current selected
+  element.</li>
+<li><code>listelements</code> can be prepended by #color in hexadecimal format RRGGBB
+  (only).<ul>
+<li>if you want a listelement to start with "#" write "##".</li>
+</ul>
+</li>
+</ul>
+<h3 id="textlistxywhnamelistelem-1listelem-2listelem-nselected-idxtransparent"><code>textlist[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;listelem 1&gt;,&lt;listelem 2&gt;,...,&lt;listelem n&gt;;&lt;selected idx&gt;;&lt;transparent&gt;]</code><a class="headerlink" href="#textlistxywhnamelistelem-1listelem-2listelem-nselected-idxtransparent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scrollable itemlist showing arbitrary text elements</li>
+<li><code>name</code> fieldname sent to server on doubleclick value is current selected
+  element.</li>
+<li><code>listelements</code> can be prepended by #RRGGBB (only) in hexadecimal format<ul>
+<li>if you want a listelement to start with "#" write "##"</li>
+</ul>
+</li>
+<li>Index to be selected within textlist</li>
+<li><code>true</code>/<code>false</code>: draw transparent background</li>
+<li>See also <code>minetest.explode_textlist_event</code>
+  (main menu: <code>core.explode_textlist_event</code>).</li>
+</ul>
+<h3 id="tabheaderxynamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border"><code>tabheader[&lt;X&gt;,&lt;Y&gt;;&lt;name&gt;;&lt;caption 1&gt;,&lt;caption 2&gt;,...,&lt;caption n&gt;;&lt;current_tab&gt;;&lt;transparent&gt;;&lt;draw_border&gt;]</code><a class="headerlink" href="#tabheaderxynamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a tab<strong>header</strong> at specific position (ignores formsize)</li>
+<li><code>X</code> and <code>Y</code>: position of the tabheader</li>
+<li><em>Note</em>: Width and height are automatically chosen with this syntax</li>
+<li><code>name</code> fieldname data is transferred to Lua</li>
+<li><code>caption 1</code>...: name shown on top of tab</li>
+<li><code>current_tab</code>: index of selected tab 1...</li>
+<li><code>transparent</code> (optional): if true, tabs are semi-transparent</li>
+<li><code>draw_border</code> (optional): if true, draw a thin line at tab base</li>
+</ul>
+<h3 id="tabheaderxyhnamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border"><code>tabheader[&lt;X&gt;,&lt;Y&gt;;&lt;H&gt;;&lt;name&gt;;&lt;caption 1&gt;,&lt;caption 2&gt;,...,&lt;caption n&gt;;&lt;current_tab&gt;;&lt;transparent&gt;;&lt;draw_border&gt;]</code><a class="headerlink" href="#tabheaderxyhnamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a tab<strong>header</strong> at specific position (ignores formsize)</li>
+<li><strong>Important note</strong>: This syntax for tabheaders can only be used with the
+  new coordinate system.</li>
+<li><code>X</code> and <code>Y</code>: position of the tabheader</li>
+<li><code>H</code>: height of the tabheader. Width is automatically determined with this syntax.</li>
+<li><code>name</code> fieldname data is transferred to Lua</li>
+<li><code>caption 1</code>...: name shown on top of tab</li>
+<li><code>current_tab</code>: index of selected tab 1...</li>
+<li><code>transparent</code> (optional): show transparent</li>
+<li><code>draw_border</code> (optional): draw border</li>
+</ul>
+<h3 id="tabheaderxywhnamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border"><code>tabheader[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;caption 1&gt;,&lt;caption 2&gt;,...,&lt;caption n&gt;;&lt;current_tab&gt;;&lt;transparent&gt;;&lt;draw_border&gt;]</code><a class="headerlink" href="#tabheaderxywhnamecaption-1caption-2caption-ncurrent_tabtransparentdraw_border" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a tab<strong>header</strong> at specific position (ignores formsize)</li>
+<li><strong>Important note</strong>: This syntax for tabheaders can only be used with the
+  new coordinate system.</li>
+<li><code>X</code> and <code>Y</code>: position of the tabheader</li>
+<li><code>W</code> and <code>H</code>: width and height of the tabheader</li>
+<li><code>name</code> fieldname data is transferred to Lua</li>
+<li><code>caption 1</code>...: name shown on top of tab</li>
+<li><code>current_tab</code>: index of selected tab 1...</li>
+<li><code>transparent</code> (optional): show transparent</li>
+<li><code>draw_border</code> (optional): draw border</li>
+</ul>
+<h3 id="boxxywhcolor"><code>box[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;color&gt;]</code><a class="headerlink" href="#boxxywhcolor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simple colored box</li>
+<li><code>color</code> is color specified as a <code>ColorString</code>.
+  If the alpha component is left blank, the box will be semitransparent.</li>
+</ul>
+<h3 id="dropdownxywnameitem-1item-2-item-nselected-idx"><code>dropdown[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;;&lt;name&gt;;&lt;item 1&gt;,&lt;item 2&gt;, ...,&lt;item n&gt;;&lt;selected idx&gt;]</code><a class="headerlink" href="#dropdownxywnameitem-1item-2-item-nselected-idx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a dropdown field</li>
+<li><strong>Important note</strong>: There are two different operation modes:<ol>
+<li>handle directly on change (only changed dropdown is submitted)</li>
+<li>read the value on pressing a button (all dropdown values are available)</li>
+</ol>
+</li>
+<li><code>X</code> and <code>Y</code>: position of the dropdown</li>
+<li><code>W</code>: width of the dropdown. Height is automatically chosen with this syntax.</li>
+<li>Fieldname data is transferred to Lua</li>
+<li>Items to be shown in dropdown</li>
+<li>Index of currently selected dropdown item</li>
+</ul>
+<h3 id="dropdownxywhnameitem-1item-2-item-nselected-idx"><code>dropdown[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;item 1&gt;,&lt;item 2&gt;, ...,&lt;item n&gt;;&lt;selected idx&gt;]</code><a class="headerlink" href="#dropdownxywhnameitem-1item-2-item-nselected-idx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a dropdown field</li>
+<li><strong>Important note</strong>: This syntax for dropdowns can only be used with the
+  new coordinate system.</li>
+<li><strong>Important note</strong>: There are two different operation modes:<ol>
+<li>handle directly on change (only changed dropdown is submitted)</li>
+<li>read the value on pressing a button (all dropdown values are available)</li>
+</ol>
+</li>
+<li><code>X</code> and <code>Y</code>: position of the dropdown</li>
+<li><code>W</code> and <code>H</code>: width and height of the dropdown</li>
+<li>Fieldname data is transferred to Lua</li>
+<li>Items to be shown in dropdown</li>
+<li>Index of currently selected dropdown item</li>
+</ul>
+<h3 id="checkboxxynamelabelselected"><code>checkbox[&lt;X&gt;,&lt;Y&gt;;&lt;name&gt;;&lt;label&gt;;&lt;selected&gt;]</code><a class="headerlink" href="#checkboxxynamelabelselected" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a checkbox</li>
+<li><code>name</code> fieldname data is transferred to Lua</li>
+<li><code>label</code> to be shown left of checkbox</li>
+<li><code>selected</code> (optional): <code>true</code>/<code>false</code></li>
+<li><strong>Note</strong>: If the new coordinate system is enabled, checkboxes are
+  positioned from the center of the checkbox, not the top.</li>
+</ul>
+<h3 id="scrollbarxywhorientationnamevalue"><code>scrollbar[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;orientation&gt;;&lt;name&gt;;&lt;value&gt;]</code><a class="headerlink" href="#scrollbarxywhorientationnamevalue" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show a scrollbar using options defined by the previous <code>scrollbaroptions[]</code></li>
+<li>There are two ways to use it:<ol>
+<li>handle the changed event (only changed scrollbar is available)</li>
+<li>read the value on pressing a button (all scrollbars are available)</li>
+</ol>
+</li>
+<li><code>orientation</code>:  <code>vertical</code>/<code>horizontal</code></li>
+<li>Fieldname data is transferred to Lua</li>
+<li>Value of this trackbar is set to (<code>0</code>-<code>1000</code>) by default</li>
+<li>See also <code>minetest.explode_scrollbar_event</code>
+  (main menu: <code>core.explode_scrollbar_event</code>).</li>
+</ul>
+<h3 id="scrollbaroptionsopt1opt2"><code>scrollbaroptions[opt1;opt2;...]</code><a class="headerlink" href="#scrollbaroptionsopt1opt2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets options for all following <code>scrollbar[]</code> elements</li>
+<li><code>min=&lt;int&gt;</code><ul>
+<li>Sets scrollbar minimum value, defaults to <code>0</code>.</li>
+</ul>
+</li>
+<li><code>max=&lt;int&gt;</code><ul>
+<li>Sets scrollbar maximum value, defaults to <code>1000</code>.
+  If the max is equal to the min, the scrollbar will be disabled.</li>
+</ul>
+</li>
+<li><code>smallstep=&lt;int&gt;</code><ul>
+<li>Sets scrollbar step value when the arrows are clicked or the mouse wheel is
+  scrolled.</li>
+<li>If this is set to a negative number, the value will be reset to <code>10</code>.</li>
+</ul>
+</li>
+<li><code>largestep=&lt;int&gt;</code><ul>
+<li>Sets scrollbar step value used by page up and page down.</li>
+<li>If this is set to a negative number, the value will be reset to <code>100</code>.</li>
+</ul>
+</li>
+<li><code>thumbsize=&lt;int&gt;</code><ul>
+<li>Sets size of the thumb on the scrollbar. Size is calculated in the number of
+  units the thumb spans out of the range of the scrollbar values.</li>
+<li>Example: If a scrollbar has a <code>min</code> of 1 and a <code>max</code> of 100, a thumbsize of 10
+  would span a tenth of the scrollbar space.</li>
+<li>If this is set to zero or less, the value will be reset to <code>1</code>.</li>
+</ul>
+</li>
+<li><code>arrows=&lt;show/hide/default&gt;</code><ul>
+<li>Whether to show the arrow buttons on the scrollbar. <code>default</code> hides the arrows
+  when the scrollbar gets too small, but shows them otherwise.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tablexywhnamecell-1cell-2cell-nselected-idx"><code>table[&lt;X&gt;,&lt;Y&gt;;&lt;W&gt;,&lt;H&gt;;&lt;name&gt;;&lt;cell 1&gt;,&lt;cell 2&gt;,...,&lt;cell n&gt;;&lt;selected idx&gt;]</code><a class="headerlink" href="#tablexywhnamecell-1cell-2cell-nselected-idx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Show scrollable table using options defined by the previous <code>tableoptions[]</code></li>
+<li>Displays cells as defined by the previous <code>tablecolumns[]</code></li>
+<li><code>name</code>: fieldname sent to server on row select or doubleclick</li>
+<li><code>cell 1</code>...<code>cell n</code>: cell contents given in row-major order</li>
+<li><code>selected idx</code>: index of row to be selected within table (first row = <code>1</code>)</li>
+<li>See also <code>minetest.explode_table_event</code>
+  (main menu: <code>core.explode_table_event</code>).</li>
+</ul>
+<h3 id="tableoptionsopt-1opt-2"><code>tableoptions[&lt;opt 1&gt;;&lt;opt 2&gt;;...]</code><a class="headerlink" href="#tableoptionsopt-1opt-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets options for <code>table[]</code></li>
+<li><code>color=#RRGGBB</code><ul>
+<li>default text color (<code>ColorString</code>), defaults to <code>#FFFFFF</code></li>
+</ul>
+</li>
+<li><code>background=#RRGGBB</code><ul>
+<li>table background color (<code>ColorString</code>), defaults to <code>#000000</code></li>
+</ul>
+</li>
+<li><code>border=&lt;true/false&gt;</code><ul>
+<li>should the table be drawn with a border? (default: <code>true</code>)</li>
+</ul>
+</li>
+<li><code>highlight=#RRGGBB</code><ul>
+<li>highlight background color (<code>ColorString</code>), defaults to <code>#466432</code></li>
+</ul>
+</li>
+<li><code>highlight_text=#RRGGBB</code><ul>
+<li>highlight text color (<code>ColorString</code>), defaults to <code>#FFFFFF</code></li>
+</ul>
+</li>
+<li><code>opendepth=&lt;value&gt;</code><ul>
+<li>all subtrees up to <code>depth &lt; value</code> are open (default value = <code>0</code>)</li>
+<li>only useful when there is a column of type "tree"</li>
+</ul>
+</li>
+</ul>
+<h3 id="tablecolumnstype-1opt-1aopt-1btype-2opt-2aopt-2b"><code>tablecolumns[&lt;type 1&gt;,&lt;opt 1a&gt;,&lt;opt 1b&gt;,...;&lt;type 2&gt;,&lt;opt 2a&gt;,&lt;opt 2b&gt;;...]</code><a class="headerlink" href="#tablecolumnstype-1opt-1aopt-1btype-2opt-2aopt-2b" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sets columns for <code>table[]</code></li>
+<li>Types: <code>text</code>, <code>image</code>, <code>color</code>, <code>indent</code>, <code>tree</code><ul>
+<li><code>text</code>:   show cell contents as text</li>
+<li><code>image</code>:  cell contents are an image index, use column options to define
+            images.</li>
+<li><code>color</code>:  cell contents are a ColorString and define color of following
+            cell.</li>
+<li><code>indent</code>: cell contents are a number and define indentation of following
+            cell.</li>
+<li><code>tree</code>:   same as indent, but user can open and close subtrees
+            (treeview-like).</li>
+</ul>
+</li>
+<li>Column options:<ul>
+<li><code>align=&lt;value&gt;</code><ul>
+<li>for <code>text</code> and <code>image</code>: content alignment within cells.
+  Available values: <code>left</code> (default), <code>center</code>, <code>right</code>, <code>inline</code></li>
+</ul>
+</li>
+<li><code>width=&lt;value&gt;</code><ul>
+<li>for <code>text</code> and <code>image</code>: minimum width in em (default: <code>0</code>)</li>
+<li>for <code>indent</code> and <code>tree</code>: indent width in em (default: <code>1.5</code>)</li>
+</ul>
+</li>
+<li><code>padding=&lt;value&gt;</code>: padding left of the column, in em (default <code>0.5</code>).
+  Exception: defaults to 0 for indent columns</li>
+<li><code>tooltip=&lt;value&gt;</code>: tooltip text (default: empty)</li>
+<li><code>image</code> column options:<ul>
+<li><code>0=&lt;value&gt;</code> sets image for image index 0</li>
+<li><code>1=&lt;value&gt;</code> sets image for image index 1</li>
+<li><code>2=&lt;value&gt;</code> sets image for image index 2</li>
+<li>and so on; defined indices need not be contiguous empty or
+  non-numeric cells are treated as <code>0</code>.</li>
+</ul>
+</li>
+<li><code>color</code> column options:<ul>
+<li><code>span=&lt;value&gt;</code>: number of following columns to affect
+  (default: infinite).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="styleselector-1selector-2prop1prop2"><code>style[&lt;selector 1&gt;,&lt;selector 2&gt;;&lt;prop1&gt;;&lt;prop2&gt;;...]</code><a class="headerlink" href="#styleselector-1selector-2prop1prop2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Set the style for the element(s) matching <code>selector</code> by name.</li>
+<li><code>selector</code> can be one of:<ul>
+<li><code>&lt;name&gt;</code> - An element name.</li>
+<li><code>&lt;name&gt;:&lt;state&gt;</code> - An element name, a colon, and one or more states.</li>
+</ul>
+</li>
+<li><code>state</code> is a list of states separated by the <code>+</code> character.<ul>
+<li>If a state is provided, the style will only take effect when the element is in that state.</li>
+<li>All provided states must be active for the style to apply.</li>
+</ul>
+</li>
+<li>Note: this <strong>must</strong> be before the element is defined.</li>
+<li>See [Styling Formspecs].</li>
+</ul>
+<h3 id="style_typeselector-1selector-2prop1prop2"><code>style_type[&lt;selector 1&gt;,&lt;selector 2&gt;;&lt;prop1&gt;;&lt;prop2&gt;;...]</code><a class="headerlink" href="#style_typeselector-1selector-2prop1prop2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Set the style for the element(s) matching <code>selector</code> by type.</li>
+<li><code>selector</code> can be one of:<ul>
+<li><code>&lt;type&gt;</code> - An element type.</li>
+<li><code>&lt;type&gt;:&lt;state&gt;</code> - An element type, a colon, and one or more states.</li>
+</ul>
+</li>
+<li><code>state</code> is a list of states separated by the <code>+</code> character.<ul>
+<li>If a state is provided, the style will only take effect when the element is in that state.</li>
+<li>All provided states must be active for the style to apply.</li>
+</ul>
+</li>
+<li>See [Styling Formspecs].</li>
+</ul>
+<h2 id="migrating-to-real-coordinates">Migrating to Real Coordinates<a class="headerlink" href="#migrating-to-real-coordinates" title="Permanent link">&para;</a></h2>
+<p>In the old system, positions included padding and spacing. Padding is a gap between
+the formspec window edges and content, and spacing is the gaps between items. For
+example, two <code>1x1</code> elements at <code>0,0</code> and <code>1,1</code> would have a spacing of <code>5/4</code> between them,
+and a padding of <code>3/8</code> from the formspec edge. It may be easiest to recreate old layouts
+in the new coordinate system from scratch.</p>
+<p>To recreate an old layout with padding, you'll need to pass the positions and sizes
+through the following formula to re-introduce padding:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">oldpos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">spacing</span> <span class="o">+</span> <span class="n">padding</span>
+<span class="n">where</span>
+    <span class="n">padding</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">8</span>
+    <span class="n">spacing</span> <span class="o">=</span> <span class="mi">5</span><span class="o">/</span><span class="mi">4</span>
+</code></pre></div>
+
+
+<p>You'll need to change the <code>size[]</code> tag like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="n">oldsize</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">spacing</span> <span class="o">+</span> <span class="n">padding</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+
+
+<p>A few elements had random offsets in the old system. Here is a table which shows these
+offsets when migrating:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Position</th>
+<th>Size</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>box</td>
+<td>+0.3, +0.1</td>
+<td>0, -0.4</td>
+<td></td>
+</tr>
+<tr>
+<td>button</td>
+<td></td>
+<td></td>
+<td>Buttons now support height, so set h = 2 * 15/13 * 0.35, and reposition if h ~= 15/13 * 0.35 before</td>
+</tr>
+<tr>
+<td>list</td>
+<td></td>
+<td></td>
+<td>Spacing is now 0.25 for both directions, meaning lists will be taller in height</td>
+</tr>
+<tr>
+<td>label</td>
+<td>0, +0.3</td>
+<td></td>
+<td>The first line of text is now positioned centered exactly at the position specified</td>
+</tr>
+</tbody>
+</table>
+<h2 id="styling-formspecs">Styling Formspecs<a class="headerlink" href="#styling-formspecs" title="Permanent link">&para;</a></h2>
+<p>Formspec elements can be themed using the style elements:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">style</span><span class="p">[</span><span class="o">&lt;</span><span class="n">name</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">name</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop1</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop2</span><span class="o">&gt;</span><span class="p">;...]</span>
+<span class="n">style</span><span class="p">[</span><span class="o">&lt;</span><span class="n">name</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">state</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">name</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">state</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop1</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop2</span><span class="o">&gt;</span><span class="p">;...]</span>
+<span class="n">style_type</span><span class="p">[</span><span class="o">&lt;</span><span class="nb">type</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">type</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop1</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop2</span><span class="o">&gt;</span><span class="p">;...]</span>
+<span class="n">style_type</span><span class="p">[</span><span class="o">&lt;</span><span class="nb">type</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">state</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">type</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">state</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop1</span><span class="o">&gt;</span><span class="p">;</span><span class="o">&lt;</span><span class="n">prop2</span><span class="o">&gt;</span><span class="p">;...]</span>
+</code></pre></div>
+
+
+<p>Where a prop is:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">property_name</span><span class="o">=</span><span class="n">property_value</span>
+</code></pre></div>
+
+
+<p>For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">style_type</span><span class="p">[</span><span class="n">button</span><span class="p">;</span><span class="n">bgcolor</span><span class="o">=#</span><span class="mi">006699</span><span class="p">]</span>
+<span class="n">style</span><span class="p">[</span><span class="n">world_delete</span><span class="p">;</span><span class="n">bgcolor</span><span class="o">=</span><span class="n">red</span><span class="p">;</span><span class="n">textcolor</span><span class="o">=</span><span class="n">yellow</span><span class="p">]</span>
+<span class="n">button</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mf">3.95</span><span class="p">;</span><span class="mf">2.6</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span><span class="n">world_delete</span><span class="p">;</span><span class="n">Delete</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>A name/type can optionally be a comma separated list of names/types, like so:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">world_delete</span><span class="p">,</span><span class="n">world_create</span><span class="p">,</span><span class="n">world_configure</span>
+<span class="n">button</span><span class="p">,</span><span class="n">image_button</span>
+</code></pre></div>
+
+
+<p>Any name/type in the list can also be accompanied by a <code>+</code>-separated list of states, like so:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">world_delete</span><span class="p">:</span><span class="n">hovered</span><span class="o">+</span><span class="n">pressed</span>
+<span class="n">button</span><span class="p">:</span><span class="n">pressed</span>
+</code></pre></div>
+
+
+<p>States allow you to apply styles in response to changes in the element, instead of applying at all times.</p>
+<p>Setting a property to nothing will reset it to the default value. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">style_type</span><span class="p">[</span><span class="n">button</span><span class="p">;</span><span class="n">bgimg</span><span class="o">=</span><span class="n">button</span><span class="p">.</span><span class="n">png</span><span class="p">;</span><span class="n">bgimg_pressed</span><span class="o">=</span><span class="n">button_pressed</span><span class="p">.</span><span class="n">png</span><span class="p">;</span><span class="n">border</span><span class="o">=</span><span class="kc">false</span><span class="p">]</span>
+<span class="n">style</span><span class="p">[</span><span class="n">btn_exit</span><span class="p">;</span><span class="n">bgimg</span><span class="o">=</span><span class="p">;</span><span class="n">bgimg_pressed</span><span class="o">=</span><span class="p">;</span><span class="n">border</span><span class="o">=</span><span class="p">;</span><span class="n">bgcolor</span><span class="o">=</span><span class="n">red</span><span class="p">]</span>
+</code></pre></div>
+
+
+<h3 id="supported-element-types">Supported Element Types<a class="headerlink" href="#supported-element-types" title="Permanent link">&para;</a></h3>
+<p>Some types may inherit styles from parent types.</p>
+<ul>
+<li>animated_image, inherits from image</li>
+<li>button</li>
+<li>button_exit, inherits from button</li>
+<li>checkbox</li>
+<li>scrollbar</li>
+<li>table</li>
+<li>textlist</li>
+<li>dropdown</li>
+<li>field</li>
+<li>pwdfield, inherits from field</li>
+<li>textarea</li>
+<li>label</li>
+<li>vertlabel, inherits from field</li>
+<li>image_button</li>
+<li>item_image_button</li>
+<li>tabheader</li>
+</ul>
+<h3 id="valid-properties">Valid Properties<a class="headerlink" href="#valid-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>animated_image<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+</ul>
+</li>
+<li>box<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.<ul>
+<li>Default to false in formspec_version version 3 or higher</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>button, button_exit, image_button, item_image_button<ul>
+<li>alpha - boolean, whether to draw alpha in bgimg. Default true.</li>
+<li>bgcolor - color, sets button tint.</li>
+<li>bgcolor_hovered - color when hovered. Defaults to a lighter bgcolor when not provided.</li>
+<li>bgcolor_pressed - color when pressed. Defaults to a darker bgcolor when not provided.</li>
+<li>bgimg - standard background image. Defaults to none.</li>
+<li>bgimg_hovered - background image when hovered. Defaults to bgimg when not provided.</li>
+<li>bgimg_middle - Makes the bgimg textures render in 9-sliced mode and defines the middle rect.
+                 See background9[] documentation for more details</li>
+<li>bgimg_pressed - background image when pressed. Defaults to bgimg when not provided.</li>
+<li>border - boolean, draw border. Set to false to hide the bevelled button pane. Default true.</li>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+<li>textcolor - color, default white.</li>
+</ul>
+</li>
+<li>checkbox<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+</ul>
+</li>
+<li>scrollbar<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+</ul>
+</li>
+<li>table, textlist<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+</ul>
+</li>
+<li>dropdown<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+</ul>
+</li>
+<li>field, pwdfield, textarea<ul>
+<li>border - set to false to hide the textbox background and border. Default true.</li>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+<li>textcolor - color. Default white.</li>
+</ul>
+</li>
+<li>image<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.<ul>
+<li>Default to false in formspec_version version 3 or higher</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>item_image<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds. Default to false.</li>
+</ul>
+</li>
+<li>label, vertlabel<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+</ul>
+</li>
+<li>image_button (additional properties)<ul>
+<li>fgimg - standard image. Defaults to none.</li>
+<li>fgimg_hovered - image when hovered. Defaults to fgimg when not provided.</li>
+<li>fgimg_pressed - image when pressed. Defaults to fgimg when not provided.</li>
+<li>NOTE: The parameters of any given image_button will take precedence over fgimg/fgimg_pressed</li>
+</ul>
+</li>
+<li>tabheader<ul>
+<li>noclip - boolean, set to true to allow the element to exceed formspec bounds.</li>
+<li>textcolor - color. Default white.</li>
+</ul>
+</li>
+</ul>
+<h3 id="valid-states">Valid States<a class="headerlink" href="#valid-states" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>all elements</em><ul>
+<li>default - Equivalent to providing no states</li>
+</ul>
+</li>
+<li>button, button_exit, image_button, item_image_button<ul>
+<li>hovered - Active when the mouse is hovering over the element</li>
+<li>pressed - Active when the button is pressed</li>
+</ul>
+</li>
+</ul>
+<h2 id="markup-language">Markup Language<a class="headerlink" href="#markup-language" title="Permanent link">&para;</a></h2>
+<p>Markup language used in <code>hypertext[]</code> elements uses tags that look like HTML tags.
+The markup language is currently unstable and subject to change. Use with caution.
+Some tags can enclose text, they open with <code>&lt;tagname&gt;</code> and close with <code>&lt;/tagname&gt;</code>.
+Tags can have attributes, in that case, attributes are in the opening tag in
+form of a key/value separated with equal signs. Attribute values should not be quoted.</p>
+<p>These are the technically basic tags but see below for usual tags. Base tags are:</p>
+<p><code>&lt;style color=... font=... size=...&gt;...&lt;/style&gt;</code></p>
+<p>Changes the style of the text.</p>
+<ul>
+<li><code>color</code>: Text color. Given color is a <code>colorspec</code>.</li>
+<li><code>size</code>: Text size.</li>
+<li><code>font</code>: Text font (<code>mono</code> or <code>normal</code>).</li>
+</ul>
+<p><code>&lt;global background=... margin=... valign=... color=... hovercolor=... size=... font=... halign=... &gt;</code></p>
+<p>Sets global style.</p>
+<p>Global only styles:
+* <code>background</code>: Text background, a <code>colorspec</code> or <code>none</code>.
+* <code>margin</code>: Page margins in pixel.
+* <code>valign</code>: Text vertical alignment (<code>top</code>, <code>middle</code>, <code>bottom</code>).</p>
+<p>Inheriting styles (affects child elements):
+* <code>color</code>: Default text color. Given color is a <code>colorspec</code>.
+* <code>hovercolor</code>: Color of <action> tags when mouse is over.
+* <code>size</code>: Default text size.
+* <code>font</code>: Default text font (<code>mono</code> or <code>normal</code>).
+* <code>halign</code>: Default text horizontal alignment (<code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>).</p>
+<p>This tag needs to be placed only once as it changes the global settings of the
+text. Anyway, if several tags are placed, each changed will be made in the order
+tags appear.</p>
+<p><code>&lt;tag name=... color=... hovercolor=... font=... size=...&gt;</code></p>
+<p>Defines or redefines tag style. This can be used to define new tags.
+* <code>name</code>: Name of the tag to define or change.
+* <code>color</code>: Text color. Given color is a <code>colorspec</code>.
+* <code>hovercolor</code>: Text color when element hovered (only for <code>action</code> tags). Given color is a <code>colorspec</code>.
+* <code>size</code>: Text size.
+* <code>font</code>: Text font (<code>mono</code> or <code>normal</code>).</p>
+<p>Following tags are the usual tags for text layout. They are defined by default.
+Other tags can be added using <code>&lt;tag ...&gt;</code> tag.</p>
+<p><code>&lt;normal&gt;...&lt;/normal&gt;</code>: Normal size text</p>
+<p><code>&lt;big&gt;...&lt;/big&gt;</code>: Big text</p>
+<p><code>&lt;bigger&gt;...&lt;/bigger&gt;</code>: Bigger text</p>
+<p><code>&lt;center&gt;...&lt;/center&gt;</code>: Centered text</p>
+<p><code>&lt;left&gt;...&lt;/left&gt;</code>: Left-aligned text</p>
+<p><code>&lt;right&gt;...&lt;/right&gt;</code>: Right-aligned text</p>
+<p><code>&lt;justify&gt;...&lt;/justify&gt;</code>: Justified text</p>
+<p><code>&lt;mono&gt;...&lt;/mono&gt;</code>: Monospaced font</p>
+<p><code>&lt;b&gt;...&lt;/b&gt;</code>, <code>&lt;i&gt;...&lt;/i&gt;</code>, <code>&lt;u&gt;...&lt;/u&gt;</code>: Bold, italic, underline styles.</p>
+<p><code>&lt;action name=...&gt;...&lt;/action&gt;</code></p>
+<p>Make that text a clickable text triggering an action.</p>
+<ul>
+<li><code>name</code>: Name of the action (mandatory).</li>
+</ul>
+<p>When clicked, the formspec is send to the server. The value of the text field
+sent to <code>on_player_receive_fields</code> will be "action:" concatenated to the action
+name.</p>
+<p><code>&lt;img name=... float=... width=... height=...&gt;</code></p>
+<p>Draws an image which is present in the client media cache.</p>
+<ul>
+<li><code>name</code>: Name of the texture (mandatory).</li>
+<li><code>float</code>: If present, makes the image floating (<code>left</code> or <code>right</code>).</li>
+<li><code>width</code>: Force image width instead of taking texture width.</li>
+<li><code>height</code>: Force image height instead of taking texture height.</li>
+</ul>
+<p>If only width or height given, texture aspect is kept.</p>
+<p><code>&lt;item name=... float=... width=... height=... rotate=...&gt;</code></p>
+<p>Draws an item image.</p>
+<ul>
+<li><code>name</code>: Item string of the item to draw (mandatory).</li>
+<li><code>float</code>: If present, makes the image floating (<code>left</code> or <code>right</code>).</li>
+<li><code>width</code>: Item image width.</li>
+<li><code>height</code>: Item image height.</li>
+<li><code>rotate</code>: Rotate item image if set to <code>yes</code> or <code>X,Y,Z</code>. X, Y and Z being
+rotation speeds in percent of standard speed (-1000 to 1000). Works only if
+<code>inventory_items_animations</code> is set to true.</li>
+<li><code>angle</code>: Angle in which the item image is shown. Value has <code>X,Y,Z</code> form.
+X, Y and Z being angles around each three axes. Works only if
+<code>inventory_items_animations</code> is set to true.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../inventory/index.html" class="btn btn-neutral float-right" title="Inventory">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../metadata/index.html" class="btn btn-neutral" title="Metadata"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../metadata/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../inventory/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/formspec/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

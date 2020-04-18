@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/textures/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Textures - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Textures";
+    var mkdocs_page_input_path = "textures.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Textures</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#texture-modifiers">Texture modifiers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#texture-overlaying">Texture overlaying</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texture-grouping">Texture grouping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#escaping">Escaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced-texture-modifiers">Advanced texture modifiers</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#crack">Crack</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#combinewxhx1y1file1x2y2file2">[combine:&lt;w&gt;x&lt;h&gt;:&lt;x1&gt;,&lt;y1&gt;=&lt;file1&gt;:&lt;x2&gt;,&lt;y2&gt;=&lt;file2&gt;:...</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resizewxh">[resize:&lt;w&gt;x&lt;h&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#opacityr">[opacity:&lt;r&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#invertmode">[invert:&lt;mode&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#brighten">[brighten</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#noalpha">[noalpha</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#makealphargb">[makealpha:&lt;r&gt;,&lt;g&gt;,&lt;b&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#transformt">[transform&lt;t&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inventorycubetopleftright">[inventorycube{&lt;top&gt;{&lt;left&gt;{&lt;right&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lowpartpercentfile">[lowpart:&lt;percent&gt;:&lt;file&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#verticalframetn">[verticalframe:&lt;t&gt;:&lt;n&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#maskfile">[mask:&lt;file&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sheetwxhxy">[sheet:&lt;w&gt;x&lt;h&gt;:&lt;x&gt;,&lt;y&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#colorizecolorratio">[colorize:&lt;color&gt;:&lt;ratio&gt;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#multiplycolor">[multiply:&lt;color&gt;</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware-coloring">Hardware coloring</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#static-coloring">Static coloring</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#global-color">Global color</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tile-color">Tile color</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#palettes">Palettes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#palette-indexing">Palette indexing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-palettes-with-items">Using palettes with items</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#linking-palettes-with-nodes">Linking palettes with nodes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#conversion-between-nodes-in-the-inventory-and-on-the-map">Conversion between nodes in the inventory and on the map</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#colored-items-in-craft-recipes">Colored items in craft recipes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#soft-texture-overlay">Soft texture overlay</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Textures</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="textures">Textures<a class="headerlink" href="#textures" title="Permanent link">&para;</a></h1>
+<p>Mods should generally prefix their textures with <code>modname_</code>, e.g. given
+the mod name <code>foomod</code>, a texture could be called:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">foomod_foothing</span><span class="p">.</span><span class="n">png</span>
+</code></pre></div>
+
+
+<p>Textures are referred to by their complete name, or alternatively by
+stripping out the file extension:</p>
+<ul>
+<li>e.g. <code>foomod_foothing.png</code></li>
+<li>e.g. <code>foomod_foothing</code></li>
+</ul>
+<h2 id="texture-modifiers">Texture modifiers<a class="headerlink" href="#texture-modifiers" title="Permanent link">&para;</a></h2>
+<p>There are various texture modifiers that can be used
+to generate textures on-the-fly.</p>
+<h3 id="texture-overlaying">Texture overlaying<a class="headerlink" href="#texture-overlaying" title="Permanent link">&para;</a></h3>
+<p>Textures can be overlaid by putting a <code>^</code> between them.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_dirt</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="n">default_grass_side</span><span class="p">.</span><span class="n">png</span>
+</code></pre></div>
+
+
+<p><code>default_grass_side.png</code> is overlaid over <code>default_dirt.png</code>.
+The texture with the lower resolution will be automatically upscaled to
+the higher resolution texture.</p>
+<h3 id="texture-grouping">Texture grouping<a class="headerlink" href="#texture-grouping" title="Permanent link">&para;</a></h3>
+<p>Textures can be grouped together by enclosing them in <code>(</code> and <code>)</code>.</p>
+<p>Example: <code>cobble.png^(thing1.png^thing2.png)</code></p>
+<p>A texture for <code>thing1.png^thing2.png</code> is created and the resulting
+texture is overlaid on top of <code>cobble.png</code>.</p>
+<h3 id="escaping">Escaping<a class="headerlink" href="#escaping" title="Permanent link">&para;</a></h3>
+<p>Modifiers that accept texture names (e.g. <code>[combine</code>) accept escaping to allow
+passing complex texture names as arguments. Escaping is done with backslash and
+is required for <code>^</code> and <code>:</code>.</p>
+<p>Example: <code>cobble.png^[lowpart:50:color.png\^[mask\:trans.png</code></p>
+<p>The lower 50 percent of <code>color.png^[mask:trans.png</code> are overlaid
+on top of <code>cobble.png</code>.</p>
+<h3 id="advanced-texture-modifiers">Advanced texture modifiers<a class="headerlink" href="#advanced-texture-modifiers" title="Permanent link">&para;</a></h3>
+<h4 id="crack">Crack<a class="headerlink" href="#crack" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>[crack:&lt;n&gt;:&lt;p&gt;</code></li>
+<li><code>[cracko:&lt;n&gt;:&lt;p&gt;</code></li>
+<li><code>[crack:&lt;t&gt;:&lt;n&gt;:&lt;p&gt;</code></li>
+<li><code>[cracko:&lt;t&gt;:&lt;n&gt;:&lt;p&gt;</code></li>
+</ul>
+<p>Parameters:</p>
+<ul>
+<li><code>&lt;t&gt;</code>: tile count (in each direction)</li>
+<li><code>&lt;n&gt;</code>: animation frame count</li>
+<li><code>&lt;p&gt;</code>: current animation frame</li>
+</ul>
+<p>Draw a step of the crack animation on the texture.
+<code>crack</code> draws it normally, while <code>cracko</code> lays it over, keeping transparent
+pixels intact.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_cobble</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">crack</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">1</span>
+</code></pre></div>
+
+
+<h4 id="combinewxhx1y1file1x2y2file2"><code>[combine:&lt;w&gt;x&lt;h&gt;:&lt;x1&gt;,&lt;y1&gt;=&lt;file1&gt;:&lt;x2&gt;,&lt;y2&gt;=&lt;file2&gt;:...</code><a class="headerlink" href="#combinewxhx1y1file1x2y2file2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>&lt;w&gt;</code>: width</li>
+<li><code>&lt;h&gt;</code>: height</li>
+<li><code>&lt;x&gt;</code>: x position</li>
+<li><code>&lt;y&gt;</code>: y position</li>
+<li><code>&lt;file&gt;</code>: texture to combine</li>
+</ul>
+<p>Creates a texture of size <code>&lt;w&gt;</code> times <code>&lt;h&gt;</code> and blits the listed files to their
+specified coordinates.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">combine</span><span class="p">:</span><span class="mi">16</span><span class="n">x32</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="o">=</span><span class="n">default_cobble</span><span class="p">.</span><span class="n">png</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="o">=</span><span class="n">default_wood</span><span class="p">.</span><span class="n">png</span>
+</code></pre></div>
+
+
+<h4 id="resizewxh"><code>[resize:&lt;w&gt;x&lt;h&gt;</code><a class="headerlink" href="#resizewxh" title="Permanent link">&para;</a></h4>
+<p>Resizes the texture to the given dimensions.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_sandstone</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">resize</span><span class="p">:</span><span class="mi">16</span><span class="n">x16</span>
+</code></pre></div>
+
+
+<h4 id="opacityr"><code>[opacity:&lt;r&gt;</code><a class="headerlink" href="#opacityr" title="Permanent link">&para;</a></h4>
+<p>Makes the base image transparent according to the given ratio.</p>
+<p><code>r</code> must be between 0 (transparent) and 255 (opaque).</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_sandstone</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">opacity</span><span class="p">:</span><span class="mi">127</span>
+</code></pre></div>
+
+
+<h4 id="invertmode"><code>[invert:&lt;mode&gt;</code><a class="headerlink" href="#invertmode" title="Permanent link">&para;</a></h4>
+<p>Inverts the given channels of the base image.
+Mode may contain the characters "r", "g", "b", "a".
+Only the channels that are mentioned in the mode string will be inverted.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_apple</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">invert</span><span class="p">:</span><span class="n">rgb</span>
+</code></pre></div>
+
+
+<h4 id="brighten"><code>[brighten</code><a class="headerlink" href="#brighten" title="Permanent link">&para;</a></h4>
+<p>Brightens the texture.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">tnt_tnt_side</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">brighten</span>
+</code></pre></div>
+
+
+<h4 id="noalpha"><code>[noalpha</code><a class="headerlink" href="#noalpha" title="Permanent link">&para;</a></h4>
+<p>Makes the texture completely opaque.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_leaves</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">noalpha</span>
+</code></pre></div>
+
+
+<h4 id="makealphargb"><code>[makealpha:&lt;r&gt;,&lt;g&gt;,&lt;b&gt;</code><a class="headerlink" href="#makealphargb" title="Permanent link">&para;</a></h4>
+<p>Convert one color to transparency.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_cobble</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">makealpha</span><span class="p">:</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span>
+</code></pre></div>
+
+
+<h4 id="transformt"><code>[transform&lt;t&gt;</code><a class="headerlink" href="#transformt" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>&lt;t&gt;</code>: transformation(s) to apply</li>
+</ul>
+<p>Rotates and/or flips the image.</p>
+<p><code>&lt;t&gt;</code> can be a number (between 0 and 7) or a transform name.
+Rotations are counter-clockwise.</p>
+<div class="codehilite"><pre><span></span><code><span class="mi">0</span>  <span class="n">I</span>      <span class="n">identity</span>
+<span class="mi">1</span>  <span class="n">R90</span>    <span class="n">rotate</span> <span class="n">by</span> <span class="mi">90</span> <span class="n">degrees</span>
+<span class="mi">2</span>  <span class="n">R180</span>   <span class="n">rotate</span> <span class="n">by</span> <span class="mi">180</span> <span class="n">degrees</span>
+<span class="mi">3</span>  <span class="n">R270</span>   <span class="n">rotate</span> <span class="n">by</span> <span class="mi">270</span> <span class="n">degrees</span>
+<span class="mi">4</span>  <span class="n">FX</span>     <span class="n">flip</span> <span class="n">X</span>
+<span class="mi">5</span>  <span class="n">FXR90</span>  <span class="n">flip</span> <span class="n">X</span> <span class="kr">then</span> <span class="n">rotate</span> <span class="n">by</span> <span class="mi">90</span> <span class="n">degrees</span>
+<span class="mi">6</span>  <span class="n">FY</span>     <span class="n">flip</span> <span class="n">Y</span>
+<span class="mi">7</span>  <span class="n">FYR90</span>  <span class="n">flip</span> <span class="n">Y</span> <span class="kr">then</span> <span class="n">rotate</span> <span class="n">by</span> <span class="mi">90</span> <span class="n">degrees</span>
+</code></pre></div>
+
+
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_stone</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">transformFXR90</span>
+</code></pre></div>
+
+
+<h4 id="inventorycubetopleftright"><code>[inventorycube{&lt;top&gt;{&lt;left&gt;{&lt;right&gt;</code><a class="headerlink" href="#inventorycubetopleftright" title="Permanent link">&para;</a></h4>
+<p>Escaping does not apply here and <code>^</code> is replaced by <code>&amp;</code> in texture names
+instead.</p>
+<p>Create an inventory cube texture using the side textures.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">inventorycube</span><span class="p">{</span><span class="n">grass</span><span class="p">.</span><span class="n">png</span><span class="p">{</span><span class="n">dirt</span><span class="p">.</span><span class="n">png</span><span class="o">&amp;</span><span class="n">grass_side</span><span class="p">.</span><span class="n">png</span><span class="p">{</span><span class="n">dirt</span><span class="p">.</span><span class="n">png</span><span class="o">&amp;</span><span class="n">grass_side</span><span class="p">.</span><span class="n">png</span>
+</code></pre></div>
+
+
+<p>Creates an inventorycube with <code>grass.png</code>, <code>dirt.png^grass_side.png</code> and
+<code>dirt.png^grass_side.png</code> textures</p>
+<h4 id="lowpartpercentfile"><code>[lowpart:&lt;percent&gt;:&lt;file&gt;</code><a class="headerlink" href="#lowpartpercentfile" title="Permanent link">&para;</a></h4>
+<p>Blit the lower <code>&lt;percent&gt;</code>% part of <code>&lt;file&gt;</code> on the texture.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">base</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">lowpart</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="n">overlay</span><span class="p">.</span><span class="n">png</span>
+</code></pre></div>
+
+
+<h4 id="verticalframetn"><code>[verticalframe:&lt;t&gt;:&lt;n&gt;</code><a class="headerlink" href="#verticalframetn" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>&lt;t&gt;</code>: animation frame count</li>
+<li><code>&lt;n&gt;</code>: current animation frame</li>
+</ul>
+<p>Crops the texture to a frame of a vertical animation.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">default_torch_animated</span><span class="p">.</span><span class="n">png</span><span class="o">^</span><span class="p">[</span><span class="n">verticalframe</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">8</span>
+</code></pre></div>
+
+
+<h4 id="maskfile"><code>[mask:&lt;file&gt;</code><a class="headerlink" href="#maskfile" title="Permanent link">&para;</a></h4>
+<p>Apply a mask to the base image.</p>
+<p>The mask is applied using binary AND.</p>
+<h4 id="sheetwxhxy"><code>[sheet:&lt;w&gt;x&lt;h&gt;:&lt;x&gt;,&lt;y&gt;</code><a class="headerlink" href="#sheetwxhxy" title="Permanent link">&para;</a></h4>
+<p>Retrieves a tile at position x,y from the base image
+which it assumes to be a tilesheet with dimensions w,h.</p>
+<h4 id="colorizecolorratio"><code>[colorize:&lt;color&gt;:&lt;ratio&gt;</code><a class="headerlink" href="#colorizecolorratio" title="Permanent link">&para;</a></h4>
+<p>Colorize the textures with the given color.
+<code>&lt;color&gt;</code> is specified as a <code>ColorString</code>.
+<code>&lt;ratio&gt;</code> is an int ranging from 0 to 255 or the word "<code>alpha</code>".  If
+it is an int, then it specifies how far to interpolate between the
+colors where 0 is only the texture color and 255 is only <code>&lt;color&gt;</code>. If
+omitted, the alpha of <code>&lt;color&gt;</code> will be used as the ratio.  If it is
+the word "<code>alpha</code>", then each texture pixel will contain the RGB of
+<code>&lt;color&gt;</code> and the alpha of <code>&lt;color&gt;</code> multiplied by the alpha of the
+texture pixel.</p>
+<h4 id="multiplycolor"><code>[multiply:&lt;color&gt;</code><a class="headerlink" href="#multiplycolor" title="Permanent link">&para;</a></h4>
+<p>Multiplies texture colors with the given color.
+<code>&lt;color&gt;</code> is specified as a <code>ColorString</code>.
+Result is more like what you'd expect if you put a color on top of another
+color, meaning white surfaces get a lot of your new color while black parts
+don't change very much.</p>
+<h2 id="hardware-coloring">Hardware coloring<a class="headerlink" href="#hardware-coloring" title="Permanent link">&para;</a></h2>
+<p>The goal of hardware coloring is to simplify the creation of
+colorful nodes. If your textures use the same pattern, and they only
+differ in their color (like colored wool blocks), you can use hardware
+coloring instead of creating and managing many texture files.
+All of these methods use color multiplication (so a white-black texture
+with red coloring will result in red-black color).</p>
+<h3 id="static-coloring">Static coloring<a class="headerlink" href="#static-coloring" title="Permanent link">&para;</a></h3>
+<p>This method is useful if you wish to create nodes/items with
+the same texture, in different colors, each in a new node/item definition.</p>
+<h4 id="global-color">Global color<a class="headerlink" href="#global-color" title="Permanent link">&para;</a></h4>
+<p>When you register an item or node, set its <code>color</code> field (which accepts a
+<code>ColorSpec</code>) to the desired color.</p>
+<p>An <code>ItemStack</code>'s static color can be overwritten by the <code>color</code> metadata
+field. If you set that field to a <code>ColorString</code>, that color will be used.</p>
+<h4 id="tile-color">Tile color<a class="headerlink" href="#tile-color" title="Permanent link">&para;</a></h4>
+<p>Each tile may have an individual static color, which overwrites every
+other coloring method. To disable the coloring of a face,
+set its color to white (because multiplying with white does nothing).
+You can set the <code>color</code> property of the tiles in the node's definition
+if the tile is in table format.</p>
+<h3 id="palettes">Palettes<a class="headerlink" href="#palettes" title="Permanent link">&para;</a></h3>
+<p>For nodes and items which can have many colors, a palette is more
+suitable. A palette is a texture, which can contain up to 256 pixels.
+Each pixel is one possible color for the node/item.
+You can register one node/item, which can have up to 256 colors.</p>
+<h4 id="palette-indexing">Palette indexing<a class="headerlink" href="#palette-indexing" title="Permanent link">&para;</a></h4>
+<p>When using palettes, you always provide a pixel index for the given
+node or <code>ItemStack</code>. The palette is read from left to right and from
+top to bottom. If the palette has less than 256 pixels, then it is
+stretched to contain exactly 256 pixels (after arranging the pixels
+to one line). The indexing starts from 0.</p>
+<p>Examples:</p>
+<ul>
+<li>16x16 palette, index = 0: the top left corner</li>
+<li>16x16 palette, index = 4: the fifth pixel in the first row</li>
+<li>16x16 palette, index = 16: the pixel below the top left corner</li>
+<li>16x16 palette, index = 255: the bottom right corner</li>
+<li>2 (width) x 4 (height) palette, index = 31: the top left corner.
+  The palette has 8 pixels, so each pixel is stretched to 32 pixels,
+  to ensure the total 256 pixels.</li>
+<li>2x4 palette, index = 32: the top right corner</li>
+<li>2x4 palette, index = 63: the top right corner</li>
+<li>2x4 palette, index = 64: the pixel below the top left corner</li>
+</ul>
+<h4 id="using-palettes-with-items">Using palettes with items<a class="headerlink" href="#using-palettes-with-items" title="Permanent link">&para;</a></h4>
+<p>When registering an item, set the item definition's <code>palette</code> field to
+a texture. You can also use texture modifiers.</p>
+<p>The <code>ItemStack</code>'s color depends on the <code>palette_index</code> field of the
+stack's metadata. <code>palette_index</code> is an integer, which specifies the
+index of the pixel to use.</p>
+<h4 id="linking-palettes-with-nodes">Linking palettes with nodes<a class="headerlink" href="#linking-palettes-with-nodes" title="Permanent link">&para;</a></h4>
+<p>When registering a node, set the item definition's <code>palette</code> field to
+a texture. You can also use texture modifiers.
+The node's color depends on its <code>param2</code>, so you also must set an
+appropriate <code>paramtype2</code>:</p>
+<ul>
+<li><code>paramtype2 = "color"</code> for nodes which use their full <code>param2</code> for
+  palette indexing. These nodes can have 256 different colors.
+  The palette should contain 256 pixels.</li>
+<li><code>paramtype2 = "colorwallmounted"</code> for nodes which use the first
+  five bits (most significant) of <code>param2</code> for palette indexing.
+  The remaining three bits are describing rotation, as in <code>wallmounted</code>
+  paramtype2. Division by 8 yields the palette index (without stretching the
+  palette). These nodes can have 32 different colors, and the palette
+  should contain 32 pixels.
+  Examples:<ul>
+<li><code>param2 = 17</code> is 2 * 8 + 1, so the rotation is 1 and the third (= 2 + 1)
+  pixel will be picked from the palette.</li>
+<li><code>param2 = 35</code> is 4 * 8 + 3, so the rotation is 3 and the fifth (= 4 + 1)
+  pixel will be picked from the palette.</li>
+</ul>
+</li>
+<li><code>paramtype2 = "colorfacedir"</code> for nodes which use the first
+  three bits of <code>param2</code> for palette indexing. The remaining
+  five bits are describing rotation, as in <code>facedir</code> paramtype2.
+  Division by 32 yields the palette index (without stretching the
+  palette). These nodes can have 8 different colors, and the
+  palette should contain 8 pixels.
+  Examples:<ul>
+<li><code>param2 = 17</code> is 0 * 32 + 17, so the rotation is 17 and the
+  first (= 0 + 1) pixel will be picked from the palette.</li>
+<li><code>param2 = 35</code> is 1 * 32 + 3, so the rotation is 3 and the
+  second (= 1 + 1) pixel will be picked from the palette.</li>
+</ul>
+</li>
+</ul>
+<p>To colorize a node on the map, set its <code>param2</code> value (according
+to the node's paramtype2).</p>
+<h3 id="conversion-between-nodes-in-the-inventory-and-on-the-map">Conversion between nodes in the inventory and on the map<a class="headerlink" href="#conversion-between-nodes-in-the-inventory-and-on-the-map" title="Permanent link">&para;</a></h3>
+<p>Static coloring is the same for both cases, there is no need
+for conversion.</p>
+<p>If the <code>ItemStack</code>'s metadata contains the <code>color</code> field, it will be
+lost on placement, because nodes on the map can only use palettes.</p>
+<p>If the <code>ItemStack</code>'s metadata contains the <code>palette_index</code> field, it is
+automatically transferred between node and item forms by the engine,
+when a player digs or places a colored node.
+You can disable this feature by setting the <code>drop</code> field of the node
+to itself (without metadata).
+To transfer the color to a special drop, you need a drop table.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">register_node</span><span class="p">(</span><span class="s2">&quot;mod:stone&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Stone&quot;</span><span class="p">,</span>
+    <span class="n">tiles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default_stone.png&quot;</span><span class="p">},</span>
+    <span class="n">paramtype2</span> <span class="o">=</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="s2">&quot;palette.png&quot;</span><span class="p">,</span>
+    <span class="n">drop</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">-- assume that mod:cobblestone also has the same palette</span>
+            <span class="p">{</span><span class="n">items</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mod:cobblestone&quot;</span><span class="p">},</span> <span class="n">inherit_color</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">},</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+
+
+<h3 id="colored-items-in-craft-recipes">Colored items in craft recipes<a class="headerlink" href="#colored-items-in-craft-recipes" title="Permanent link">&para;</a></h3>
+<p>Craft recipes only support item strings, but fortunately item strings
+can also contain metadata. Example craft recipe registration:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">register_craft</span><span class="p">({</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">minetest</span><span class="p">.</span><span class="n">itemstring_with_palette</span><span class="p">(</span><span class="s2">&quot;wool:block&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;shapeless&quot;</span><span class="p">,</span>
+    <span class="n">recipe</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;wool:block&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dye:red&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</code></pre></div>
+
+
+<p>To set the <code>color</code> field, you can use <code>minetest.itemstring_with_color</code>.</p>
+<p>Metadata field filtering in the <code>recipe</code> field are not supported yet,
+so the craft output is independent of the color of the ingredients.</p>
+<h2 id="soft-texture-overlay">Soft texture overlay<a class="headerlink" href="#soft-texture-overlay" title="Permanent link">&para;</a></h2>
+<p>Sometimes hardware coloring is not enough, because it affects the
+whole tile. Soft texture overlays were added to Minetest to allow
+the dynamic coloring of only specific parts of the node's texture.
+For example a grass block may have colored grass, while keeping the
+dirt brown.</p>
+<p>These overlays are 'soft', because unlike texture modifiers, the layers
+are not merged in the memory, but they are simply drawn on top of each
+other. This allows different hardware coloring, but also means that
+tiles with overlays are drawn slower. Using too much overlays might
+cause FPS loss.</p>
+<p>For inventory and wield images you can specify overlays which
+hardware coloring does not modify. You have to set <code>inventory_overlay</code>
+and <code>wield_overlay</code> fields to an image name.</p>
+<p>To define a node overlay, simply set the <code>overlay_tiles</code> field of the node
+definition. These tiles are defined in the same way as plain tiles:
+they can have a texture name, color etc.
+To skip one face, set that overlay tile to an empty string.</p>
+<p>Example (colored grass block):</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">register_node</span><span class="p">(</span><span class="s2">&quot;default:dirt_with_grass&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Dirt with Grass&quot;</span><span class="p">,</span>
+    <span class="c1">-- Regular tiles, as usual</span>
+    <span class="c1">-- The dirt tile disables palette coloring</span>
+    <span class="n">tiles</span> <span class="o">=</span> <span class="p">{{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;default_grass.png&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;default_dirt.png&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">}},</span>
+    <span class="c1">-- Overlay tiles: define them in the same style</span>
+    <span class="c1">-- The top and bottom tile does not have overlay</span>
+    <span class="n">overlay_tiles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;default_grass_side.png&quot;</span><span class="p">,</span> <span class="n">tileable_vertical</span> <span class="o">=</span> <span class="kc">false</span><span class="p">}},</span>
+    <span class="c1">-- Global color, used in inventory</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
+    <span class="c1">-- Palette in the world</span>
+    <span class="n">paramtype2</span> <span class="o">=</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="s2">&quot;default_foilage.png&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sounds/index.html" class="btn btn-neutral float-right" title="Sounds">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../aliases/index.html" class="btn btn-neutral" title="Aliases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../aliases/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../sounds/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/textures/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

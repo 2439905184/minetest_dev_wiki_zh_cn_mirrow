@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/class-reference/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Class reference - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Class reference";
+    var mkdocs_page_input_path = "class-reference.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Class reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#areastore">AreaStore</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invref">InvRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_1">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#itemstack">ItemStack</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_2">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#itemstackmetaref">ItemStackMetaRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_3">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metadataref">MetaDataRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_4">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modchannel">ModChannel</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_5">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nodemetaref">NodeMetaRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_6">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nodetimerref">NodeTimerRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_7">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#objectref">ObjectRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#advice-on-handling-objectrefs">Advice on handling ObjectRefs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_8">Methods</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#lua-entity-only-no-op-for-other-objects">Lua entity only (no-op for other objects)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#player-only-no-op-for-other-objects">Player only (no-op for other objects)</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pcgrandom">PcgRandom</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_9">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#perlinnoise">PerlinNoise</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_10">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#perlinnoisemap">PerlinNoiseMap</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_11">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#playermetaref">PlayerMetaRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_12">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pseudorandom">PseudoRandom</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_13">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#raycast">Raycast</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_14">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#securerandom">SecureRandom</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_15">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_16">Methods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#format">Format</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#storageref">StorageRef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_17">Methods</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Class reference</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="class-reference">Class reference<a class="headerlink" href="#class-reference" title="Permanent link">&para;</a></h1>
+<p>Sorted alphabetically.</p>
+<h2 id="areastore"><code>AreaStore</code><a class="headerlink" href="#areastore" title="Permanent link">&para;</a></h2>
+<p>A fast access data structure to store areas, and find areas near a given
+position or area.
+Every area has a <code>data</code> string attribute to store additional information.
+You can create an empty <code>AreaStore</code> by calling <code>AreaStore()</code>, or
+<code>AreaStore(type_name)</code>. The mod decides where to save and load AreaStore.
+If you chose the parameter-less constructor, a fast implementation will be
+automatically chosen for you.</p>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>get_area(id, include_borders, include_data)</code></p>
+<ul>
+<li>Returns the area information about the specified ID.</li>
+<li>Returned values are either of these:<div class="codehilite"><pre><span></span><code><span class="kc">nil</span>  <span class="c1">-- Area not found</span>
+<span class="kc">true</span> <span class="c1">-- Without `include_borders` and `include_data`</span>
+<span class="p">{</span>
+    <span class="n">min</span> <span class="o">=</span> <span class="n">pos</span><span class="p">,</span> <span class="n">max</span> <span class="o">=</span> <span class="n">pos</span> <span class="c1">-- `include_borders == true`</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">string</span>        <span class="c1">-- `include_data == true`</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+</li>
+</ul>
+</li>
+<li>
+<p><code>get_areas_for_pos(pos, include_borders, include_data)</code></p>
+<ul>
+<li>Returns all areas as table, indexed by the area ID.</li>
+<li>Table values: see <code>get_area</code>.</li>
+</ul>
+</li>
+<li><code>get_areas_in_area(edge1, edge2, accept_overlap, include_borders, include_data)</code><ul>
+<li>Returns all areas that contain all nodes inside the area specified by <code>edge1</code>
+  and <code>edge2</code> (inclusive).</li>
+<li><code>accept_overlap</code>: if <code>true</code>, areas are returned that have nodes in
+  common (intersect) with the specified area.</li>
+<li>Returns the same values as <code>get_areas_for_pos</code>.</li>
+</ul>
+</li>
+<li><code>insert_area(edge1, edge2, data, [id])</code>: inserts an area into the store.<ul>
+<li>Returns the new area's ID, or nil if the insertion failed.</li>
+<li>The (inclusive) positions <code>edge1</code> and <code>edge2</code> describe the area.</li>
+<li><code>data</code> is a string stored with the area.</li>
+<li><code>id</code> (optional): will be used as the internal area ID if it is an unique
+  number between 0 and 2^32-2.</li>
+</ul>
+</li>
+<li><code>reserve(count)</code>: reserves resources for at most <code>count</code> many contained
+  areas.
+  Only needed for efficiency, and only some implementations profit.</li>
+<li><code>remove_area(id)</code>: removes the area with the given id from the store, returns
+  success.</li>
+<li><code>set_cache_params(params)</code>: sets params for the included prefiltering cache.
+  Calling invalidates the cache, so that its elements have to be newly
+  generated.<ul>
+<li>
+<p><code>params</code> is a table with the following fields:</p>
+<p>enabled = boolean,   -- Whether to enable, default true
+  block_radius = int,  -- The radius (in nodes) of the areas the cache
+                       -- generates prefiltered lists for, minimum 16,
+                       -- default 64
+  limit = int,         -- The cache size, minimum 20, default 1000
+* <code>to_string()</code>: Experimental. Returns area store serialized as a (binary)
+  string.
+* <code>to_file(filename)</code>: Experimental. Like <code>to_string()</code>, but writes the data to
+  a file.
+* <code>from_string(str)</code>: Experimental. Deserializes string and loads it into the
+  AreaStore.
+  Returns success and, optionally, an error message.
+* <code>from_file(filename)</code>: Experimental. Like <code>from_string()</code>, but reads the data
+  from a file.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="invref"><code>InvRef</code><a class="headerlink" href="#invref" title="Permanent link">&para;</a></h2>
+<p>An <code>InvRef</code> is a reference to an inventory.</p>
+<h3 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>is_empty(listname)</code>: return <code>true</code> if list is empty</li>
+<li><code>get_size(listname)</code>: get size of a list</li>
+<li><code>set_size(listname, size)</code>: set size of a list<ul>
+<li>returns <code>false</code> on error (e.g. invalid <code>listname</code> or <code>size</code>)</li>
+</ul>
+</li>
+<li><code>get_width(listname)</code>: get width of a list</li>
+<li><code>set_width(listname, width)</code>: set width of list; currently used for crafting</li>
+<li><code>get_stack(listname, i)</code>: get a copy of stack index <code>i</code> in list</li>
+<li><code>set_stack(listname, i, stack)</code>: copy <code>stack</code> to index <code>i</code> in list</li>
+<li><code>get_list(listname)</code>: return full list</li>
+<li><code>set_list(listname, list)</code>: set full list (size will not change)</li>
+<li><code>get_lists()</code>: returns list of inventory lists</li>
+<li><code>set_lists(lists)</code>: sets inventory lists (size will not change)</li>
+<li><code>add_item(listname, stack)</code>: add item somewhere in list, returns leftover
+  <code>ItemStack</code>.</li>
+<li><code>room_for_item(listname, stack):</code> returns <code>true</code> if the stack of items
+  can be fully added to the list</li>
+<li><code>contains_item(listname, stack, [match_meta])</code>: returns <code>true</code> if
+  the stack of items can be fully taken from the list.
+  If <code>match_meta</code> is false, only the items' names are compared
+  (default: <code>false</code>).</li>
+<li><code>remove_item(listname, stack)</code>: take as many items as specified from the
+  list, returns the items that were actually removed (as an <code>ItemStack</code>)
+  -- note that any item metadata is ignored, so attempting to remove a specific
+  unique item this way will likely remove the wrong one -- to do that use
+  <code>set_stack</code> with an empty <code>ItemStack</code>.</li>
+<li><code>get_location()</code>: returns a location compatible to
+  <code>minetest.get_inventory(location)</code>.<ul>
+<li>returns <code>{type="undefined"}</code> in case location is not known</li>
+</ul>
+</li>
+</ul>
+<h2 id="itemstack"><code>ItemStack</code><a class="headerlink" href="#itemstack" title="Permanent link">&para;</a></h2>
+<p>An <code>ItemStack</code> is a stack of items.</p>
+<p>It can be created via <code>ItemStack(x)</code>, where x is an <code>ItemStack</code>,
+an itemstring, a table or <code>nil</code>.</p>
+<h3 id="methods_2">Methods<a class="headerlink" href="#methods_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>is_empty()</code>: returns <code>true</code> if stack is empty.</li>
+<li><code>get_name()</code>: returns item name (e.g. <code>"default:stone"</code>).</li>
+<li><code>set_name(item_name)</code>: returns a boolean indicating whether the item was
+  cleared.</li>
+<li><code>get_count()</code>: Returns number of items on the stack.</li>
+<li><code>set_count(count)</code>: returns a boolean indicating whether the item was cleared<ul>
+<li><code>count</code>: number, unsigned 16 bit integer</li>
+</ul>
+</li>
+<li><code>get_wear()</code>: returns tool wear (<code>0</code>-<code>65535</code>), <code>0</code> for non-tools.</li>
+<li><code>set_wear(wear)</code>: returns boolean indicating whether item was cleared<ul>
+<li><code>wear</code>: number, unsigned 16 bit integer</li>
+</ul>
+</li>
+<li><code>get_meta()</code>: returns ItemStackMetaRef. See section for more details</li>
+<li><code>get_metadata()</code>: (DEPRECATED) Returns metadata (a string attached to an item
+  stack).</li>
+<li><code>set_metadata(metadata)</code>: (DEPRECATED) Returns true.</li>
+<li><code>get_description()</code>: returns the description shown in inventory list tooltips.</li>
+<li><code>clear()</code>: removes all items from the stack, making it empty.</li>
+<li><code>replace(item)</code>: replace the contents of this stack.<ul>
+<li><code>item</code> can also be an itemstring or table.</li>
+</ul>
+</li>
+<li><code>to_string()</code>: returns the stack in itemstring form.</li>
+<li><code>to_table()</code>: returns the stack in Lua table form.</li>
+<li><code>get_stack_max()</code>: returns the maximum size of the stack (depends on the
+  item).</li>
+<li><code>get_free_space()</code>: returns <code>get_stack_max() - get_count()</code>.</li>
+<li><code>is_known()</code>: returns <code>true</code> if the item name refers to a defined item type.</li>
+<li><code>get_definition()</code>: returns the item definition table.</li>
+<li><code>get_tool_capabilities()</code>: returns the digging properties of the item,
+  or those of the hand if none are defined for this item type</li>
+<li><code>add_wear(amount)</code><ul>
+<li>Increases wear by <code>amount</code> if the item is a tool</li>
+<li><code>amount</code>: number, integer</li>
+</ul>
+</li>
+<li><code>add_item(item)</code>: returns leftover <code>ItemStack</code><ul>
+<li>Put some item or stack onto this stack</li>
+</ul>
+</li>
+<li><code>item_fits(item)</code>: returns <code>true</code> if item or stack can be fully added to
+  this one.</li>
+<li><code>take_item(n)</code>: returns taken <code>ItemStack</code><ul>
+<li>Take (and remove) up to <code>n</code> items from this stack</li>
+<li><code>n</code>: number, default: <code>1</code></li>
+</ul>
+</li>
+<li><code>peek_item(n)</code>: returns taken <code>ItemStack</code><ul>
+<li>Copy (don't remove) up to <code>n</code> items from this stack</li>
+<li><code>n</code>: number, default: <code>1</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="itemstackmetaref"><code>ItemStackMetaRef</code><a class="headerlink" href="#itemstackmetaref" title="Permanent link">&para;</a></h2>
+<p>ItemStack metadata: reference extra data and functionality stored in a stack.
+Can be obtained via <code>item:get_meta()</code>.</p>
+<h3 id="methods_3">Methods<a class="headerlink" href="#methods_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All methods in MetaDataRef</li>
+<li><code>set_tool_capabilities([tool_capabilities])</code><ul>
+<li>Overrides the item's tool capabilities</li>
+<li>A nil value will clear the override data and restore the original
+  behavior.</li>
+</ul>
+</li>
+</ul>
+<h2 id="metadataref"><code>MetaDataRef</code><a class="headerlink" href="#metadataref" title="Permanent link">&para;</a></h2>
+<p>Base class used by [<code>StorageRef</code>], [<code>NodeMetaRef</code>], [<code>ItemStackMetaRef</code>],
+and [<code>PlayerMetaRef</code>].</p>
+<h3 id="methods_4">Methods<a class="headerlink" href="#methods_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>contains(key)</code>: Returns true if key present, otherwise false.<ul>
+<li>Returns <code>nil</code> when the MetaData is inexistent.</li>
+</ul>
+</li>
+<li><code>get(key)</code>: Returns <code>nil</code> if key not present, else the stored string.</li>
+<li><code>set_string(key, value)</code>: Value of <code>""</code> will delete the key.</li>
+<li><code>get_string(key)</code>: Returns <code>""</code> if key not present.</li>
+<li><code>set_int(key, value)</code></li>
+<li><code>get_int(key)</code>: Returns <code>0</code> if key not present.</li>
+<li><code>set_float(key, value)</code></li>
+<li><code>get_float(key)</code>: Returns <code>0</code> if key not present.</li>
+<li><code>to_table()</code>: returns <code>nil</code> or a table with keys:<ul>
+<li><code>fields</code>: key-value storage</li>
+<li><code>inventory</code>: <code>{list1 = {}, ...}}</code> (NodeMetaRef only)</li>
+</ul>
+</li>
+<li><code>from_table(nil or {})</code><ul>
+<li>Any non-table value will clear the metadata</li>
+<li>See [Node Metadata] for an example</li>
+<li>returns <code>true</code> on success</li>
+</ul>
+</li>
+<li><code>equals(other)</code><ul>
+<li>returns <code>true</code> if this metadata has the same key-value pairs as <code>other</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="modchannel"><code>ModChannel</code><a class="headerlink" href="#modchannel" title="Permanent link">&para;</a></h2>
+<p>An interface to use mod channels on client and server</p>
+<h3 id="methods_5">Methods<a class="headerlink" href="#methods_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>leave()</code>: leave the mod channel.<ul>
+<li>Server leaves channel <code>channel_name</code>.</li>
+<li>No more incoming or outgoing messages can be sent to this channel from
+  server mods.</li>
+<li>This invalidate all future object usage.</li>
+<li>Ensure you set mod_channel to nil after that to free Lua resources.</li>
+</ul>
+</li>
+<li><code>is_writeable()</code>: returns true if channel is writeable and mod can send over
+  it.</li>
+<li><code>send_all(message)</code>: Send <code>message</code> though the mod channel.<ul>
+<li>If mod channel is not writeable or invalid, message will be dropped.</li>
+<li>Message size is limited to 65535 characters by protocol.</li>
+</ul>
+</li>
+</ul>
+<h2 id="nodemetaref"><code>NodeMetaRef</code><a class="headerlink" href="#nodemetaref" title="Permanent link">&para;</a></h2>
+<p>Node metadata: reference extra data and functionality stored in a node.
+Can be obtained via <code>minetest.get_meta(pos)</code>.</p>
+<h3 id="methods_6">Methods<a class="headerlink" href="#methods_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All methods in MetaDataRef</li>
+<li><code>get_inventory()</code>: returns <code>InvRef</code></li>
+<li><code>mark_as_private(name or {name1, name2, ...})</code>: Mark specific vars as private
+  This will prevent them from being sent to the client. Note that the "private"
+  status will only be remembered if an associated key-value pair exists,
+  meaning it's best to call this when initializing all other meta (e.g.
+  <code>on_construct</code>).</li>
+</ul>
+<h2 id="nodetimerref"><code>NodeTimerRef</code><a class="headerlink" href="#nodetimerref" title="Permanent link">&para;</a></h2>
+<p>Node Timers: a high resolution persistent per-node timer.
+Can be gotten via <code>minetest.get_node_timer(pos)</code>.</p>
+<h3 id="methods_7">Methods<a class="headerlink" href="#methods_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>set(timeout,elapsed)</code><ul>
+<li>set a timer's state</li>
+<li><code>timeout</code> is in seconds, and supports fractional values (0.1 etc)</li>
+<li><code>elapsed</code> is in seconds, and supports fractional values (0.1 etc)</li>
+<li>will trigger the node's <code>on_timer</code> function after <code>(timeout - elapsed)</code>
+  seconds.</li>
+</ul>
+</li>
+<li><code>start(timeout)</code><ul>
+<li>start a timer</li>
+<li>equivalent to <code>set(timeout,0)</code></li>
+</ul>
+</li>
+<li><code>stop()</code><ul>
+<li>stops the timer</li>
+</ul>
+</li>
+<li><code>get_timeout()</code>: returns current timeout in seconds<ul>
+<li>if <code>timeout</code> equals <code>0</code>, timer is inactive</li>
+</ul>
+</li>
+<li><code>get_elapsed()</code>: returns current elapsed time in seconds<ul>
+<li>the node's <code>on_timer</code> function will be called after <code>(timeout - elapsed)</code>
+  seconds.</li>
+</ul>
+</li>
+<li><code>is_started()</code>: returns boolean state of timer<ul>
+<li>returns <code>true</code> if timer is started, otherwise <code>false</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="objectref"><code>ObjectRef</code><a class="headerlink" href="#objectref" title="Permanent link">&para;</a></h2>
+<p>Moving things in the game are generally these.
+This is basically a reference to a C++ <code>ServerActiveObject</code>.</p>
+<h3 id="advice-on-handling-objectrefs">Advice on handling <code>ObjectRefs</code><a class="headerlink" href="#advice-on-handling-objectrefs" title="Permanent link">&para;</a></h3>
+<p>When you receive an <code>ObjectRef</code> as a callback argument or from another API
+function, it is possible to store the reference somewhere and keep it around.
+It will keep functioning until the object is unloaded or removed.</p>
+<p>However, doing this is <strong>NOT</strong> recommended as there is (intentionally) no method
+to test if a previously acquired <code>ObjectRef</code> is still valid.
+Instead, <code>ObjectRefs</code> should be "let go" of as soon as control is returned from
+Lua back to the engine.
+Doing so is much less error-prone and you will never need to wonder if the
+object you are working with still exists.</p>
+<h3 id="methods_8">Methods<a class="headerlink" href="#methods_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>get_pos()</code>: returns <code>{x=num, y=num, z=num}</code></li>
+<li><code>set_pos(pos)</code>: <code>pos</code>=<code>{x=num, y=num, z=num}</code></li>
+<li><code>move_to(pos, continuous=false)</code><ul>
+<li>Does an interpolated move for Lua entities for visually smooth transitions.</li>
+<li>If <code>continuous</code> is true, the Lua entity will not be moved to the current
+  position before starting the interpolated move.</li>
+<li>For players this does the same as <code>set_pos</code>,<code>continuous</code> is ignored.</li>
+</ul>
+</li>
+<li><code>punch(puncher, time_from_last_punch, tool_capabilities, direction)</code><ul>
+<li><code>puncher</code> = another <code>ObjectRef</code>,</li>
+<li><code>time_from_last_punch</code> = time since last punch action of the puncher</li>
+<li><code>direction</code>: can be <code>nil</code></li>
+</ul>
+</li>
+<li><code>right_click(clicker)</code>; <code>clicker</code> is another <code>ObjectRef</code></li>
+<li><code>get_hp()</code>: returns number of hitpoints (2 * number of hearts)</li>
+<li><code>set_hp(hp, reason)</code>: set number of hitpoints (2 * number of hearts).<ul>
+<li>See reason in register_on_player_hpchange</li>
+<li>Is limited to the range of 0 ... 65535 (2^16 - 1)</li>
+<li>For players: HP are also limited by <code>hp_max</code> specified in the player's
+  object properties</li>
+</ul>
+</li>
+<li><code>get_inventory()</code>: returns an <code>InvRef</code> for players, otherwise returns <code>nil</code></li>
+<li><code>get_wield_list()</code>: returns the name of the inventory list the wielded item
+   is in.</li>
+<li><code>get_wield_index()</code>: returns the index of the wielded item</li>
+<li><code>get_wielded_item()</code>: returns an <code>ItemStack</code></li>
+<li><code>set_wielded_item(item)</code>: replaces the wielded item, returns <code>true</code> if
+  successful.</li>
+<li><code>set_armor_groups({group1=rating, group2=rating, ...})</code></li>
+<li><code>get_armor_groups()</code>: returns a table with the armor group ratings</li>
+<li><code>set_animation(frame_range, frame_speed, frame_blend, frame_loop)</code><ul>
+<li><code>frame_range</code>: table {x=num, y=num}, default: <code>{x=1, y=1}</code></li>
+<li><code>frame_speed</code>: number, default: <code>15.0</code></li>
+<li><code>frame_blend</code>: number, default: <code>0.0</code></li>
+<li><code>frame_loop</code>: boolean, default: <code>true</code></li>
+</ul>
+</li>
+<li><code>get_animation()</code>: returns <code>range</code>, <code>frame_speed</code>, <code>frame_blend</code> and
+  <code>frame_loop</code>.</li>
+<li><code>set_animation_frame_speed(frame_speed)</code><ul>
+<li><code>frame_speed</code>: number, default: <code>15.0</code></li>
+</ul>
+</li>
+<li><code>set_attach(parent, bone, position, rotation)</code><ul>
+<li><code>bone</code>: string</li>
+<li><code>position</code>: <code>{x=num, y=num, z=num}</code> (relative)</li>
+<li><code>rotation</code>: <code>{x=num, y=num, z=num}</code> = Rotation on each axis, in degrees</li>
+</ul>
+</li>
+<li><code>get_attach()</code>: returns parent, bone, position, rotation or nil if it isn't
+  attached.</li>
+<li><code>set_detach()</code></li>
+<li><code>set_bone_position(bone, position, rotation)</code><ul>
+<li><code>bone</code>: string</li>
+<li><code>position</code>: <code>{x=num, y=num, z=num}</code> (relative)</li>
+<li><code>rotation</code>: <code>{x=num, y=num, z=num}</code></li>
+</ul>
+</li>
+<li><code>get_bone_position(bone)</code>: returns position and rotation of the bone</li>
+<li><code>set_properties(object property table)</code></li>
+<li><code>get_properties()</code>: returns object property table</li>
+<li><code>is_player()</code>: returns true for players, false otherwise</li>
+<li><code>get_nametag_attributes()</code><ul>
+<li>returns a table with the attributes of the nametag of an object</li>
+<li>{
+    color = {a=0..255, r=0..255, g=0..255, b=0..255},
+    text = "",
+  }</li>
+</ul>
+</li>
+<li><code>set_nametag_attributes(attributes)</code><ul>
+<li>sets the attributes of the nametag of an object</li>
+<li><code>attributes</code>:
+  {
+    color = ColorSpec,
+    text = "My Nametag",
+  }</li>
+</ul>
+</li>
+</ul>
+<h4 id="lua-entity-only-no-op-for-other-objects">Lua entity only (no-op for other objects)<a class="headerlink" href="#lua-entity-only-no-op-for-other-objects" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>remove()</code>: remove object<ul>
+<li>The object is removed after returning from Lua. However the <code>ObjectRef</code>
+  itself instantly becomes unusable with all further method calls having
+  no effect and returning <code>nil</code>.</li>
+</ul>
+</li>
+<li><code>set_velocity(vel)</code><ul>
+<li><code>vel</code> is a vector, e.g. <code>{x=0.0, y=2.3, z=1.0}</code></li>
+</ul>
+</li>
+<li><code>add_velocity(vel)</code><ul>
+<li><code>vel</code> is a vector, e.g. <code>{x=0.0, y=2.3, z=1.0}</code></li>
+<li>In comparison to using get_velocity, adding the velocity and then using
+  set_velocity, add_velocity is supposed to avoid synchronization problems.</li>
+</ul>
+</li>
+<li><code>get_velocity()</code>: returns the velocity, a vector</li>
+<li><code>set_acceleration(acc)</code><ul>
+<li><code>acc</code> is a vector</li>
+</ul>
+</li>
+<li><code>get_acceleration()</code>: returns the acceleration, a vector</li>
+<li><code>set_rotation(rot)</code><ul>
+<li><code>rot</code> is a vector (radians). X is pitch (elevation), Y is yaw (heading)
+  and Z is roll (bank).</li>
+</ul>
+</li>
+<li><code>get_rotation()</code>: returns the rotation, a vector (radians)</li>
+<li><code>set_yaw(radians)</code>: sets the yaw (heading).</li>
+<li><code>get_yaw()</code>: returns number in radians</li>
+<li><code>set_texture_mod(mod)</code></li>
+<li><code>get_texture_mod()</code> returns current texture modifier</li>
+<li><code>set_sprite(p, num_frames, framelength, select_horiz_by_yawpitch)</code><ul>
+<li>Select sprite from spritesheet with optional animation and Dungeon Master
+  style texture selection based on yaw relative to camera</li>
+<li><code>p</code>: {x=number, y=number}, the coordinate of the first frame
+  (x: column, y: row), default: <code>{x=0, y=0}</code></li>
+<li><code>num_frames</code>: number, default: <code>1</code></li>
+<li><code>framelength</code>: number, default: <code>0.2</code></li>
+<li><code>select_horiz_by_yawpitch</code>: boolean, this was once used for the Dungeon
+  Master mob, default: <code>false</code></li>
+</ul>
+</li>
+<li><code>get_entity_name()</code> (<strong>Deprecated</strong>: Will be removed in a future version)</li>
+<li><code>get_luaentity()</code></li>
+</ul>
+<h4 id="player-only-no-op-for-other-objects">Player only (no-op for other objects)<a class="headerlink" href="#player-only-no-op-for-other-objects" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>get_player_name()</code>: returns <code>""</code> if is not a player</li>
+<li><code>get_player_velocity()</code>: returns <code>nil</code> if is not a player, otherwise a
+  table {x, y, z} representing the player's instantaneous velocity in nodes/s</li>
+<li><code>add_player_velocity(vel)</code><ul>
+<li>Adds to player velocity, this happens client-side and only once.</li>
+<li>Does not apply during free_move.</li>
+<li>Note that since the player speed is normalized at each move step,
+  increasing e.g. Y velocity beyond what would usually be achieved
+  (see: physics overrides) will cause existing X/Z velocity to be reduced.</li>
+<li>Example: <code>add_player_velocity({x=0, y=6.5, z=0})</code> is equivalent to
+  pressing the jump key (assuming default settings)</li>
+</ul>
+</li>
+<li><code>get_look_dir()</code>: get camera direction as a unit vector</li>
+<li><code>get_look_vertical()</code>: pitch in radians<ul>
+<li>Angle ranges between -pi/2 and pi/2, which are straight up and down
+  respectively.</li>
+</ul>
+</li>
+<li><code>get_look_horizontal()</code>: yaw in radians<ul>
+<li>Angle is counter-clockwise from the +z direction.</li>
+</ul>
+</li>
+<li><code>set_look_vertical(radians)</code>: sets look pitch<ul>
+<li>radians: Angle from looking forward, where positive is downwards.</li>
+</ul>
+</li>
+<li><code>set_look_horizontal(radians)</code>: sets look yaw<ul>
+<li>radians: Angle from the +z direction, where positive is counter-clockwise.</li>
+</ul>
+</li>
+<li><code>get_look_pitch()</code>: pitch in radians - Deprecated as broken. Use
+  <code>get_look_vertical</code>.<ul>
+<li>Angle ranges between -pi/2 and pi/2, which are straight down and up
+  respectively.</li>
+</ul>
+</li>
+<li><code>get_look_yaw()</code>: yaw in radians - Deprecated as broken. Use
+  <code>get_look_horizontal</code>.<ul>
+<li>Angle is counter-clockwise from the +x direction.</li>
+</ul>
+</li>
+<li><code>set_look_pitch(radians)</code>: sets look pitch - Deprecated. Use
+  <code>set_look_vertical</code>.</li>
+<li><code>set_look_yaw(radians)</code>: sets look yaw - Deprecated. Use
+  <code>set_look_horizontal</code>.</li>
+<li><code>get_breath()</code>: returns player's breath</li>
+<li><code>set_breath(value)</code>: sets player's breath<ul>
+<li>values:<ul>
+<li><code>0</code>: player is drowning</li>
+<li>max: bubbles bar is not shown</li>
+<li>See [Object properties] for more information</li>
+</ul>
+</li>
+<li>Is limited to range 0 ... 65535 (2^16 - 1)</li>
+</ul>
+</li>
+<li><code>set_fov(fov, is_multiplier)</code>: Sets player's FOV<ul>
+<li><code>fov</code>: FOV value.</li>
+<li><code>is_multiplier</code>: Set to <code>true</code> if the FOV value is a multiplier.
+  Defaults to <code>false</code>.</li>
+<li>Set to 0 to clear FOV override.</li>
+</ul>
+</li>
+<li><code>get_fov()</code>:<ul>
+<li>Returns player's FOV override in degrees, and a boolean depending on whether
+  the value is a multiplier.</li>
+<li>Returns 0 as first value if player's FOV hasn't been overridden.</li>
+</ul>
+</li>
+<li><code>set_attribute(attribute, value)</code>:  DEPRECATED, use get_meta() instead<ul>
+<li>Sets an extra attribute with value on player.</li>
+<li><code>value</code> must be a string, or a number which will be converted to a
+  string.</li>
+<li>If <code>value</code> is <code>nil</code>, remove attribute from player.</li>
+</ul>
+</li>
+<li><code>get_attribute(attribute)</code>:  DEPRECATED, use get_meta() instead<ul>
+<li>Returns value (a string) for extra attribute.</li>
+<li>Returns <code>nil</code> if no attribute found.</li>
+</ul>
+</li>
+<li><code>get_meta()</code>: Returns a PlayerMetaRef.</li>
+<li><code>set_inventory_formspec(formspec)</code><ul>
+<li>Redefine player's inventory form</li>
+<li>Should usually be called in <code>on_joinplayer</code></li>
+</ul>
+</li>
+<li><code>get_inventory_formspec()</code>: returns a formspec string</li>
+<li><code>set_formspec_prepend(formspec)</code>:<ul>
+<li>the formspec string will be added to every formspec shown to the user,
+  except for those with a no_prepend[] tag.</li>
+<li>This should be used to set style elements such as background[] and
+  bgcolor[], any non-style elements (eg: label) may result in weird behaviour.</li>
+<li>Only affects formspecs shown after this is called.</li>
+</ul>
+</li>
+<li><code>get_formspec_prepend(formspec)</code>: returns a formspec string.</li>
+<li><code>get_player_control()</code>: returns table with player pressed keys<ul>
+<li>The table consists of fields with boolean value representing the pressed
+  keys, the fields are jump, right, left, LMB, RMB, sneak, aux1, down, up.</li>
+<li>example: <code>{jump=false, right=true, left=false, LMB=false, RMB=false,
+  sneak=true, aux1=false, down=false, up=false}</code></li>
+</ul>
+</li>
+<li><code>get_player_control_bits()</code>: returns integer with bit packed player pressed
+  keys.<ul>
+<li>bit nr/meaning: 0/up, 1/down, 2/left, 3/right, 4/jump, 5/aux1, 6/sneak,
+  7/LMB, 8/RMB</li>
+</ul>
+</li>
+<li><code>set_physics_override(override_table)</code><ul>
+<li><code>override_table</code> is a table with the following fields:<ul>
+<li><code>speed</code>: multiplier to default walking speed value (default: <code>1</code>)</li>
+<li><code>jump</code>: multiplier to default jump value (default: <code>1</code>)</li>
+<li><code>gravity</code>: multiplier to default gravity value (default: <code>1</code>)</li>
+<li><code>sneak</code>: whether player can sneak (default: <code>true</code>)</li>
+<li><code>sneak_glitch</code>: whether player can use the new move code replications
+  of the old sneak side-effects: sneak ladders and 2 node sneak jump
+  (default: <code>false</code>)</li>
+<li><code>new_move</code>: use new move/sneak code. When <code>false</code> the exact old code
+  is used for the specific old sneak behaviour (default: <code>true</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get_physics_override()</code>: returns the table given to <code>set_physics_override</code></li>
+<li><code>hud_add(hud definition)</code>: add a HUD element described by HUD def, returns ID
+   number on success</li>
+<li><code>hud_remove(id)</code>: remove the HUD element of the specified id</li>
+<li><code>hud_change(id, stat, value)</code>: change a value of a previously added HUD
+  element.<ul>
+<li>element <code>stat</code> values:
+  <code>position</code>, <code>name</code>, <code>scale</code>, <code>text</code>, <code>number</code>, <code>item</code>, <code>dir</code></li>
+</ul>
+</li>
+<li><code>hud_get(id)</code>: gets the HUD element definition structure of the specified ID</li>
+<li><code>hud_set_flags(flags)</code>: sets specified HUD flags of player.<ul>
+<li><code>flags</code>: A table with the following fields set to boolean values<ul>
+<li>hotbar</li>
+<li>healthbar</li>
+<li>crosshair</li>
+<li>wielditem</li>
+<li>breathbar</li>
+<li>minimap</li>
+<li>minimap_radar</li>
+</ul>
+</li>
+<li>If a flag equals <code>nil</code>, the flag is not modified</li>
+<li><code>minimap</code>: Modifies the client's permission to view the minimap.
+  The client may locally elect to not view the minimap.</li>
+<li><code>minimap_radar</code> is only usable when <code>minimap</code> is true</li>
+</ul>
+</li>
+<li><code>hud_get_flags()</code>: returns a table of player HUD flags with boolean values.<ul>
+<li>See <code>hud_set_flags</code> for a list of flags that can be toggled.</li>
+</ul>
+</li>
+<li><code>hud_set_hotbar_itemcount(count)</code>: sets number of items in builtin hotbar<ul>
+<li><code>count</code>: number of items, must be between <code>1</code> and <code>32</code></li>
+</ul>
+</li>
+<li><code>hud_get_hotbar_itemcount</code>: returns number of visible items</li>
+<li><code>hud_set_hotbar_image(texturename)</code><ul>
+<li>sets background image for hotbar</li>
+</ul>
+</li>
+<li><code>hud_get_hotbar_image</code>: returns texturename</li>
+<li><code>hud_set_hotbar_selected_image(texturename)</code><ul>
+<li>sets image for selected item of hotbar</li>
+</ul>
+</li>
+<li><code>hud_get_hotbar_selected_image</code>: returns texturename</li>
+<li><code>set_sky(parameters)</code><ul>
+<li><code>parameters</code> is a table with the following optional fields:<ul>
+<li><code>base_color</code>: ColorSpec, changes fog in "skybox" and "plain".</li>
+<li><code>type</code>: Available types:<ul>
+<li><code>"regular"</code>: Uses 0 textures, <code>base_color</code> ignored</li>
+<li><code>"skybox"</code>: Uses 6 textures, <code>base_color</code> used as fog.</li>
+<li><code>"plain"</code>: Uses 0 textures, <code>base_color</code> used as both fog and sky.</li>
+</ul>
+</li>
+<li><code>textures</code>: A table containing up to six textures in the following
+    order: Y+ (top), Y- (bottom), X- (west), X+ (east), Z+ (north), Z- (south).</li>
+<li><code>clouds</code>: Boolean for whether clouds appear. (default: <code>true</code>)</li>
+<li><code>sky_color</code>: A table containing the following values, alpha is ignored:<ul>
+<li><code>day_sky</code>: ColorSpec, for the top half of the <code>"regular"</code>
+  sky during the day. (default: <code>#8cbafa</code>)</li>
+<li><code>day_horizon</code>: ColorSpec, for the bottom half of the
+  <code>"regular"</code> sky during the day. (default: <code>#9bc1f0</code>)</li>
+<li><code>dawn_sky</code>: ColorSpec, for the top half of the <code>"regular"</code>
+  sky during dawn/sunset. (default: <code>#b4bafa</code>)
+  The resulting sky color will be a darkened version of the ColorSpec.
+  Warning: The darkening of the ColorSpec is subject to change.</li>
+<li><code>dawn_horizon</code>: ColorSpec, for the bottom half of the <code>"regular"</code>
+  sky during dawn/sunset. (default: <code>#bac1f0</code>)
+  The resulting sky color will be a darkened version of the ColorSpec.
+  Warning: The darkening of the ColorSpec is subject to change.</li>
+<li><code>night_sky</code>: ColorSpec, for the top half of the <code>"regular"</code>
+  sky during the night. (default: <code>#006aff</code>)
+  The resulting sky color will be a dark version of the ColorSpec.
+  Warning: The darkening of the ColorSpec is subject to change.</li>
+<li><code>night_horizon</code>: ColorSpec, for the bottom half of the <code>"regular"</code>
+  sky during the night. (default: <code>#4090ff</code>)
+  The resulting sky color will be a dark version of the ColorSpec.
+  Warning: The darkening of the ColorSpec is subject to change.</li>
+<li><code>indoors</code>: ColorSpec, for when you're either indoors or
+  underground. Only applies to the <code>"regular"</code> sky.
+  (default: <code>#646464</code>)</li>
+<li><code>fog_sun_tint</code>: ColorSpec, changes the fog tinting for the sun
+  at sunrise and sunset.</li>
+<li><code>fog_moon_tint</code>: ColorSpec, changes the fog tinting for the moon
+  at sunrise and sunset.</li>
+<li><code>fog_tint_type</code>: string, changes which mode the directional fog
+    abides by, <code>"custom"</code> uses <code>sun_tint</code> and <code>moon_tint</code>, while
+    <code>"default"</code> uses the classic Minetest sun and moon tinting.
+    Will use tonemaps, if set to <code>"default"</code>. (default: <code>"default"</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get_sky()</code>: returns base_color, type, table of textures, clouds.</li>
+<li><code>get_sky_color()</code>: returns a table with the <code>sky_color</code> parameters as in
+    <code>set_sky</code>.</li>
+<li><code>set_sun(parameters)</code>:<ul>
+<li><code>parameters</code> is a table with the following optional fields:<ul>
+<li><code>visible</code>: Boolean for whether the sun is visible.
+    (default: <code>true</code>)</li>
+<li><code>texture</code>: A regular texture for the sun. Setting to <code>""</code>
+    will re-enable the mesh sun. (default: <code>"sun.png"</code>)</li>
+<li><code>tonemap</code>: A 512x1 texture containing the tonemap for the sun
+    (default: <code>"sun_tonemap.png"</code>)</li>
+<li><code>sunrise</code>: A regular texture for the sunrise texture.
+    (default: <code>"sunrisebg.png"</code>)</li>
+<li><code>sunrise_visible</code>: Boolean for whether the sunrise texture is visible.
+    (default: <code>true</code>)</li>
+<li><code>scale</code>: Float controlling the overall size of the sun. (default: <code>1</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get_sun()</code>: returns a table with the current sun parameters as in
+    <code>set_sun</code>.</li>
+<li><code>set_moon(parameters)</code>:<ul>
+<li><code>parameters</code> is a table with the following optional fields:<ul>
+<li><code>visible</code>: Boolean for whether the moon is visible.
+    (default: <code>true</code>)</li>
+<li><code>texture</code>: A regular texture for the moon. Setting to <code>""</code>
+    will re-enable the mesh moon. (default: <code>"moon.png"</code>)</li>
+<li><code>tonemap</code>: A 512x1 texture containing the tonemap for the moon
+    (default: <code>"moon_tonemap.png"</code>)</li>
+<li><code>scale</code>: Float controlling the overall size of the moon (default: <code>1</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get_moon()</code>: returns a table with the current moon parameters as in
+    <code>set_moon</code>.</li>
+<li><code>set_stars(parameters)</code>:<ul>
+<li><code>parameters</code> is a table with the following optional fields:<ul>
+<li><code>visible</code>: Boolean for whether the stars are visible.
+    (default: <code>true</code>)</li>
+<li><code>count</code>: Integer number to set the number of stars in
+    the skybox. Only applies to <code>"skybox"</code> and <code>"regular"</code> sky types.
+    (default: <code>1000</code>)</li>
+<li><code>star_color</code>: ColorSpec, sets the colors of the stars,
+    alpha channel is used to set overall star brightness.
+    (default: <code>#ebebff69</code>)</li>
+<li><code>scale</code>: Float controlling the overall size of the stars (default: <code>1</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get_stars()</code>: returns a table with the current stars parameters as in
+    <code>set_stars</code>.</li>
+<li><code>set_clouds(parameters)</code>: set cloud parameters<ul>
+<li><code>parameters</code> is a table with the following optional fields:<ul>
+<li><code>density</code>: from <code>0</code> (no clouds) to <code>1</code> (full clouds) (default <code>0.4</code>)</li>
+<li><code>color</code>: basic cloud color with alpha channel, ColorSpec
+  (default <code>#fff0f0e5</code>).</li>
+<li><code>ambient</code>: cloud color lower bound, use for a "glow at night" effect.
+  ColorSpec (alpha ignored, default <code>#000000</code>)</li>
+<li><code>height</code>: cloud height, i.e. y of cloud base (default per conf,
+  usually <code>120</code>)</li>
+<li><code>thickness</code>: cloud thickness in nodes (default <code>16</code>)</li>
+<li><code>speed</code>: 2D cloud speed + direction in nodes per second
+  (default <code>{x=0, z=-2}</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get_clouds()</code>: returns a table with the current cloud parameters as in
+  <code>set_clouds</code>.</li>
+<li><code>override_day_night_ratio(ratio or nil)</code><ul>
+<li><code>0</code>...<code>1</code>: Overrides day-night ratio, controlling sunlight to a specific
+  amount.</li>
+<li><code>nil</code>: Disables override, defaulting to sunlight based on day-night cycle</li>
+</ul>
+</li>
+<li><code>get_day_night_ratio()</code>: returns the ratio or nil if it isn't overridden</li>
+<li>
+<p><code>set_local_animation(stand/idle, walk, dig, walk+dig, frame_speed=frame_speed)</code>:
+  set animation for player model in third person view</p>
+<p>set_local_animation({x=0, y=79},  -- stand/idle animation key frames
+      {x=168, y=187},  -- walk animation key frames
+      {x=189, y=198},  -- dig animation key frames
+      {x=200, y=219},  -- walk+dig animation key frames
+      frame_speed=30)  -- animation frame speed
+* <code>get_local_animation()</code>: returns stand, walk, dig, dig+walk tables and
+  <code>frame_speed</code>.
+* <code>set_eye_offset({x=0,y=0,z=0},{x=0,y=0,z=0})</code>: defines offset value for
+  camera per player.
+* in first person view
+* in third person view (max. values <code>{x=-10/10,y=-10,15,z=-5/5}</code>)
+* <code>get_eye_offset()</code>: returns <code>offset_first</code> and <code>offset_third</code>
+* <code>send_mapblock(blockpos)</code>:
+* Sends a server-side loaded mapblock to the player.
+* Returns <code>false</code> if failed.
+* Resource intensive - use sparsely
+* To get blockpos, integer divide pos by 16</p>
+</li>
+</ul>
+<h2 id="pcgrandom"><code>PcgRandom</code><a class="headerlink" href="#pcgrandom" title="Permanent link">&para;</a></h2>
+<p>A 32-bit pseudorandom number generator.
+Uses PCG32, an algorithm of the permuted congruential generator family,
+offering very strong randomness.</p>
+<p>It can be created via <code>PcgRandom(seed)</code> or <code>PcgRandom(seed, sequence)</code>.</p>
+<h3 id="methods_9">Methods<a class="headerlink" href="#methods_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>next()</code>: return next integer random number [<code>-2147483648</code>...<code>2147483647</code>]</li>
+<li><code>next(min, max)</code>: return next integer random number [<code>min</code>...<code>max</code>]</li>
+<li><code>rand_normal_dist(min, max, num_trials=6)</code>: return normally distributed
+  random number [<code>min</code>...<code>max</code>].<ul>
+<li>This is only a rough approximation of a normal distribution with:</li>
+<li><code>mean = (max - min) / 2</code>, and</li>
+<li><code>variance = (((max - min + 1) ^ 2) - 1) / (12 * num_trials)</code></li>
+<li>Increasing <code>num_trials</code> improves accuracy of the approximation</li>
+</ul>
+</li>
+</ul>
+<h2 id="perlinnoise"><code>PerlinNoise</code><a class="headerlink" href="#perlinnoise" title="Permanent link">&para;</a></h2>
+<p>A perlin noise generator.
+It can be created via <code>PerlinNoise(seed, octaves, persistence, spread)</code>
+or <code>PerlinNoise(noiseparams)</code>.
+Alternatively with <code>minetest.get_perlin(seeddiff, octaves, persistence, spread)</code>
+or <code>minetest.get_perlin(noiseparams)</code>.</p>
+<h3 id="methods_10">Methods<a class="headerlink" href="#methods_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>get_2d(pos)</code>: returns 2D noise value at <code>pos={x=,y=}</code></li>
+<li><code>get_3d(pos)</code>: returns 3D noise value at <code>pos={x=,y=,z=}</code></li>
+</ul>
+<h2 id="perlinnoisemap"><code>PerlinNoiseMap</code><a class="headerlink" href="#perlinnoisemap" title="Permanent link">&para;</a></h2>
+<p>A fast, bulk perlin noise generator.</p>
+<p>It can be created via <code>PerlinNoiseMap(noiseparams, size)</code> or
+<code>minetest.get_perlin_map(noiseparams, size)</code>.</p>
+<p>Format of <code>size</code> is <code>{x=dimx, y=dimy, z=dimz}</code>. The <code>z</code> component is omitted
+for 2D noise, and it must be must be larger than 1 for 3D noise (otherwise
+<code>nil</code> is returned).</p>
+<p>For each of the functions with an optional <code>buffer</code> parameter: If <code>buffer</code> is
+not nil, this table will be used to store the result instead of creating a new
+table.</p>
+<h3 id="methods_11">Methods<a class="headerlink" href="#methods_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>get_2d_map(pos)</code>: returns a <code>&lt;size.x&gt;</code> times <code>&lt;size.y&gt;</code> 2D array of 2D noise
+  with values starting at <code>pos={x=,y=}</code></li>
+<li><code>get_3d_map(pos)</code>: returns a <code>&lt;size.x&gt;</code> times <code>&lt;size.y&gt;</code> times <code>&lt;size.z&gt;</code>
+  3D array of 3D noise with values starting at <code>pos={x=,y=,z=}</code>.</li>
+<li><code>get_2d_map_flat(pos, buffer)</code>: returns a flat <code>&lt;size.x * size.y&gt;</code> element
+  array of 2D noise with values starting at <code>pos={x=,y=}</code></li>
+<li><code>get_3d_map_flat(pos, buffer)</code>: Same as <code>get2dMap_flat</code>, but 3D noise</li>
+<li><code>calc_2d_map(pos)</code>: Calculates the 2d noise map starting at <code>pos</code>. The result
+  is stored internally.</li>
+<li><code>calc_3d_map(pos)</code>: Calculates the 3d noise map starting at <code>pos</code>. The result
+  is stored internally.</li>
+<li><code>get_map_slice(slice_offset, slice_size, buffer)</code>: In the form of an array,
+  returns a slice of the most recently computed noise results. The result slice
+  begins at coordinates <code>slice_offset</code> and takes a chunk of <code>slice_size</code>.
+  E.g. to grab a 2-slice high horizontal 2d plane of noise starting at buffer
+  offset y = 20:
+  <code>noisevals = noise:get_map_slice({y=20}, {y=2})</code>
+  It is important to note that <code>slice_offset</code> offset coordinates begin at 1,
+  and are relative to the starting position of the most recently calculated
+  noise.
+  To grab a single vertical column of noise starting at map coordinates
+  x = 1023, y=1000, z = 1000:
+  <code>noise:calc_3d_map({x=1000, y=1000, z=1000})</code>
+  <code>noisevals = noise:get_map_slice({x=24, z=1}, {x=1, z=1})</code></li>
+</ul>
+<h2 id="playermetaref"><code>PlayerMetaRef</code><a class="headerlink" href="#playermetaref" title="Permanent link">&para;</a></h2>
+<p>Player metadata.
+Uses the same method of storage as the deprecated player attribute API, so
+data there will also be in player meta.
+Can be obtained using <code>player:get_meta()</code>.</p>
+<h3 id="methods_12">Methods<a class="headerlink" href="#methods_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All methods in MetaDataRef</li>
+</ul>
+<h2 id="pseudorandom"><code>PseudoRandom</code><a class="headerlink" href="#pseudorandom" title="Permanent link">&para;</a></h2>
+<p>A 16-bit pseudorandom number generator.
+Uses a well-known LCG algorithm introduced by K&amp;R.</p>
+<p>It can be created via <code>PseudoRandom(seed)</code>.</p>
+<h3 id="methods_13">Methods<a class="headerlink" href="#methods_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>next()</code>: return next integer random number [<code>0</code>...<code>32767</code>]</li>
+<li><code>next(min, max)</code>: return next integer random number [<code>min</code>...<code>max</code>]<ul>
+<li><code>((max - min) == 32767) or ((max-min) &lt;= 6553))</code> must be true
+  due to the simple implementation making bad distribution otherwise.</li>
+</ul>
+</li>
+</ul>
+<h2 id="raycast"><code>Raycast</code><a class="headerlink" href="#raycast" title="Permanent link">&para;</a></h2>
+<p>A raycast on the map. It works with selection boxes.
+Can be used as an iterator in a for loop as:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ray</span> <span class="o">=</span> <span class="n">Raycast</span><span class="p">(...)</span>
+<span class="kr">for</span> <span class="n">pointed_thing</span> <span class="kr">in</span> <span class="n">ray</span> <span class="kr">do</span>
+    <span class="p">...</span>
+<span class="kr">end</span>
+</code></pre></div>
+
+
+<p>The map is loaded as the ray advances. If the map is modified after the
+<code>Raycast</code> is created, the changes may or may not have an effect on the object.</p>
+<p>It can be created via <code>Raycast(pos1, pos2, objects, liquids)</code> or
+<code>minetest.raycast(pos1, pos2, objects, liquids)</code> where:</p>
+<ul>
+<li><code>pos1</code>: start of the ray</li>
+<li><code>pos2</code>: end of the ray</li>
+<li><code>objects</code>: if false, only nodes will be returned. Default is true.</li>
+<li><code>liquids</code>: if false, liquid nodes won't be returned. Default is false.</li>
+</ul>
+<h3 id="methods_14">Methods<a class="headerlink" href="#methods_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>next()</code>: returns a <code>pointed_thing</code> with exact pointing location<ul>
+<li>Returns the next thing pointed by the ray or nil.</li>
+</ul>
+</li>
+</ul>
+<h2 id="securerandom"><code>SecureRandom</code><a class="headerlink" href="#securerandom" title="Permanent link">&para;</a></h2>
+<p>Interface for the operating system's crypto-secure PRNG.</p>
+<p>It can be created via <code>SecureRandom()</code>.  The constructor returns nil if a
+secure random device cannot be found on the system.</p>
+<h3 id="methods_15">Methods<a class="headerlink" href="#methods_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>next_bytes([count])</code>: return next <code>count</code> (default 1, capped at 2048) many
+  random bytes, as a string.</li>
+</ul>
+<h2 id="settings"><code>Settings</code><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>An interface to read config files in the format of <code>minetest.conf</code>.</p>
+<p>It can be created via <code>Settings(filename)</code>.</p>
+<h3 id="methods_16">Methods<a class="headerlink" href="#methods_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>get(key)</code>: returns a value</li>
+<li><code>get_bool(key, [default])</code>: returns a boolean<ul>
+<li><code>default</code> is the value returned if <code>key</code> is not found.</li>
+<li>Returns <code>nil</code> if <code>key</code> is not found and <code>default</code> not specified.</li>
+</ul>
+</li>
+<li><code>get_np_group(key)</code>: returns a NoiseParams table</li>
+<li><code>get_flags(key)</code>:<ul>
+<li>Returns <code>{flag = true/false, ...}</code> according to the set flags.</li>
+<li>Is currently limited to mapgen flags <code>mg_flags</code> and mapgen-specific
+  flags like <code>mgv5_spflags</code>.</li>
+</ul>
+</li>
+<li><code>set(key, value)</code><ul>
+<li>Setting names can't contain whitespace or any of <code>="{}#</code>.</li>
+<li>Setting values can't contain the sequence <code>\n"""</code>.</li>
+<li>Setting names starting with "secure." can't be set on the main settings
+  object (<code>minetest.settings</code>).</li>
+</ul>
+</li>
+<li><code>set_bool(key, value)</code><ul>
+<li>See documentation for set() above.</li>
+</ul>
+</li>
+<li><code>set_np_group(key, value)</code><ul>
+<li><code>value</code> is a NoiseParams table.</li>
+<li>Also, see documentation for set() above.</li>
+</ul>
+</li>
+<li><code>remove(key)</code>: returns a boolean (<code>true</code> for success)</li>
+<li><code>get_names()</code>: returns <code>{key1,...}</code></li>
+<li><code>write()</code>: returns a boolean (<code>true</code> for success)<ul>
+<li>Writes changes to file.</li>
+</ul>
+</li>
+<li><code>to_table()</code>: returns <code>{[key1]=value1,...}</code></li>
+</ul>
+<h3 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
+<p>The settings have the format <code>key = value</code>. Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">foo</span> <span class="o">=</span> <span class="n">example</span> <span class="n">text</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Multiline</span>
+<span class="s2">value</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+
+
+<h2 id="storageref"><code>StorageRef</code><a class="headerlink" href="#storageref" title="Permanent link">&para;</a></h2>
+<p>Mod metadata: per mod metadata, saved automatically.
+Can be obtained via <code>minetest.get_mod_storage()</code> during load time.</p>
+<p>WARNING: This storage backend is incaptable to save raw binary data due
+to restrictions of JSON.</p>
+<h3 id="methods_17">Methods<a class="headerlink" href="#methods_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All methods in MetaDataRef</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../definition-tables/index.html" class="btn btn-neutral float-right" title="Definition tables">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../minetest-namespace-reference/index.html" class="btn btn-neutral" title="'minetest' namespace reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../minetest-namespace-reference/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../definition-tables/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/class-reference/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/ores/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Ores - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Ores";
+    var mkdocs_page_input_path = "ores.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Ores</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ore-types">Ore types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scatter">scatter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sheet">sheet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#puff">puff</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#blob">blob</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vein">vein</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stratum">stratum</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ore-attributes">Ore attributes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#puff_cliffs">puff_cliffs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#puff_additive_composition">puff_additive_composition</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Ores</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ores">Ores<a class="headerlink" href="#ores" title="Permanent link">&para;</a></h1>
+<h2 id="ore-types">Ore types<a class="headerlink" href="#ore-types" title="Permanent link">&para;</a></h2>
+<p>These tell in what manner the ore is generated.</p>
+<p>All default ores are of the uniformly-distributed scatter type.</p>
+<h3 id="scatter"><code>scatter</code><a class="headerlink" href="#scatter" title="Permanent link">&para;</a></h3>
+<p>Randomly chooses a location and generates a cluster of ore.</p>
+<p>If <code>noise_params</code> is specified, the ore will be placed if the 3D perlin noise
+at that point is greater than the <code>noise_threshold</code>, giving the ability to
+create a non-equal distribution of ore.</p>
+<h3 id="sheet"><code>sheet</code><a class="headerlink" href="#sheet" title="Permanent link">&para;</a></h3>
+<p>Creates a sheet of ore in a blob shape according to the 2D perlin noise
+described by <code>noise_params</code> and <code>noise_threshold</code>. This is essentially an
+improved version of the so-called "stratus" ore seen in some unofficial mods.</p>
+<p>This sheet consists of vertical columns of uniform randomly distributed height,
+varying between the inclusive range <code>column_height_min</code> and <code>column_height_max</code>.
+If <code>column_height_min</code> is not specified, this parameter defaults to 1.
+If <code>column_height_max</code> is not specified, this parameter defaults to <code>clust_size</code>
+for reverse compatibility. New code should prefer <code>column_height_max</code>.</p>
+<p>The <code>column_midpoint_factor</code> parameter controls the position of the column at
+which ore emanates from.
+If 1, columns grow upward. If 0, columns grow downward. If 0.5, columns grow
+equally starting from each direction.
+<code>column_midpoint_factor</code> is a decimal number ranging in value from 0 to 1. If
+this parameter is not specified, the default is 0.5.</p>
+<p>The ore parameters <code>clust_scarcity</code> and <code>clust_num_ores</code> are ignored for this
+ore type.</p>
+<h3 id="puff"><code>puff</code><a class="headerlink" href="#puff" title="Permanent link">&para;</a></h3>
+<p>Creates a sheet of ore in a cloud-like puff shape.</p>
+<p>As with the <code>sheet</code> ore type, the size and shape of puffs are described by
+<code>noise_params</code> and <code>noise_threshold</code> and are placed at random vertical
+positions within the currently generated chunk.</p>
+<p>The vertical top and bottom displacement of each puff are determined by the
+noise parameters <code>np_puff_top</code> and <code>np_puff_bottom</code>, respectively.</p>
+<h3 id="blob"><code>blob</code><a class="headerlink" href="#blob" title="Permanent link">&para;</a></h3>
+<p>Creates a deformed sphere of ore according to 3d perlin noise described by
+<code>noise_params</code>. The maximum size of the blob is <code>clust_size</code>, and
+<code>clust_scarcity</code> has the same meaning as with the <code>scatter</code> type.</p>
+<h3 id="vein"><code>vein</code><a class="headerlink" href="#vein" title="Permanent link">&para;</a></h3>
+<p>Creates veins of ore varying in density by according to the intersection of two
+instances of 3d perlin noise with different seeds, both described by
+<code>noise_params</code>.</p>
+<p><code>random_factor</code> varies the influence random chance has on placement of an ore
+inside the vein, which is <code>1</code> by default. Note that modifying this parameter
+may require adjusting <code>noise_threshold</code>.</p>
+<p>The parameters <code>clust_scarcity</code>, <code>clust_num_ores</code>, and <code>clust_size</code> are ignored
+by this ore type.</p>
+<p>This ore type is difficult to control since it is sensitive to small changes.
+The following is a decent set of parameters to work from:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">noise_params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">offset</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale</span>   <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">spread</span>  <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">200</span><span class="p">},</span>
+    <span class="n">seed</span>    <span class="o">=</span> <span class="mi">5390</span><span class="p">,</span>
+    <span class="n">octaves</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">lacunarity</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="s2">&quot;eased&quot;</span><span class="p">,</span>
+<span class="p">},</span>
+<span class="n">noise_threshold</span> <span class="o">=</span> <span class="mf">1.6</span>
+</code></pre></div>
+
+
+<p><strong>WARNING</strong>: Use this ore type <em>very</em> sparingly since it is ~200x more
+computationally expensive than any other ore.</p>
+<h3 id="stratum"><code>stratum</code><a class="headerlink" href="#stratum" title="Permanent link">&para;</a></h3>
+<p>Creates a single undulating ore stratum that is continuous across mapchunk
+borders and horizontally spans the world.</p>
+<p>The 2D perlin noise described by <code>noise_params</code> defines the Y co-ordinate of
+the stratum midpoint. The 2D perlin noise described by <code>np_stratum_thickness</code>
+defines the stratum's vertical thickness (in units of nodes). Due to being
+continuous across mapchunk borders the stratum's vertical thickness is
+unlimited.</p>
+<p>If the noise parameter <code>noise_params</code> is omitted the ore will occur from y_min
+to y_max in a simple horizontal stratum.</p>
+<p>A parameter <code>stratum_thickness</code> can be provided instead of the noise parameter
+<code>np_stratum_thickness</code>, to create a constant thickness.</p>
+<p>Leaving out one or both noise parameters makes the ore generation less
+intensive, useful when adding multiple strata.</p>
+<p><code>y_min</code> and <code>y_max</code> define the limits of the ore generation and for performance
+reasons should be set as close together as possible but without clipping the
+stratum's Y variation.</p>
+<p>Each node in the stratum has a 1-in-<code>clust_scarcity</code> chance of being ore, so a
+solid-ore stratum would require a <code>clust_scarcity</code> of 1.</p>
+<p>The parameters <code>clust_num_ores</code>, <code>clust_size</code>, <code>noise_threshold</code> and
+<code>random_factor</code> are ignored by this ore type.</p>
+<h2 id="ore-attributes">Ore attributes<a class="headerlink" href="#ore-attributes" title="Permanent link">&para;</a></h2>
+<p>See section [Flag Specifier Format].</p>
+<p>Currently supported flags:
+<code>puff_cliffs</code>, <code>puff_additive_composition</code>.</p>
+<h3 id="puff_cliffs"><code>puff_cliffs</code><a class="headerlink" href="#puff_cliffs" title="Permanent link">&para;</a></h3>
+<p>If set, puff ore generation will not taper down large differences in
+displacement when approaching the edge of a puff. This flag has no effect for
+ore types other than <code>puff</code>.</p>
+<h3 id="puff_additive_composition"><code>puff_additive_composition</code><a class="headerlink" href="#puff_additive_composition" title="Permanent link">&para;</a></h3>
+<p>By default, when noise described by <code>np_puff_top</code> or <code>np_puff_bottom</code> results
+in a negative displacement, the sub-column at that point is not generated. With
+this attribute set, puff ore generation will instead generate the absolute
+difference in noise displacement values. This flag has no effect for ore types
+other than <code>puff</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../decoration-types/index.html" class="btn btn-neutral float-right" title="Decoration types">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../perlin-noise/index.html" class="btn btn-neutral" title="Perlin noise"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../perlin-noise/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../decoration-types/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/ores/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

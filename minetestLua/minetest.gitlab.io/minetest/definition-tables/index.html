@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/definition-tables/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Definition tables - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Definition tables";
+    var mkdocs_page_input_path = "definition-tables.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Definition tables</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#object-properties">Object properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entity-definition">Entity definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#abm-activeblockmodifier-definition">ABM (ActiveBlockModifier) definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lbm-loadingblockmodifier-definition">LBM (LoadingBlockModifier) definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tile-definition">Tile definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tile-animation-definition">Tile animation definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#item-definition">Item definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#node-definition">Node definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#crafting-recipes">Crafting recipes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#shaped">Shaped</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shapeless">Shapeless</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tool-repair">Tool repair</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cooking">Cooking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#furnace-fuel">Furnace fuel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ore-definition">Ore definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#biome-definition">Biome definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#decoration-definition">Decoration definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chat-command-definition">Chat command definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#privilege-definition">Privilege definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#detached-inventory-callbacks">Detached inventory callbacks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hud-definition">HUD Definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#particle-definition">Particle definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#particlespawner-definition">ParticleSpawner definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#httprequest-definition">HTTPRequest definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#httprequestresult-definition">HTTPRequestResult definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#authentication-handler-definition">Authentication handler definition</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Definition tables</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="definition-tables">Definition tables<a class="headerlink" href="#definition-tables" title="Permanent link">&para;</a></h1>
+<h2 id="object-properties">Object properties<a class="headerlink" href="#object-properties" title="Permanent link">&para;</a></h2>
+<p>Used by <code>ObjectRef</code> methods. Part of an Entity definition.
+These properties are not persistent, but are applied automatically to the
+corresponding Lua entity using the given registration fields.
+Player properties need to be saved manually.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">hp_max</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- For players only. Defaults to `minetest.PLAYER_MAX_HP_DEFAULT`.</span>
+
+    <span class="n">breath_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- For players only. Defaults to `minetest.PLAYER_MAX_BREATH_DEFAULT`.</span>
+
+    <span class="n">zoom_fov</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="c1">-- For players only. Zoom FOV in degrees.</span>
+    <span class="c1">-- Note that zoom loads and/or generates world beyond the server&#39;s</span>
+    <span class="c1">-- maximum send and generate distances, so acts like a telescope.</span>
+    <span class="c1">-- Smaller zoom_fov values increase the distance loaded/generated.</span>
+    <span class="c1">-- Defaults to 15 in creative mode, 0 in survival mode.</span>
+    <span class="c1">-- zoom_fov = 0 disables zooming for the player.</span>
+
+    <span class="n">eye_height</span> <span class="o">=</span> <span class="mf">1.625</span><span class="p">,</span>
+    <span class="c1">-- For players only. Camera height above feet position in nodes.</span>
+    <span class="c1">-- Defaults to 1.625.</span>
+
+    <span class="n">physical</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- Collide with `walkable` nodes.</span>
+
+    <span class="n">collide_with_objects</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- Collide with other objects if physical = true</span>
+
+    <span class="n">collisionbox</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">},</span>  <span class="c1">-- Default</span>
+    <span class="n">selectionbox</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">},</span>
+    <span class="c1">-- Selection box uses collision box dimensions when not set.</span>
+    <span class="c1">-- For both boxes: {xmin, ymin, zmin, xmax, ymax, zmax} in nodes from</span>
+    <span class="c1">-- object position.</span>
+
+    <span class="n">pointable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- Overrides selection box when false</span>
+
+    <span class="n">visual</span> <span class="o">=</span> <span class="s2">&quot;cube&quot;</span> <span class="o">/</span> <span class="s2">&quot;sprite&quot;</span> <span class="o">/</span> <span class="s2">&quot;upright_sprite&quot;</span> <span class="o">/</span> <span class="s2">&quot;mesh&quot;</span> <span class="o">/</span> <span class="s2">&quot;wielditem&quot;</span> <span class="o">/</span> <span class="s2">&quot;item&quot;</span><span class="p">,</span>
+    <span class="c1">-- &quot;cube&quot; is a node-sized cube.</span>
+    <span class="c1">-- &quot;sprite&quot; is a flat texture always facing the player.</span>
+    <span class="c1">-- &quot;upright_sprite&quot; is a vertical flat texture.</span>
+    <span class="c1">-- &quot;mesh&quot; uses the defined mesh model.</span>
+    <span class="c1">-- &quot;wielditem&quot; is used for dropped items.</span>
+    <span class="c1">--   (see builtin/game/item_entity.lua).</span>
+    <span class="c1">--   For this use &#39;wield_item = itemname&#39; (Deprecated: &#39;textures = {itemname}&#39;).</span>
+    <span class="c1">--   If the item has a &#39;wield_image&#39; the object will be an extrusion of</span>
+    <span class="c1">--   that, otherwise:</span>
+    <span class="c1">--   If &#39;itemname&#39; is a cubic node or nodebox the object will appear</span>
+    <span class="c1">--   identical to &#39;itemname&#39;.</span>
+    <span class="c1">--   If &#39;itemname&#39; is a plantlike node the object will be an extrusion</span>
+    <span class="c1">--   of its texture.</span>
+    <span class="c1">--   Otherwise for non-node items, the object will be an extrusion of</span>
+    <span class="c1">--   &#39;inventory_image&#39;.</span>
+    <span class="c1">--   If &#39;itemname&#39; contains a ColorString or palette index (e.g. from</span>
+    <span class="c1">--   `minetest.itemstring_with_palette()`), the entity will inherit the color.</span>
+    <span class="c1">-- &quot;item&quot; is similar to &quot;wielditem&quot; but ignores the &#39;wield_image&#39; parameter.</span>
+
+    <span class="n">visual_size</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="c1">-- Multipliers for the visual size. If `z` is not specified, `x` will be used</span>
+    <span class="c1">-- to scale the entity along both horizontal axes.</span>
+
+    <span class="n">mesh</span> <span class="o">=</span> <span class="s2">&quot;model.obj&quot;</span><span class="p">,</span>
+    <span class="c1">-- File name of mesh when using &quot;mesh&quot; visual</span>
+
+    <span class="n">textures</span> <span class="o">=</span> <span class="p">{},</span>
+    <span class="c1">-- Number of required textures depends on visual.</span>
+    <span class="c1">-- &quot;cube&quot; uses 6 textures just like a node, but all 6 must be defined.</span>
+    <span class="c1">-- &quot;sprite&quot; uses 1 texture.</span>
+    <span class="c1">-- &quot;upright_sprite&quot; uses 2 textures: {front, back}.</span>
+    <span class="c1">-- &quot;wielditem&quot; expects &#39;textures = {itemname}&#39; (see &#39;visual&#39; above).</span>
+
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">{},</span>
+    <span class="c1">-- Number of required colors depends on visual</span>
+
+    <span class="n">use_texture_alpha</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- Use texture&#39;s alpha channel.</span>
+    <span class="c1">-- Excludes &quot;upright_sprite&quot; and &quot;wielditem&quot;.</span>
+    <span class="c1">-- Note: currently causes visual issues when viewed through other</span>
+    <span class="c1">-- semi-transparent materials such as water.</span>
+
+    <span class="n">spritediv</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="c1">-- Used with spritesheet textures for animation and/or frame selection</span>
+    <span class="c1">-- according to position relative to player.</span>
+    <span class="c1">-- Defines the number of columns and rows in the spritesheet:</span>
+    <span class="c1">-- {columns, rows}.</span>
+
+    <span class="n">initial_sprite_basepos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="c1">-- Used with spritesheet textures.</span>
+    <span class="c1">-- Defines the {column, row} position of the initially used frame in the</span>
+    <span class="c1">-- spritesheet.</span>
+
+    <span class="n">is_visible</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If false, object is invisible and can&#39;t be pointed.</span>
+
+    <span class="n">makes_footstep_sound</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true, is able to make footstep sounds of nodes</span>
+    <span class="c1">-- (see node sound definition for details).</span>
+
+    <span class="n">automatic_rotate</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Set constant rotation in radians per second, positive or negative.</span>
+    <span class="c1">-- Set to 0 to disable constant rotation.</span>
+
+    <span class="n">stepheight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- If positive number, object will climb upwards when it moves</span>
+    <span class="c1">-- horizontally against a `walkable` node, if the height difference</span>
+    <span class="c1">-- is within `stepheight`.</span>
+
+    <span class="n">automatic_face_movement_dir</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="c1">-- Automatically set yaw to movement direction, offset in degrees.</span>
+    <span class="c1">-- &#39;false&#39; to disable.</span>
+
+    <span class="n">automatic_face_movement_max_rotation_per_sec</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Limit automatic rotation to this value in degrees per second.</span>
+    <span class="c1">-- No limit if value &lt;= 0.</span>
+
+    <span class="n">backface_culling</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- Set to false to disable backface_culling for model</span>
+
+    <span class="n">glow</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Add this much extra lighting when calculating texture color.</span>
+    <span class="c1">-- Value &lt; 0 disables light&#39;s effect on texture color.</span>
+    <span class="c1">-- For faking self-lighting, UI style entities, or programmatic coloring</span>
+    <span class="c1">-- in mods.</span>
+
+    <span class="n">nametag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- By default empty, for players their name is shown if empty</span>
+
+    <span class="n">nametag_color</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ColorSpec</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="c1">-- Sets color of nametag</span>
+
+    <span class="n">infotext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- By default empty, text to be shown when pointed at object</span>
+
+    <span class="n">static_save</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If false, never save this object statically. It will simply be</span>
+    <span class="c1">-- deleted when the block gets unloaded.</span>
+    <span class="c1">-- The get_staticdata() callback is never called then.</span>
+    <span class="c1">-- Defaults to &#39;true&#39;.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="entity-definition">Entity definition<a class="headerlink" href="#entity-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_entity</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">initial_properties</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">visual</span> <span class="o">=</span> <span class="s2">&quot;mesh&quot;</span><span class="p">,</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="s2">&quot;boats_boat.obj&quot;</span><span class="p">,</span>
+        <span class="p">...,</span>
+    <span class="p">},</span>
+    <span class="c1">-- A table of object properties, see the `Object properties` section.</span>
+    <span class="c1">-- Object properties being read directly from the entity definition</span>
+    <span class="c1">-- table is deprecated. Define object properties in this</span>
+    <span class="c1">-- `initial_properties` table instead.</span>
+
+    <span class="n">on_activate</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">staticdata</span><span class="p">,</span> <span class="n">dtime_s</span><span class="p">),</span>
+
+    <span class="n">on_step</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">dtime</span><span class="p">),</span>
+
+    <span class="n">on_punch</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">puncher</span><span class="p">,</span> <span class="n">time_from_last_punch</span><span class="p">,</span> <span class="n">tool_capabilities</span><span class="p">,</span> <span class="n">dir</span><span class="p">),</span>
+
+    <span class="n">on_rightclick</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">clicker</span><span class="p">),</span>
+
+    <span class="n">get_staticdata</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">),</span>
+    <span class="c1">-- Called sometimes; the string returned is passed to on_activate when</span>
+    <span class="c1">-- the entity is re-activated from static state</span>
+
+    <span class="n">_custom_field</span> <span class="o">=</span> <span class="n">whatever</span><span class="p">,</span>
+    <span class="c1">-- You can define arbitrary member variables here (see Item definition</span>
+    <span class="c1">-- for more info) by using a &#39;_&#39; prefix</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="abm-activeblockmodifier-definition">ABM (ActiveBlockModifier) definition<a class="headerlink" href="#abm-activeblockmodifier-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_abm</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lava cooling&quot;</span><span class="p">,</span>
+    <span class="c1">-- Descriptive label for profiling purposes (optional).</span>
+    <span class="c1">-- Definitions with identical labels will be listed as one.</span>
+
+    <span class="n">nodenames</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:lava_source&quot;</span><span class="p">},</span>
+    <span class="c1">-- Apply `action` function to these nodes.</span>
+    <span class="c1">-- `group:groupname` can also be used here.</span>
+
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:water_source&quot;</span><span class="p">,</span> <span class="s2">&quot;default:water_flowing&quot;</span><span class="p">},</span>
+    <span class="c1">-- Only apply `action` to nodes that have one of, or any</span>
+    <span class="c1">-- combination of, these neighbors.</span>
+    <span class="c1">-- If left out or empty, any neighbor will do.</span>
+    <span class="c1">-- `group:groupname` can also be used here.</span>
+
+    <span class="n">interval</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="c1">-- Operation interval in seconds</span>
+
+    <span class="n">chance</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Chance of triggering `action` per-node per-interval is 1.0 / this</span>
+    <span class="c1">-- value</span>
+
+    <span class="n">catch_up</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If true, catch-up behaviour is enabled: The `chance` value is</span>
+    <span class="c1">-- temporarily reduced when returning to an area to simulate time lost</span>
+    <span class="c1">-- by the area being unattended. Note that the `chance` value can often</span>
+    <span class="c1">-- be reduced to 1.</span>
+
+    <span class="n">action</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">active_object_count</span><span class="p">,</span> <span class="n">active_object_count_wider</span><span class="p">),</span>
+    <span class="c1">-- Function triggered for each qualifying node.</span>
+    <span class="c1">-- `active_object_count` is number of active objects in the node&#39;s</span>
+    <span class="c1">-- mapblock.</span>
+    <span class="c1">-- `active_object_count_wider` is number of active objects in the node&#39;s</span>
+    <span class="c1">-- mapblock plus all 26 neighboring mapblocks. If any neighboring</span>
+    <span class="c1">-- mapblocks are unloaded an estmate is calculated for them based on</span>
+    <span class="c1">-- loaded mapblocks.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="lbm-loadingblockmodifier-definition">LBM (LoadingBlockModifier) definition<a class="headerlink" href="#lbm-loadingblockmodifier-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_lbm</code>.</p>
+<p>A loading block modifier (LBM) is used to define a function that is called for
+specific nodes (defined by <code>nodenames</code>) when a mapblock which contains such nodes
+gets loaded.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Upgrade legacy doors&quot;</span><span class="p">,</span>
+    <span class="c1">-- Descriptive label for profiling purposes (optional).</span>
+    <span class="c1">-- Definitions with identical labels will be listed as one.</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;modname:replace_legacy_door&quot;</span><span class="p">,</span>
+
+    <span class="n">nodenames</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:lava_source&quot;</span><span class="p">},</span>
+    <span class="c1">-- List of node names to trigger the LBM on.</span>
+    <span class="c1">-- Also non-registered nodes will work.</span>
+    <span class="c1">-- Groups (as of group:groupname) will work as well.</span>
+
+    <span class="n">run_at_every_load</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- Whether to run the LBM&#39;s action every time a block gets loaded,</span>
+    <span class="c1">-- and not only the first time the block gets loaded after the LBM</span>
+    <span class="c1">-- was introduced.</span>
+
+    <span class="n">action</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">node</span><span class="p">),</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="tile-definition">Tile definition<a class="headerlink" href="#tile-definition" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>"image.png"</code></li>
+<li><code>{name="image.png", animation={Tile Animation definition}}</code></li>
+<li><code>{name="image.png", backface_culling=bool, tileable_vertical=bool,
+  tileable_horizontal=bool, align_style="node"/"world"/"user", scale=int}</code><ul>
+<li>backface culling enabled by default for most nodes</li>
+<li>tileable flags are info for shaders, how they should treat texture
+  when displacement mapping is used.
+  Directions are from the point of view of the tile texture,
+  not the node it's on.</li>
+<li>align style determines whether the texture will be rotated with the node
+  or kept aligned with its surroundings. "user" means that client
+  setting will be used, similar to <code>glasslike_framed_optional</code>.
+  Note: supported by solid nodes and nodeboxes only.</li>
+<li>scale is used to make texture span several (exactly <code>scale</code>) nodes,
+  instead of just one, in each direction. Works for world-aligned
+  textures only.
+  Note that as the effect is applied on per-mapblock basis, <code>16</code> should
+  be equally divisible by <code>scale</code> or you may get wrong results.</li>
+</ul>
+</li>
+<li><code>{name="image.png", color=ColorSpec}</code><ul>
+<li>the texture's color will be multiplied with this color.</li>
+<li>the tile's color overrides the owning node's color in all cases.</li>
+</ul>
+</li>
+<li>deprecated, yet still supported field names:<ul>
+<li><code>image</code> (name)</li>
+</ul>
+</li>
+</ul>
+<h2 id="tile-animation-definition">Tile animation definition<a class="headerlink" href="#tile-animation-definition" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;vertical_frames&quot;</span><span class="p">,</span>
+
+    <span class="n">aspect_w</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="c1">-- Width of a frame in pixels</span>
+
+    <span class="n">aspect_h</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="c1">-- Height of a frame in pixels</span>
+
+    <span class="n">length</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span>
+    <span class="c1">-- Full loop length</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;sheet_2d&quot;</span><span class="p">,</span>
+
+    <span class="n">frames_w</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="c1">-- Width in number of frames</span>
+
+    <span class="n">frames_h</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="c1">-- Height in number of frames</span>
+
+    <span class="n">frame_length</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="c1">-- Length of a single frame</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="item-definition">Item definition<a class="headerlink" href="#item-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_node</code>, <code>minetest.register_craftitem</code>, and
+<code>minetest.register_tool</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Steel Axe&quot;</span><span class="p">,</span>
+
+    <span class="n">groups</span> <span class="o">=</span> <span class="p">{},</span>
+    <span class="c1">-- key = name, value = rating; rating = 1..3.</span>
+    <span class="c1">-- If rating not applicable, use 1.</span>
+    <span class="c1">-- e.g. {wool = 1, fluffy = 3}</span>
+    <span class="c1">--      {soil = 2, outerspace = 1, crumbly = 1}</span>
+    <span class="c1">--      {bendy = 2, snappy = 1},</span>
+    <span class="c1">--      {hard = 1, metal = 1, spikes = 1}</span>
+
+    <span class="n">inventory_image</span> <span class="o">=</span> <span class="s2">&quot;default_tool_steelaxe.png&quot;</span><span class="p">,</span>
+
+    <span class="n">inventory_overlay</span> <span class="o">=</span> <span class="s2">&quot;overlay.png&quot;</span><span class="p">,</span>
+    <span class="c1">-- An overlay which does not get colorized</span>
+
+    <span class="n">wield_image</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+
+    <span class="n">wield_overlay</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+
+    <span class="n">palette</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- An image file containing the palette of a node.</span>
+    <span class="c1">-- You can set the currently used color as the &quot;palette_index&quot; field of</span>
+    <span class="c1">-- the item stack metadata.</span>
+    <span class="c1">-- The palette is always stretched to fit indices between 0 and 255, to</span>
+    <span class="c1">-- ensure compatibility with &quot;colorfacedir&quot; and &quot;colorwallmounted&quot; nodes.</span>
+
+    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;0xFFFFFFFF&quot;</span><span class="p">,</span>
+    <span class="c1">-- The color of the item. The palette overrides this.</span>
+
+    <span class="n">wield_scale</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">},</span>
+
+    <span class="n">stack_max</span> <span class="o">=</span> <span class="mi">99</span><span class="p">,</span>
+
+    <span class="n">range</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span>
+
+    <span class="n">liquids_pointable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">-- See &quot;Tools&quot; section for an example including explanation</span>
+    <span class="n">tool_capabilities</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">full_punch_interval</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">max_drop_level</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">groupcaps</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">-- For example:</span>
+            <span class="n">choppy</span> <span class="o">=</span> <span class="p">{</span><span class="n">times</span> <span class="o">=</span> <span class="p">{[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.50</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.40</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.00</span><span class="p">},</span>
+                     <span class="n">uses</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">maxlevel</span> <span class="o">=</span> <span class="mi">2</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="n">damage_groups</span> <span class="o">=</span> <span class="p">{</span><span class="n">groupname</span> <span class="o">=</span> <span class="n">damage</span><span class="p">},</span>
+        <span class="c1">-- Damage values must be between -32768 and 32767 (2^15)</span>
+
+        <span class="n">punch_attack_uses</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="c1">-- Amount of uses this tool has for attacking players and entities</span>
+        <span class="c1">-- by punching them (0 = infinite uses).</span>
+        <span class="c1">-- For compatibility, this is automatically set from the first</span>
+        <span class="c1">-- suitable groupcap using the forumla &quot;uses * 3^(maxlevel - 1)&quot;.</span>
+        <span class="c1">-- It is recommend to set this explicitly instead of relying on the</span>
+        <span class="c1">-- fallback behavior.</span>
+    <span class="p">},</span>
+
+    <span class="n">node_placement_prediction</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="c1">-- If nil and item is node, prediction is made automatically.</span>
+    <span class="c1">-- If nil and item is not a node, no prediction is made.</span>
+    <span class="c1">-- If &quot;&quot; and item is anything, no prediction is made.</span>
+    <span class="c1">-- Otherwise should be name of node which the client immediately places</span>
+    <span class="c1">-- on ground when the player places the item. Server will always update</span>
+    <span class="c1">-- actual result to client in a short moment.</span>
+
+    <span class="n">node_dig_prediction</span> <span class="o">=</span> <span class="s2">&quot;air&quot;</span><span class="p">,</span>
+    <span class="c1">-- if &quot;&quot;, no prediction is made.</span>
+    <span class="c1">-- if &quot;air&quot;, node is removed.</span>
+    <span class="c1">-- Otherwise should be name of node which the client immediately places</span>
+    <span class="c1">-- upon digging. Server will always update actual result shortly.</span>
+
+    <span class="n">sound</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1">-- Definition of items sounds to be played at various events.</span>
+        <span class="c1">-- All fields in this table are optional.</span>
+
+        <span class="n">breaks</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- When tool breaks due to wear. Ignored for non-tools</span>
+
+        <span class="n">eat</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- When item is eaten with `minetest.do_item_eat`</span>
+    <span class="p">},</span>
+
+    <span class="n">on_place</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">itemstack</span><span class="p">,</span> <span class="n">placer</span><span class="p">,</span> <span class="n">pointed_thing</span><span class="p">),</span>
+    <span class="c1">-- Shall place item and return the leftover itemstack.</span>
+    <span class="c1">-- The placer may be any ObjectRef or nil.</span>
+    <span class="c1">-- default: minetest.item_place</span>
+
+    <span class="n">on_secondary_use</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">itemstack</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">pointed_thing</span><span class="p">),</span>
+    <span class="c1">-- Same as on_place but called when not pointing at a node.</span>
+    <span class="c1">-- The user may be any ObjectRef or nil.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">on_drop</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">itemstack</span><span class="p">,</span> <span class="n">dropper</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span>
+    <span class="c1">-- Shall drop item and return the leftover itemstack.</span>
+    <span class="c1">-- The dropper may be any ObjectRef or nil.</span>
+    <span class="c1">-- default: minetest.item_drop</span>
+
+    <span class="n">on_use</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">itemstack</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">pointed_thing</span><span class="p">),</span>
+    <span class="c1">-- default: nil</span>
+    <span class="c1">-- Function must return either nil if no item shall be removed from</span>
+    <span class="c1">-- inventory, or an itemstack to replace the original itemstack.</span>
+    <span class="c1">-- e.g. itemstack:take_item(); return itemstack</span>
+    <span class="c1">-- Otherwise, the function is free to do what it wants.</span>
+    <span class="c1">-- The user may be any ObjectRef or nil.</span>
+    <span class="c1">-- The default functions handle regular use cases.</span>
+
+    <span class="n">after_use</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">itemstack</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">digparams</span><span class="p">),</span>
+    <span class="c1">-- default: nil</span>
+    <span class="c1">-- If defined, should return an itemstack and will be called instead of</span>
+    <span class="c1">-- wearing out the tool. If returns nil, does nothing.</span>
+    <span class="c1">-- If after_use doesn&#39;t exist, it is the same as:</span>
+    <span class="c1">--   function(itemstack, user, node, digparams)</span>
+    <span class="c1">--     itemstack:add_wear(digparams.wear)</span>
+    <span class="c1">--     return itemstack</span>
+    <span class="c1">--   end</span>
+    <span class="c1">-- The user may be any ObjectRef or nil.</span>
+
+    <span class="n">_custom_field</span> <span class="o">=</span> <span class="n">whatever</span><span class="p">,</span>
+    <span class="c1">-- Add your own custom fields. By convention, all custom field names</span>
+    <span class="c1">-- should start with `_` to avoid naming collisions with future engine</span>
+    <span class="c1">-- usage.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="node-definition">Node definition<a class="headerlink" href="#node-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_node</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="c1">-- &lt;all fields allowed in item definitions&gt;,</span>
+
+    <span class="n">drawtype</span> <span class="o">=</span> <span class="s2">&quot;normal&quot;</span><span class="p">,</span>  <span class="c1">-- See &quot;Node drawtypes&quot;</span>
+
+    <span class="n">visual_scale</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="c1">-- Supported for drawtypes &quot;plantlike&quot;, &quot;signlike&quot;, &quot;torchlike&quot;,</span>
+    <span class="c1">-- &quot;firelike&quot;, &quot;mesh&quot;.</span>
+    <span class="c1">-- For plantlike and firelike, the image will start at the bottom of the</span>
+    <span class="c1">-- node. For torchlike, the image will start at the surface to which the</span>
+    <span class="c1">-- node &quot;attaches&quot;. For the other drawtypes the image will be centered</span>
+    <span class="c1">-- on the node.</span>
+
+    <span class="n">tiles</span> <span class="o">=</span> <span class="p">{</span><span class="n">tile</span> <span class="n">definition</span> <span class="mi">1</span><span class="p">,</span> <span class="n">def2</span><span class="p">,</span> <span class="n">def3</span><span class="p">,</span> <span class="n">def4</span><span class="p">,</span> <span class="n">def5</span><span class="p">,</span> <span class="n">def6</span><span class="p">},</span>
+    <span class="c1">-- Textures of node; +Y, -Y, +X, -X, +Z, -Z</span>
+    <span class="c1">-- Old field name was &#39;tile_images&#39;.</span>
+    <span class="c1">-- List can be shortened to needed length.</span>
+
+    <span class="n">overlay_tiles</span> <span class="o">=</span> <span class="p">{</span><span class="n">tile</span> <span class="n">definition</span> <span class="mi">1</span><span class="p">,</span> <span class="n">def2</span><span class="p">,</span> <span class="n">def3</span><span class="p">,</span> <span class="n">def4</span><span class="p">,</span> <span class="n">def5</span><span class="p">,</span> <span class="n">def6</span><span class="p">},</span>
+    <span class="c1">-- Same as `tiles`, but these textures are drawn on top of the base</span>
+    <span class="c1">-- tiles. You can use this to colorize only specific parts of your</span>
+    <span class="c1">-- texture. If the texture name is an empty string, that overlay is not</span>
+    <span class="c1">-- drawn. Since such tiles are drawn twice, it is not recommended to use</span>
+    <span class="c1">-- overlays on very common nodes.</span>
+
+    <span class="n">special_tiles</span> <span class="o">=</span> <span class="p">{</span><span class="n">tile</span> <span class="n">definition</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Tile</span> <span class="n">definition</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="c1">-- Special textures of node; used rarely.</span>
+    <span class="c1">-- Old field name was &#39;special_materials&#39;.</span>
+    <span class="c1">-- List can be shortened to needed length.</span>
+
+    <span class="n">color</span> <span class="o">=</span> <span class="n">ColorSpec</span><span class="p">,</span>
+    <span class="c1">-- The node&#39;s original color will be multiplied with this color.</span>
+    <span class="c1">-- If the node has a palette, then this setting only has an effect in</span>
+    <span class="c1">-- the inventory and on the wield item.</span>
+
+    <span class="n">use_texture_alpha</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- Use texture&#39;s alpha channel</span>
+
+    <span class="n">palette</span> <span class="o">=</span> <span class="s2">&quot;palette.png&quot;</span><span class="p">,</span>
+    <span class="c1">-- The node&#39;s `param2` is used to select a pixel from the image.</span>
+    <span class="c1">-- Pixels are arranged from left to right and from top to bottom.</span>
+    <span class="c1">-- The node&#39;s color will be multiplied with the selected pixel&#39;s color.</span>
+    <span class="c1">-- Tiles can override this behavior.</span>
+    <span class="c1">-- Only when `paramtype2` supports palettes.</span>
+
+    <span class="n">post_effect_color</span> <span class="o">=</span> <span class="s2">&quot;green#0F&quot;</span><span class="p">,</span>
+    <span class="c1">-- Screen tint if player is inside node, see &quot;ColorSpec&quot;</span>
+
+    <span class="n">paramtype</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1">-- See &quot;Nodes&quot;</span>
+
+    <span class="n">paramtype2</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1">-- See &quot;Nodes&quot;</span>
+
+    <span class="n">place_param2</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>  <span class="c1">-- Force value for param2 when player places node</span>
+
+    <span class="n">is_ground_content</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If false, the cave generator and dungeon generator will not carve</span>
+    <span class="c1">-- through this node.</span>
+    <span class="c1">-- Specifically, this stops mod-added nodes being removed by caves and</span>
+    <span class="c1">-- dungeons when those generate in a neighbor mapchunk and extend out</span>
+    <span class="c1">-- beyond the edge of that mapchunk.</span>
+
+    <span class="n">sunlight_propagates</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true, sunlight will go infinitely through this node</span>
+
+    <span class="n">walkable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">-- If true, objects collide with node</span>
+
+    <span class="n">pointable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">-- If true, can be pointed at</span>
+
+    <span class="n">diggable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">-- If false, can never be dug</span>
+
+    <span class="n">climbable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">-- If true, can be climbed on (ladder)</span>
+
+    <span class="n">buildable_to</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">-- If true, placed nodes can replace this node</span>
+
+    <span class="n">floodable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true, liquids flow into and replace this node.</span>
+    <span class="c1">-- Warning: making a liquid node &#39;floodable&#39; will cause problems.</span>
+
+    <span class="n">liquidtype</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1">-- &quot;none&quot; / &quot;source&quot; / &quot;flowing&quot;</span>
+
+    <span class="n">liquid_alternative_flowing</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">-- Flowing version of source liquid</span>
+
+    <span class="n">liquid_alternative_source</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">-- Source version of flowing liquid</span>
+
+    <span class="n">liquid_viscosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">-- Higher viscosity = slower flow (max. 7)</span>
+
+    <span class="n">liquid_renewable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If true, a new liquid source can be created by placing two or more</span>
+    <span class="c1">-- sources nearby</span>
+
+    <span class="n">leveled</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="c1">-- Only valid for &quot;nodebox&quot; drawtype with &#39;type = &quot;leveled&quot;&#39;.</span>
+    <span class="c1">-- Allows defining the nodebox height without using param2.</span>
+    <span class="c1">-- The nodebox height is &#39;leveled&#39; / 64 nodes.</span>
+    <span class="c1">-- The maximum value of &#39;leveled&#39; is 127.</span>
+
+    <span class="n">liquid_range</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>  <span class="c1">-- Number of flowing nodes around source (max. 8)</span>
+
+    <span class="n">drowning</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Player will take this amount of damage if no bubbles are left</span>
+
+    <span class="n">light_source</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Amount of light emitted by node.</span>
+    <span class="c1">-- To set the maximum (14), use the value &#39;minetest.LIGHT_MAX&#39;.</span>
+    <span class="c1">-- A value outside the range 0 to minetest.LIGHT_MAX causes undefined</span>
+    <span class="c1">-- behavior.</span>
+
+    <span class="n">damage_per_second</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- If player is inside node, this damage is caused</span>
+
+    <span class="n">node_box</span> <span class="o">=</span> <span class="p">{</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;regular&quot;</span><span class="p">},</span>  <span class="c1">-- See &quot;Node boxes&quot;</span>
+
+    <span class="n">connects_to</span> <span class="o">=</span> <span class="n">nodenames</span><span class="p">,</span>
+    <span class="c1">-- Used for nodebox nodes with the type == &quot;connected&quot;.</span>
+    <span class="c1">-- Specifies to what neighboring nodes connections will be drawn.</span>
+    <span class="c1">-- e.g. `{&quot;group:fence&quot;, &quot;default:wood&quot;}` or `&quot;default:stone&quot;`</span>
+
+    <span class="n">connect_sides</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;front&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span> <span class="p">},</span>
+    <span class="c1">-- Tells connected nodebox nodes to connect only to these sides of this</span>
+    <span class="c1">-- node</span>
+
+    <span class="n">mesh</span> <span class="o">=</span> <span class="s2">&quot;model.obj&quot;</span><span class="p">,</span>
+    <span class="c1">-- File name of mesh when using &quot;mesh&quot; drawtype</span>
+
+    <span class="n">selection_box</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;fixed&quot;</span><span class="p">,</span>
+        <span class="n">fixed</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="c1">-- Custom selection box definition. Multiple boxes can be defined.</span>
+    <span class="c1">-- If &quot;nodebox&quot; drawtype is used and selection_box is nil, then node_box</span>
+    <span class="c1">-- definition is used for the selection box.</span>
+
+    <span class="n">collision_box</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;fixed&quot;</span><span class="p">,</span>
+        <span class="n">fixed</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">16</span><span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="c1">-- Custom collision box definition. Multiple boxes can be defined.</span>
+    <span class="c1">-- If &quot;nodebox&quot; drawtype is used and collision_box is nil, then node_box</span>
+    <span class="c1">-- definition is used for the collision box.</span>
+    <span class="c1">-- Both of the boxes above are defined as:</span>
+    <span class="c1">-- {xmin, ymin, zmin, xmax, ymax, zmax} in nodes from node center.</span>
+
+    <span class="c1">-- Support maps made in and before January 2012</span>
+    <span class="n">legacy_facedir_simple</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="n">legacy_wallmounted</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="n">waving</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Valid for drawtypes:</span>
+    <span class="c1">-- mesh, nodebox, plantlike, allfaces_optional, liquid, flowingliquid.</span>
+    <span class="c1">-- 1 - wave node like plants (node top moves side-to-side, bottom is fixed)</span>
+    <span class="c1">-- 2 - wave node like leaves (whole node moves side-to-side)</span>
+    <span class="c1">-- 3 - wave node like liquids (whole node moves up and down)</span>
+    <span class="c1">-- Not all models will properly wave.</span>
+    <span class="c1">-- plantlike drawtype can only wave like plants.</span>
+    <span class="c1">-- allfaces_optional drawtype can only wave like leaves.</span>
+    <span class="c1">-- liquid, flowingliquid drawtypes can only wave like liquids.</span>
+
+    <span class="n">sounds</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1">-- Definition of node sounds to be played at various events.</span>
+        <span class="c1">-- All fields in this table are optional.</span>
+
+        <span class="n">footstep</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- If walkable, played when object walks on it. If node is</span>
+        <span class="c1">-- climbable or a liquid, played when object moves through it</span>
+
+        <span class="n">dig</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="s2">&quot;__group&quot;</span><span class="p">,</span>
+        <span class="c1">-- While digging node.</span>
+        <span class="c1">-- If `&quot;__group&quot;`, then the sound will be</span>
+        <span class="c1">-- `default_dig_&lt;groupname&gt;`, where `&lt;groupname&gt;` is the</span>
+        <span class="c1">-- name of the tool&#39;s digging group with the fastest digging time.</span>
+        <span class="c1">-- In case of a tie, one of the sounds will be played (but we</span>
+        <span class="c1">-- cannot predict which one)</span>
+        <span class="c1">-- Default value: `&quot;__group&quot;`</span>
+
+        <span class="n">dug</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- Node was dug</span>
+
+        <span class="n">place</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- Node was placed. Also played after falling</span>
+
+        <span class="n">place_failed</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- When node placement failed</span>
+
+        <span class="n">fall</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">SimpleSoundSpec</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="c1">-- When node starts to fall</span>
+    <span class="p">},</span>
+
+    <span class="n">drop</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- Name of dropped item when dug.</span>
+    <span class="c1">-- Default dropped item is the node itself.</span>
+    <span class="c1">-- Using a table allows multiple items, drop chances and tool filtering.</span>
+    <span class="c1">-- Tool filtering was undocumented until recently, tool filtering by string</span>
+    <span class="c1">-- matching is deprecated.</span>
+    <span class="n">drop</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">max_items</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="c1">-- Maximum number of item lists to drop.</span>
+        <span class="c1">-- The entries in &#39;items&#39; are processed in order. For each:</span>
+        <span class="c1">-- Tool filtering is applied, chance of drop is applied, if both are</span>
+        <span class="c1">-- successful the entire item list is dropped.</span>
+        <span class="c1">-- Entry processing continues until the number of dropped item lists</span>
+        <span class="c1">-- equals &#39;max_items&#39;.</span>
+        <span class="c1">-- Therefore, entries should progress from low to high drop chance.</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">-- Entry examples.</span>
+            <span class="p">{</span>
+                <span class="c1">-- 1 in 1000 chance of dropping a diamond.</span>
+                <span class="c1">-- Default rarity is &#39;1&#39;.</span>
+                <span class="n">rarity</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+                <span class="n">items</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:diamond&quot;</span><span class="p">},</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="c1">-- Only drop if using a tool whose name is identical to one</span>
+                <span class="c1">-- of these.</span>
+                <span class="n">tools</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:shovel_mese&quot;</span><span class="p">,</span> <span class="s2">&quot;default:shovel_diamond&quot;</span><span class="p">},</span>
+                <span class="n">rarity</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="n">items</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:dirt&quot;</span><span class="p">},</span>
+                <span class="c1">-- Whether all items in the dropped item list inherit the</span>
+                <span class="c1">-- hardware coloring palette color from the dug node.</span>
+                <span class="c1">-- Default is &#39;false&#39;.</span>
+                <span class="n">inherit_color</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="c1">-- Only drop if using a tool whose name contains</span>
+                <span class="c1">-- &quot;default:shovel_&quot; (this tool filtering by string matching</span>
+                <span class="c1">-- is deprecated).</span>
+                <span class="n">tools</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;~default:shovel_&quot;</span><span class="p">},</span>
+                <span class="n">rarity</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="c1">-- The item list dropped.</span>
+                <span class="n">items</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:sand&quot;</span><span class="p">,</span> <span class="s2">&quot;default:desert_sand&quot;</span><span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+
+    <span class="n">on_construct</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">),</span>
+    <span class="c1">-- Node constructor; called after adding node.</span>
+    <span class="c1">-- Can set up metadata and stuff like that.</span>
+    <span class="c1">-- Not called for bulk node placement (i.e. schematics and VoxelManip).</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">on_destruct</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">),</span>
+    <span class="c1">-- Node destructor; called before removing node.</span>
+    <span class="c1">-- Not called for bulk node placement.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">after_destruct</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">oldnode</span><span class="p">),</span>
+    <span class="c1">-- Node destructor; called after removing node.</span>
+    <span class="c1">-- Not called for bulk node placement.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">on_flood</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">oldnode</span><span class="p">,</span> <span class="n">newnode</span><span class="p">),</span>
+    <span class="c1">-- Called when a liquid (newnode) is about to flood oldnode, if it has</span>
+    <span class="c1">-- `floodable = true` in the nodedef. Not called for bulk node placement</span>
+    <span class="c1">-- (i.e. schematics and VoxelManip) or air nodes. If return true the</span>
+    <span class="c1">-- node is not flooded, but on_flood callback will most likely be called</span>
+    <span class="c1">-- over and over again every liquid update interval.</span>
+    <span class="c1">-- Default: nil</span>
+    <span class="c1">-- Warning: making a liquid node &#39;floodable&#39; will cause problems.</span>
+
+    <span class="n">preserve_metadata</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">oldnode</span><span class="p">,</span> <span class="n">oldmeta</span><span class="p">,</span> <span class="n">drops</span><span class="p">),</span>
+    <span class="c1">-- Called when oldnode is about be converted to an item, but before the</span>
+    <span class="c1">-- node is deleted from the world or the drops are added. This is</span>
+    <span class="c1">-- generally the result of either the node being dug or an attached node</span>
+    <span class="c1">-- becoming detached.</span>
+    <span class="c1">-- oldmeta is the NodeMetaRef of the oldnode before deletion.</span>
+    <span class="c1">-- drops is a table of ItemStacks, so any metadata to be preserved can</span>
+    <span class="c1">-- be added directly to one or more of the dropped items. See</span>
+    <span class="c1">-- &quot;ItemStackMetaRef&quot;.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">after_place_node</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">placer</span><span class="p">,</span> <span class="n">itemstack</span><span class="p">,</span> <span class="n">pointed_thing</span><span class="p">),</span>
+    <span class="c1">-- Called after constructing node when node was placed using</span>
+    <span class="c1">-- minetest.item_place_node / minetest.place_node.</span>
+    <span class="c1">-- If return true no item is taken from itemstack.</span>
+    <span class="c1">-- `placer` may be any valid ObjectRef or nil.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">after_dig_node</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">oldnode</span><span class="p">,</span> <span class="n">oldmetadata</span><span class="p">,</span> <span class="n">digger</span><span class="p">),</span>
+    <span class="c1">-- oldmetadata is in table format.</span>
+    <span class="c1">-- Called after destructing node when node was dug using</span>
+    <span class="c1">-- minetest.node_dig / minetest.dig_node.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">can_dig</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="p">[</span><span class="n">player</span><span class="p">]),</span>
+    <span class="c1">-- Returns true if node can be dug, or false if not.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">on_punch</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">puncher</span><span class="p">,</span> <span class="n">pointed_thing</span><span class="p">),</span>
+    <span class="c1">-- default: minetest.node_punch</span>
+    <span class="c1">-- Called when puncher (an ObjectRef) punches the node at pos.</span>
+    <span class="c1">-- By default calls minetest.register_on_punchnode callbacks.</span>
+
+    <span class="n">on_rightclick</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">clicker</span><span class="p">,</span> <span class="n">itemstack</span><span class="p">,</span> <span class="n">pointed_thing</span><span class="p">),</span>
+    <span class="c1">-- default: nil</span>
+    <span class="c1">-- Called when clicker (an ObjectRef) &quot;rightclicks&quot;</span>
+    <span class="c1">-- (&quot;rightclick&quot; here stands for the placement key) while pointing at</span>
+    <span class="c1">-- the node at pos with &#39;node&#39; being the node table.</span>
+    <span class="c1">-- itemstack will hold clicker&#39;s wielded item.</span>
+    <span class="c1">-- Shall return the leftover itemstack.</span>
+    <span class="c1">-- Note: pointed_thing can be nil, if a mod calls this function.</span>
+    <span class="c1">-- This function does not get triggered by clients &lt;=0.4.16 if the</span>
+    <span class="c1">-- &quot;formspec&quot; node metadata field is set.</span>
+
+    <span class="n">on_dig</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">digger</span><span class="p">),</span>
+    <span class="c1">-- default: minetest.node_dig</span>
+    <span class="c1">-- By default checks privileges, wears out tool and removes node.</span>
+
+    <span class="n">on_timer</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">),</span>
+    <span class="c1">-- default: nil</span>
+    <span class="c1">-- called by NodeTimers, see minetest.get_node_timer and NodeTimerRef.</span>
+    <span class="c1">-- elapsed is the total time passed since the timer was started.</span>
+    <span class="c1">-- return true to run the timer for another cycle with the same timeout</span>
+    <span class="c1">-- value.</span>
+
+    <span class="n">on_receive_fields</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">formname</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">sender</span><span class="p">),</span>
+    <span class="c1">-- fields = {name1 = value1, name2 = value2, ...}</span>
+    <span class="c1">-- Called when an UI form (e.g. sign text input) returns data.</span>
+    <span class="c1">-- See minetest.register_on_player_receive_fields for more info.</span>
+    <span class="c1">-- default: nil</span>
+
+    <span class="n">allow_metadata_inventory_move</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">from_list</span><span class="p">,</span> <span class="n">from_index</span><span class="p">,</span> <span class="n">to_list</span><span class="p">,</span> <span class="n">to_index</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called when a player wants to move items inside the inventory.</span>
+    <span class="c1">-- Return value: number of items allowed to move.</span>
+
+    <span class="n">allow_metadata_inventory_put</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called when a player wants to put something into the inventory.</span>
+    <span class="c1">-- Return value: number of items allowed to put.</span>
+    <span class="c1">-- Return value -1: Allow and don&#39;t modify item count in inventory.</span>
+
+    <span class="n">allow_metadata_inventory_take</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called when a player wants to take something out of the inventory.</span>
+    <span class="c1">-- Return value: number of items allowed to take.</span>
+    <span class="c1">-- Return value -1: Allow and don&#39;t modify item count in inventory.</span>
+
+    <span class="n">on_metadata_inventory_move</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">from_list</span><span class="p">,</span> <span class="n">from_index</span><span class="p">,</span> <span class="n">to_list</span><span class="p">,</span> <span class="n">to_index</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="n">on_metadata_inventory_put</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="n">on_metadata_inventory_take</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called after the actual action has happened, according to what was</span>
+    <span class="c1">-- allowed.</span>
+    <span class="c1">-- No return value.</span>
+
+    <span class="n">on_blast</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">intensity</span><span class="p">),</span>
+    <span class="c1">-- intensity: 1.0 = mid range of regular TNT.</span>
+    <span class="c1">-- If defined, called when an explosion touches the node, instead of</span>
+    <span class="c1">-- removing the node.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="crafting-recipes">Crafting recipes<a class="headerlink" href="#crafting-recipes" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_craft</code>.</p>
+<h3 id="shaped">Shaped<a class="headerlink" href="#shaped" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;default:pick_stone&#39;</span><span class="p">,</span>
+    <span class="n">recipe</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">{</span><span class="s1">&#39;default:cobble&#39;</span><span class="p">,</span> <span class="s1">&#39;default:cobble&#39;</span><span class="p">,</span> <span class="s1">&#39;default:cobble&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;default:stick&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;default:stick&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>  <span class="c1">-- Also groups; e.g. &#39;group:crumbly&#39;</span>
+    <span class="p">},</span>
+    <span class="n">replacements</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">list</span> <span class="n">of</span> <span class="n">item</span> <span class="nb">pairs</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="c1">-- replacements: replace one input item with another item on crafting</span>
+    <span class="c1">-- (optional).</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h3 id="shapeless">Shapeless<a class="headerlink" href="#shapeless" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;shapeless&quot;</span><span class="p">,</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;mushrooms:mushroom_stew&#39;</span><span class="p">,</span>
+    <span class="n">recipe</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;mushrooms:bowl&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mushrooms:mushroom_brown&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mushrooms:mushroom_red&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">replacements</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">list</span> <span class="n">of</span> <span class="n">item</span> <span class="nb">pairs</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h3 id="tool-repair">Tool repair<a class="headerlink" href="#tool-repair" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;toolrepair&quot;</span><span class="p">,</span>
+    <span class="n">additional_wear</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Note: Tools with group <code>disable_repair=1</code> will not repairable by this recipe.</p>
+<h3 id="cooking">Cooking<a class="headerlink" href="#cooking" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;cooking&quot;</span><span class="p">,</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;default:glass&quot;</span><span class="p">,</span>
+    <span class="n">recipe</span> <span class="o">=</span> <span class="s2">&quot;default:sand&quot;</span><span class="p">,</span>
+    <span class="n">cooktime</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h3 id="furnace-fuel">Furnace fuel<a class="headerlink" href="#furnace-fuel" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;fuel&quot;</span><span class="p">,</span>
+    <span class="n">recipe</span> <span class="o">=</span> <span class="s2">&quot;bucket:bucket_lava&quot;</span><span class="p">,</span>
+    <span class="n">burntime</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="n">replacements</span> <span class="o">=</span> <span class="p">{{</span><span class="s2">&quot;bucket:bucket_lava&quot;</span><span class="p">,</span> <span class="s2">&quot;bucket:bucket_empty&quot;</span><span class="p">}},</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="ore-definition">Ore definition<a class="headerlink" href="#ore-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_ore</code>.</p>
+<p>See [Ores] section above for essential information.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">ore_type</span> <span class="o">=</span> <span class="s2">&quot;scatter&quot;</span><span class="p">,</span>
+
+    <span class="n">ore</span> <span class="o">=</span> <span class="s2">&quot;default:stone_with_coal&quot;</span><span class="p">,</span>
+
+    <span class="n">ore_param2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="c1">-- Facedir rotation. Default is 0 (unchanged rotation)</span>
+
+    <span class="n">wherein</span> <span class="o">=</span> <span class="s2">&quot;default:stone&quot;</span><span class="p">,</span>
+    <span class="c1">-- A list of nodenames is supported too</span>
+
+    <span class="n">clust_scarcity</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="c1">-- Ore has a 1 out of clust_scarcity chance of spawning in a node.</span>
+    <span class="c1">-- If the desired average distance between ores is &#39;d&#39;, set this to</span>
+    <span class="c1">-- d * d * d.</span>
+
+    <span class="n">clust_num_ores</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="c1">-- Number of ores in a cluster</span>
+
+    <span class="n">clust_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="c1">-- Size of the bounding box of the cluster.</span>
+    <span class="c1">-- In this example, there is a 3 * 3 * 3 cluster where 8 out of the 27</span>
+    <span class="c1">-- nodes are coal ore.</span>
+
+    <span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">31000</span><span class="p">,</span>
+    <span class="n">y_max</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span>
+    <span class="c1">-- Lower and upper limits for ore</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- Attributes for the ore generation, see &#39;Ore attributes&#39; section above</span>
+
+    <span class="n">noise_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="c1">-- If noise is above this threshold, ore is placed. Not needed for a</span>
+    <span class="c1">-- uniform distribution.</span>
+
+    <span class="n">noise_params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">spread</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="n">seed</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span>
+        <span class="n">octaves</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.7</span>
+    <span class="p">},</span>
+    <span class="c1">-- NoiseParams structure describing one of the perlin noises used for</span>
+    <span class="c1">-- ore distribution.</span>
+    <span class="c1">-- Needed by &quot;sheet&quot;, &quot;puff&quot;, &quot;blob&quot; and &quot;vein&quot; ores.</span>
+    <span class="c1">-- Omit from &quot;scatter&quot; ore for a uniform ore distribution.</span>
+    <span class="c1">-- Omit from &quot;stratum&quot; ore for a simple horizontal strata from y_min to</span>
+    <span class="c1">-- y_max.</span>
+
+    <span class="n">biomes</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;desert&quot;</span><span class="p">,</span> <span class="s2">&quot;rainforest&quot;</span><span class="p">},</span>
+    <span class="c1">-- List of biomes in which this ore occurs.</span>
+    <span class="c1">-- Occurs in all biomes if this is omitted, and ignored if the Mapgen</span>
+    <span class="c1">-- being used does not support biomes.</span>
+    <span class="c1">-- Can be a list of (or a single) biome names, IDs, or definitions.</span>
+
+    <span class="c1">-- Type-specific parameters</span>
+
+    <span class="c1">-- sheet</span>
+    <span class="n">column_height_min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">column_height_max</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="n">column_midpoint_factor</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+
+    <span class="c1">-- puff</span>
+    <span class="n">np_puff_top</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">spread</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="n">seed</span> <span class="o">=</span> <span class="mi">47</span><span class="p">,</span>
+        <span class="n">octaves</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.7</span>
+    <span class="p">},</span>
+    <span class="n">np_puff_bottom</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">spread</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="n">seed</span> <span class="o">=</span> <span class="mi">11</span><span class="p">,</span>
+        <span class="n">octaves</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.7</span>
+    <span class="p">},</span>
+
+    <span class="c1">-- vein</span>
+    <span class="n">random_factor</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+
+    <span class="c1">-- stratum</span>
+    <span class="n">np_stratum_thickness</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">spread</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="n">seed</span> <span class="o">=</span> <span class="mi">17</span><span class="p">,</span>
+        <span class="n">octaves</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.7</span>
+    <span class="p">},</span>
+    <span class="n">stratum_thickness</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="biome-definition">Biome definition<a class="headerlink" href="#biome-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_biome</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;tundra&quot;</span><span class="p">,</span>
+
+    <span class="n">node_dust</span> <span class="o">=</span> <span class="s2">&quot;default:snow&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node dropped onto upper surface after all else is generated</span>
+
+    <span class="n">node_top</span> <span class="o">=</span> <span class="s2">&quot;default:dirt_with_snow&quot;</span><span class="p">,</span>
+    <span class="n">depth_top</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Node forming surface layer of biome and thickness of this layer</span>
+
+    <span class="n">node_filler</span> <span class="o">=</span> <span class="s2">&quot;default:permafrost&quot;</span><span class="p">,</span>
+    <span class="n">depth_filler</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="c1">-- Node forming lower layer of biome and thickness of this layer</span>
+
+    <span class="n">node_stone</span> <span class="o">=</span> <span class="s2">&quot;default:bluestone&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node that replaces all stone nodes between roughly y_min and y_max.</span>
+
+    <span class="n">node_water_top</span> <span class="o">=</span> <span class="s2">&quot;default:ice&quot;</span><span class="p">,</span>
+    <span class="n">depth_water_top</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="c1">-- Node forming a surface layer in seawater with the defined thickness</span>
+
+    <span class="n">node_water</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node that replaces all seawater nodes not in the surface layer</span>
+
+    <span class="n">node_river_water</span> <span class="o">=</span> <span class="s2">&quot;default:ice&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node that replaces river water in mapgens that use</span>
+    <span class="c1">-- default:river_water</span>
+
+    <span class="n">node_riverbed</span> <span class="o">=</span> <span class="s2">&quot;default:gravel&quot;</span><span class="p">,</span>
+    <span class="n">depth_riverbed</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="c1">-- Node placed under river water and thickness of this layer</span>
+
+    <span class="n">node_cave_liquid</span> <span class="o">=</span> <span class="s2">&quot;default:lava_source&quot;</span><span class="p">,</span>
+    <span class="n">node_cave_liquid</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;default:water_source&quot;</span><span class="p">,</span> <span class="s2">&quot;default:lava_source&quot;</span><span class="p">},</span>
+    <span class="c1">-- Nodes placed inside 50% of the medium size caves.</span>
+    <span class="c1">-- Multiple nodes can be specified, each cave will use a randomly</span>
+    <span class="c1">-- chosen node from the list.</span>
+    <span class="c1">-- If this field is left out or &#39;nil&#39;, cave liquids fall back to</span>
+    <span class="c1">-- classic behaviour of lava and water distributed using 3D noise.</span>
+    <span class="c1">-- For no cave liquid, specify &quot;air&quot;.</span>
+
+    <span class="n">node_dungeon</span> <span class="o">=</span> <span class="s2">&quot;default:cobble&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node used for primary dungeon structure.</span>
+    <span class="c1">-- If absent, dungeon nodes fall back to the &#39;mapgen_cobble&#39; mapgen</span>
+    <span class="c1">-- alias, if that is also absent, dungeon nodes fall back to the biome</span>
+    <span class="c1">-- &#39;node_stone&#39;.</span>
+    <span class="c1">-- If present, the following two nodes are also used.</span>
+
+    <span class="n">node_dungeon_alt</span> <span class="o">=</span> <span class="s2">&quot;default:mossycobble&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node used for randomly-distributed alternative structure nodes.</span>
+    <span class="c1">-- If alternative structure nodes are not wanted leave this absent for</span>
+    <span class="c1">-- performance reasons.</span>
+
+    <span class="n">node_dungeon_stair</span> <span class="o">=</span> <span class="s2">&quot;stairs:stair_cobble&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node used for dungeon stairs.</span>
+    <span class="c1">-- If absent, stairs fall back to &#39;node_dungeon&#39;.</span>
+
+    <span class="n">y_max</span> <span class="o">=</span> <span class="mi">31000</span><span class="p">,</span>
+    <span class="n">y_min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Upper and lower limits for biome.</span>
+    <span class="c1">-- Alternatively you can use xyz limits as shown below.</span>
+
+    <span class="n">max_pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">31000</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">31000</span><span class="p">},</span>
+    <span class="n">min_pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">31000</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mi">31000</span><span class="p">},</span>
+    <span class="c1">-- xyz limits for biome, an alternative to using &#39;y_min&#39; and &#39;y_max&#39;.</span>
+    <span class="c1">-- Biome is limited to a cuboid defined by these positions.</span>
+    <span class="c1">-- Any x, y or z field left undefined defaults to -31000 in &#39;min_pos&#39; or</span>
+    <span class="c1">-- 31000 in &#39;max_pos&#39;.</span>
+
+    <span class="n">vertical_blend</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="c1">-- Vertical distance in nodes above &#39;y_max&#39; over which the biome will</span>
+    <span class="c1">-- blend with the biome above.</span>
+    <span class="c1">-- Set to 0 for no vertical blend. Defaults to 0.</span>
+
+    <span class="n">heat_point</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">humidity_point</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="c1">-- Characteristic temperature and humidity for the biome.</span>
+    <span class="c1">-- These values create &#39;biome points&#39; on a voronoi diagram with heat and</span>
+    <span class="c1">-- humidity as axes. The resulting voronoi cells determine the</span>
+    <span class="c1">-- distribution of the biomes.</span>
+    <span class="c1">-- Heat and humidity have average values of 50, vary mostly between</span>
+    <span class="c1">-- 0 and 100 but can exceed these values.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="decoration-definition">Decoration definition<a class="headerlink" href="#decoration-definition" title="Permanent link">&para;</a></h2>
+<p>See [Decoration types]. Used by <code>minetest.register_decoration</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">deco_type</span> <span class="o">=</span> <span class="s2">&quot;simple&quot;</span><span class="p">,</span>
+
+    <span class="n">place_on</span> <span class="o">=</span> <span class="s2">&quot;default:dirt_with_grass&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node (or list of nodes) that the decoration can be placed on</span>
+
+    <span class="n">sidelen</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="c1">-- Size of the square divisions of the mapchunk being generated.</span>
+    <span class="c1">-- Determines the resolution of noise variation if used.</span>
+    <span class="c1">-- If the chunk size is not evenly divisible by sidelen, sidelen is made</span>
+    <span class="c1">-- equal to the chunk size.</span>
+
+    <span class="n">fill_ratio</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span>
+    <span class="c1">-- The value determines &#39;decorations per surface node&#39;.</span>
+    <span class="c1">-- Used only if noise_params is not specified.</span>
+    <span class="c1">-- If &gt;= 10.0 complete coverage is enabled and decoration placement uses</span>
+    <span class="c1">-- a different and much faster method.</span>
+
+    <span class="n">noise_params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="mf">0.45</span><span class="p">,</span>
+        <span class="n">spread</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="n">seed</span> <span class="o">=</span> <span class="mi">354</span><span class="p">,</span>
+        <span class="n">octaves</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="n">lacunarity</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="s2">&quot;absvalue&quot;</span>
+    <span class="p">},</span>
+    <span class="c1">-- NoiseParams structure describing the perlin noise used for decoration</span>
+    <span class="c1">-- distribution.</span>
+    <span class="c1">-- A noise value is calculated for each square division and determines</span>
+    <span class="c1">-- &#39;decorations per surface node&#39; within each division.</span>
+    <span class="c1">-- If the noise value &gt;= 10.0 complete coverage is enabled and</span>
+    <span class="c1">-- decoration placement uses a different and much faster method.</span>
+
+    <span class="n">biomes</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Oceanside&quot;</span><span class="p">,</span> <span class="s2">&quot;Hills&quot;</span><span class="p">,</span> <span class="s2">&quot;Plains&quot;</span><span class="p">},</span>
+    <span class="c1">-- List of biomes in which this decoration occurs. Occurs in all biomes</span>
+    <span class="c1">-- if this is omitted, and ignored if the Mapgen being used does not</span>
+    <span class="c1">-- support biomes.</span>
+    <span class="c1">-- Can be a list of (or a single) biome names, IDs, or definitions.</span>
+
+    <span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">31000</span><span class="p">,</span>
+    <span class="n">y_max</span> <span class="o">=</span> <span class="mi">31000</span><span class="p">,</span>
+    <span class="c1">-- Lower and upper limits for decoration.</span>
+    <span class="c1">-- These parameters refer to the Y co-ordinate of the &#39;place_on&#39; node.</span>
+
+    <span class="n">spawn_by</span> <span class="o">=</span> <span class="s2">&quot;default:water&quot;</span><span class="p">,</span>
+    <span class="c1">-- Node (or list of nodes) that the decoration only spawns next to.</span>
+    <span class="c1">-- Checks two horizontal planes of 8 neighbouring nodes (including</span>
+    <span class="c1">-- diagonal neighbours), one plane level with the &#39;place_on&#39; node and a</span>
+    <span class="c1">-- plane one node above that.</span>
+
+    <span class="n">num_spawn_by</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Number of spawn_by nodes that must be surrounding the decoration</span>
+    <span class="c1">-- position to occur.</span>
+    <span class="c1">-- If absent or -1, decorations occur next to any nodes.</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="s2">&quot;liquid_surface, force_placement, all_floors, all_ceilings&quot;</span><span class="p">,</span>
+    <span class="c1">-- Flags for all decoration types.</span>
+    <span class="c1">-- &quot;liquid_surface&quot;: Instead of placement on the highest solid surface</span>
+    <span class="c1">--   in a mapchunk column, placement is on the highest liquid surface.</span>
+    <span class="c1">--   Placement is disabled if solid nodes are found above the liquid</span>
+    <span class="c1">--   surface.</span>
+    <span class="c1">-- &quot;force_placement&quot;: Nodes other than &quot;air&quot; and &quot;ignore&quot; are replaced</span>
+    <span class="c1">--   by the decoration.</span>
+    <span class="c1">-- &quot;all_floors&quot;, &quot;all_ceilings&quot;: Instead of placement on the highest</span>
+    <span class="c1">--   surface in a mapchunk the decoration is placed on all floor and/or</span>
+    <span class="c1">--   ceiling surfaces, for example in caves and dungeons.</span>
+    <span class="c1">--   Ceiling decorations act as an inversion of floor decorations so the</span>
+    <span class="c1">--   effect of &#39;place_offset_y&#39; is inverted.</span>
+    <span class="c1">--   Y-slice probabilities do not function correctly for ceiling</span>
+    <span class="c1">--   schematic decorations as the behaviour is unchanged.</span>
+    <span class="c1">--   If a single decoration registration has both flags the floor and</span>
+    <span class="c1">--   ceiling decorations will be aligned vertically.</span>
+
+    <span class="c1">----- Simple-type parameters</span>
+
+    <span class="n">decoration</span> <span class="o">=</span> <span class="s2">&quot;default:grass&quot;</span><span class="p">,</span>
+    <span class="c1">-- The node name used as the decoration.</span>
+    <span class="c1">-- If instead a list of strings, a randomly selected node from the list</span>
+    <span class="c1">-- is placed as the decoration.</span>
+
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Decoration height in nodes.</span>
+    <span class="c1">-- If height_max is not 0, this is the lower limit of a randomly</span>
+    <span class="c1">-- selected height.</span>
+
+    <span class="n">height_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Upper limit of the randomly selected height.</span>
+    <span class="c1">-- If absent, the parameter &#39;height&#39; is used as a constant.</span>
+
+    <span class="n">param2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Param2 value of decoration nodes.</span>
+    <span class="c1">-- If param2_max is not 0, this is the lower limit of a randomly</span>
+    <span class="c1">-- selected param2.</span>
+
+    <span class="n">param2_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Upper limit of the randomly selected param2.</span>
+    <span class="c1">-- If absent, the parameter &#39;param2&#39; is used as a constant.</span>
+
+    <span class="n">place_offset_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Y offset of the decoration base node relative to the standard base</span>
+    <span class="c1">-- node position.</span>
+    <span class="c1">-- Can be positive or negative. Default is 0.</span>
+    <span class="c1">-- Effect is inverted for &quot;all_ceilings&quot; decorations.</span>
+    <span class="c1">-- Ignored by &#39;y_min&#39;, &#39;y_max&#39; and &#39;spawn_by&#39; checks, which always refer</span>
+    <span class="c1">-- to the &#39;place_on&#39; node.</span>
+
+    <span class="c1">----- Schematic-type parameters</span>
+
+    <span class="n">schematic</span> <span class="o">=</span> <span class="s2">&quot;foobar.mts&quot;</span><span class="p">,</span>
+    <span class="c1">-- If schematic is a string, it is the filepath relative to the current</span>
+    <span class="c1">-- working directory of the specified Minetest schematic file.</span>
+    <span class="c1">-- Could also be the ID of a previously registered schematic.</span>
+
+    <span class="n">schematic</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">4</span><span class="p">},</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;default:cobble&quot;</span><span class="p">,</span> <span class="n">param1</span> <span class="o">=</span> <span class="mi">255</span><span class="p">,</span> <span class="n">param2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">},</span>
+            <span class="p">{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;default:dirt_with_grass&quot;</span><span class="p">,</span> <span class="n">param1</span> <span class="o">=</span> <span class="mi">255</span><span class="p">,</span> <span class="n">param2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">},</span>
+            <span class="p">{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;air&quot;</span><span class="p">,</span> <span class="n">param1</span> <span class="o">=</span> <span class="mi">255</span><span class="p">,</span> <span class="n">param2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">},</span>
+             <span class="p">...</span>
+        <span class="p">},</span>
+        <span class="n">yslice_prob</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="n">ypos</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">prob</span> <span class="o">=</span> <span class="mi">128</span><span class="p">},</span>
+            <span class="p">{</span><span class="n">ypos</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">prob</span> <span class="o">=</span> <span class="mi">64</span><span class="p">},</span>
+             <span class="p">...</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="c1">-- Alternative schematic specification by supplying a table. The fields</span>
+    <span class="c1">-- size and data are mandatory whereas yslice_prob is optional.</span>
+    <span class="c1">-- See &#39;Schematic specifier&#39; for details.</span>
+
+    <span class="n">replacements</span> <span class="o">=</span> <span class="p">{[</span><span class="s2">&quot;oldname&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;convert_to&quot;</span><span class="p">,</span> <span class="p">...},</span>
+
+    <span class="n">flags</span> <span class="o">=</span> <span class="s2">&quot;place_center_x, place_center_y, place_center_z&quot;</span><span class="p">,</span>
+    <span class="c1">-- Flags for schematic decorations. See &#39;Schematic attributes&#39;.</span>
+
+    <span class="n">rotation</span> <span class="o">=</span> <span class="s2">&quot;90&quot;</span><span class="p">,</span>
+    <span class="c1">-- Rotation can be &quot;0&quot;, &quot;90&quot;, &quot;180&quot;, &quot;270&quot;, or &quot;random&quot;</span>
+
+    <span class="n">place_offset_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- If the flag &#39;place_center_y&#39; is set this parameter is ignored.</span>
+    <span class="c1">-- Y offset of the schematic base node layer relative to the &#39;place_on&#39;</span>
+    <span class="c1">-- node.</span>
+    <span class="c1">-- Can be positive or negative. Default is 0.</span>
+    <span class="c1">-- Effect is inverted for &quot;all_ceilings&quot; decorations.</span>
+    <span class="c1">-- Ignored by &#39;y_min&#39;, &#39;y_max&#39; and &#39;spawn_by&#39; checks, which always refer</span>
+    <span class="c1">-- to the &#39;place_on&#39; node.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="chat-command-definition">Chat command definition<a class="headerlink" href="#chat-command-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_chatcommand</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="s2">&quot;&lt;name&gt; &lt;privilege&gt;&quot;</span><span class="p">,</span>  <span class="c1">-- Short parameter description</span>
+
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Remove privilege from player&quot;</span><span class="p">,</span>  <span class="c1">-- Full description</span>
+
+    <span class="n">privs</span> <span class="o">=</span> <span class="p">{</span><span class="n">privs</span><span class="o">=</span><span class="kc">true</span><span class="p">},</span>  <span class="c1">-- Require the &quot;privs&quot; privilege to run</span>
+
+    <span class="n">func</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">),</span>
+    <span class="c1">-- Called when command is run. Returns boolean success and text output.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Note that in params, use of symbols is as follows:</p>
+<ul>
+<li><code>&lt;&gt;</code> signifies a placeholder to be replaced when the command is used. For
+  example, when a player name is needed: <code>&lt;name&gt;</code></li>
+<li><code>[]</code> signifies param is optional and not required when the command is used.
+  For example, if you require param1 but param2 is optional:
+  <code>&lt;param1&gt; [&lt;param2&gt;]</code></li>
+<li><code>|</code> signifies exclusive or. The command requires one param from the options
+  provided. For example: <code>&lt;param1&gt; | &lt;param2&gt;</code></li>
+<li><code>()</code> signifies grouping. For example, when param1 and param2 are both
+  required, or only param3 is required: <code>(&lt;param1&gt; &lt;param2&gt;) | &lt;param3&gt;</code></li>
+</ul>
+<h2 id="privilege-definition">Privilege definition<a class="headerlink" href="#privilege-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_privilege</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="c1">-- Privilege description</span>
+
+    <span class="n">give_to_singleplayer</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- Whether to grant the privilege to singleplayer.</span>
+
+    <span class="n">give_to_admin</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- Whether to grant the privilege to the server admin.</span>
+    <span class="c1">-- Uses value of &#39;give_to_singleplayer&#39; by default.</span>
+
+    <span class="n">on_grant</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">granter_name</span><span class="p">),</span>
+    <span class="c1">-- Called when given to player &#39;name&#39; by &#39;granter_name&#39;.</span>
+    <span class="c1">-- &#39;granter_name&#39; will be nil if the priv was granted by a mod.</span>
+
+    <span class="n">on_revoke</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">revoker_name</span><span class="p">),</span>
+    <span class="c1">-- Called when taken from player &#39;name&#39; by &#39;revoker_name&#39;.</span>
+    <span class="c1">-- &#39;revoker_name&#39; will be nil if the priv was revoked by a mod.</span>
+
+    <span class="c1">-- Note that the above two callbacks will be called twice if a player is</span>
+    <span class="c1">-- responsible, once with the player name, and then with a nil player</span>
+    <span class="c1">-- name.</span>
+    <span class="c1">-- Return true in the above callbacks to stop register_on_priv_grant or</span>
+    <span class="c1">-- revoke being called.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="detached-inventory-callbacks">Detached inventory callbacks<a class="headerlink" href="#detached-inventory-callbacks" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.create_detached_inventory</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">allow_move</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">from_list</span><span class="p">,</span> <span class="n">from_index</span><span class="p">,</span> <span class="n">to_list</span><span class="p">,</span> <span class="n">to_index</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called when a player wants to move items inside the inventory.</span>
+    <span class="c1">-- Return value: number of items allowed to move.</span>
+
+    <span class="n">allow_put</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called when a player wants to put something into the inventory.</span>
+    <span class="c1">-- Return value: number of items allowed to put.</span>
+    <span class="c1">-- Return value -1: Allow and don&#39;t modify item count in inventory.</span>
+
+    <span class="n">allow_take</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called when a player wants to take something out of the inventory.</span>
+    <span class="c1">-- Return value: number of items allowed to take.</span>
+    <span class="c1">-- Return value -1: Allow and don&#39;t modify item count in inventory.</span>
+
+    <span class="n">on_move</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">from_list</span><span class="p">,</span> <span class="n">from_index</span><span class="p">,</span> <span class="n">to_list</span><span class="p">,</span> <span class="n">to_index</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="n">on_put</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="n">on_take</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">listname</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span>
+    <span class="c1">-- Called after the actual action has happened, according to what was</span>
+    <span class="c1">-- allowed.</span>
+    <span class="c1">-- No return value.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="hud-definition">HUD Definition<a class="headerlink" href="#hud-definition" title="Permanent link">&para;</a></h2>
+<p>See [HUD] section.</p>
+<p>Used by <code>Player:hud_add</code>. Returned by <code>Player:hud_get</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">hud_elem_type</span> <span class="o">=</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span>  <span class="c1">-- See HUD element types</span>
+    <span class="c1">-- Type of element, can be &quot;image&quot;, &quot;text&quot;, &quot;statbar&quot;, or &quot;inventory&quot;</span>
+
+    <span class="n">position</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">},</span>
+    <span class="c1">-- Left corner position of element</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">,</span>
+
+    <span class="n">scale</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">},</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&lt;text&gt;&quot;</span><span class="p">,</span>
+
+    <span class="n">number</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+
+    <span class="n">item</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="c1">-- Selected item in inventory. 0 for no item selected.</span>
+
+    <span class="n">direction</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Direction: 0: left-right, 1: right-left, 2: top-bottom, 3: bottom-top</span>
+
+    <span class="n">alignment</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+
+    <span class="n">offset</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+
+    <span class="n">size</span> <span class="o">=</span> <span class="p">{</span> <span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span> <span class="p">},</span>
+    <span class="c1">-- Size of element in pixels</span>
+
+    <span class="n">z_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">-- Z index : lower z-index HUDs are displayed behind higher z-index HUDs</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="particle-definition">Particle definition<a class="headerlink" href="#particle-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.add_particle</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">acceleration</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="c1">-- Spawn particle at pos with velocity and acceleration</span>
+
+    <span class="n">expirationtime</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Disappears after expirationtime seconds</span>
+
+    <span class="n">size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Scales the visual size of the particle texture.</span>
+
+    <span class="n">collisiondetection</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true collides with `walkable` nodes and, depending on the</span>
+    <span class="c1">-- `object_collision` field, objects too.</span>
+
+    <span class="n">collision_removal</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true particle is removed when it collides.</span>
+    <span class="c1">-- Requires collisiondetection = true to have any effect.</span>
+
+    <span class="n">object_collision</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true particle collides with objects that are defined as</span>
+    <span class="c1">-- `physical = true,` and `collide_with_objects = true,`.</span>
+    <span class="c1">-- Requires collisiondetection = true to have any effect.</span>
+
+    <span class="n">vertical</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true faces player using y axis only</span>
+
+    <span class="n">texture</span> <span class="o">=</span> <span class="s2">&quot;image.png&quot;</span><span class="p">,</span>
+
+    <span class="n">playername</span> <span class="o">=</span> <span class="s2">&quot;singleplayer&quot;</span><span class="p">,</span>
+    <span class="c1">-- Optional, if specified spawns particle only on the player&#39;s client</span>
+
+    <span class="n">animation</span> <span class="o">=</span> <span class="p">{</span><span class="n">Tile</span> <span class="n">Animation</span> <span class="n">definition</span><span class="p">},</span>
+    <span class="c1">-- Optional, specifies how to animate the particle texture</span>
+
+    <span class="n">glow</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">-- Optional, specify particle self-luminescence in darkness.</span>
+    <span class="c1">-- Values 0-14.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="particlespawner-definition"><code>ParticleSpawner</code> definition<a class="headerlink" href="#particlespawner-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.add_particlespawner</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">amount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Number of particles spawned over the time period `time`.</span>
+
+    <span class="n">time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- Lifespan of spawner in seconds.</span>
+    <span class="c1">-- If time is 0 spawner has infinite lifespan and spawns the `amount` on</span>
+    <span class="c1">-- a per-second basis.</span>
+
+    <span class="n">minpos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">maxpos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">minvel</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">maxvel</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">minacc</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">maxacc</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">minexptime</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">maxexptime</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">minsize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">maxsize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">-- The particles&#39; properties are random values between the min and max</span>
+    <span class="c1">-- values.</span>
+    <span class="c1">-- pos, velocity, acceleration, expirationtime, size</span>
+
+    <span class="n">collisiondetection</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true collide with `walkable` nodes and, depending on the</span>
+    <span class="c1">-- `object_collision` field, objects too.</span>
+
+    <span class="n">collision_removal</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true particles are removed when they collide.</span>
+    <span class="c1">-- Requires collisiondetection = true to have any effect.</span>
+
+    <span class="n">object_collision</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true particles collide with objects that are defined as</span>
+    <span class="c1">-- `physical = true,` and `collide_with_objects = true,`.</span>
+    <span class="c1">-- Requires collisiondetection = true to have any effect.</span>
+
+    <span class="n">attached</span> <span class="o">=</span> <span class="n">ObjectRef</span><span class="p">,</span>
+    <span class="c1">-- If defined, particle positions, velocities and accelerations are</span>
+    <span class="c1">-- relative to this object&#39;s position and yaw</span>
+
+    <span class="n">vertical</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true face player using y axis only</span>
+
+    <span class="n">texture</span> <span class="o">=</span> <span class="s2">&quot;image.png&quot;</span><span class="p">,</span>
+
+    <span class="n">playername</span> <span class="o">=</span> <span class="s2">&quot;singleplayer&quot;</span><span class="p">,</span>
+    <span class="c1">-- Optional, if specified spawns particles only on the player&#39;s client</span>
+
+    <span class="n">animation</span> <span class="o">=</span> <span class="p">{</span><span class="n">Tile</span> <span class="n">Animation</span> <span class="n">definition</span><span class="p">},</span>
+    <span class="c1">-- Optional, specifies how to animate the particles&#39; texture</span>
+
+    <span class="n">glow</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">-- Optional, specify particle self-luminescence in darkness.</span>
+    <span class="c1">-- Values 0-14.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="httprequest-definition"><code>HTTPRequest</code> definition<a class="headerlink" href="#httprequest-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>HTTPApiTable.fetch</code> and <code>HTTPApiTable.fetch_async</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://example.org&quot;</span><span class="p">,</span>
+
+    <span class="n">timeout</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="c1">-- Timeout for connection in seconds. Default is 3 seconds.</span>
+
+    <span class="n">post_data</span> <span class="o">=</span> <span class="s2">&quot;Raw POST request data string&quot;</span> <span class="n">OR</span> <span class="p">{</span><span class="n">field1</span> <span class="o">=</span> <span class="s2">&quot;data1&quot;</span><span class="p">,</span> <span class="n">field2</span> <span class="o">=</span> <span class="s2">&quot;data2&quot;</span><span class="p">},</span>
+    <span class="c1">-- Optional, if specified a POST request with post_data is performed.</span>
+    <span class="c1">-- Accepts both a string and a table. If a table is specified, encodes</span>
+    <span class="c1">-- table as x-www-form-urlencoded key-value pairs.</span>
+    <span class="c1">-- If post_data is not specified, a GET request is performed instead.</span>
+
+    <span class="n">user_agent</span> <span class="o">=</span> <span class="s2">&quot;ExampleUserAgent&quot;</span><span class="p">,</span>
+    <span class="c1">-- Optional, if specified replaces the default minetest user agent with</span>
+    <span class="c1">-- given string</span>
+
+    <span class="n">extra_headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;Accept-Language: en-us&quot;</span><span class="p">,</span> <span class="s2">&quot;Accept-Charset: utf-8&quot;</span> <span class="p">},</span>
+    <span class="c1">-- Optional, if specified adds additional headers to the HTTP request.</span>
+    <span class="c1">-- You must make sure that the header strings follow HTTP specification</span>
+    <span class="c1">-- (&quot;Key: Value&quot;).</span>
+
+    <span class="n">multipart</span> <span class="o">=</span> <span class="n">boolean</span>
+    <span class="c1">-- Optional, if true performs a multipart HTTP request.</span>
+    <span class="c1">-- Default is false.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="httprequestresult-definition"><code>HTTPRequestResult</code> definition<a class="headerlink" href="#httprequestresult-definition" title="Permanent link">&para;</a></h2>
+<p>Passed to <code>HTTPApiTable.fetch</code> callback. Returned by
+<code>HTTPApiTable.fetch_async_get</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">completed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If true, the request has finished (either succeeded, failed or timed</span>
+    <span class="c1">-- out)</span>
+
+    <span class="n">succeeded</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">-- If true, the request was successful</span>
+
+    <span class="n">timeout</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">-- If true, the request timed out</span>
+
+    <span class="n">code</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="c1">-- HTTP status code</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;response&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="authentication-handler-definition">Authentication handler definition<a class="headerlink" href="#authentication-handler-definition" title="Permanent link">&para;</a></h2>
+<p>Used by <code>minetest.register_authentication_handler</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="n">get_auth</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">),</span>
+    <span class="c1">-- Get authentication data for existing player `name` (`nil` if player</span>
+    <span class="c1">-- doesn&#39;t exist).</span>
+    <span class="c1">-- Returns following structure:</span>
+    <span class="c1">-- `{password=&lt;string&gt;, privileges=&lt;table&gt;, last_login=&lt;number or nil&gt;}`</span>
+
+    <span class="n">create_auth</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">password</span><span class="p">),</span>
+    <span class="c1">-- Create new auth data for player `name`.</span>
+    <span class="c1">-- Note that `password` is not plain-text but an arbitrary</span>
+    <span class="c1">-- representation decided by the engine.</span>
+
+    <span class="n">delete_auth</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">),</span>
+    <span class="c1">-- Delete auth data of player `name`.</span>
+    <span class="c1">-- Returns boolean indicating success (false if player is nonexistent).</span>
+
+    <span class="n">set_password</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">password</span><span class="p">),</span>
+    <span class="c1">-- Set password of player `name` to `password`.</span>
+    <span class="c1">-- Auth data should be created if not present.</span>
+
+    <span class="n">set_privileges</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">privileges</span><span class="p">),</span>
+    <span class="c1">-- Set privileges of player `name`.</span>
+    <span class="c1">-- `privileges` is in table form, auth data should be created if not</span>
+    <span class="c1">-- present.</span>
+
+    <span class="n">reload</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(),</span>
+    <span class="c1">-- Reload authentication data from the storage location.</span>
+    <span class="c1">-- Returns boolean indicating success.</span>
+
+    <span class="n">record_login</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">name</span><span class="p">),</span>
+    <span class="c1">-- Called when player joins, used for keeping track of last_login</span>
+
+    <span class="n">iterate</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(),</span>
+    <span class="c1">-- Returns an iterator (use with `for` loops) for all player names</span>
+    <span class="c1">-- currently in the auth database</span>
+<span class="p">}</span>
+</code></pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../class-reference/index.html" class="btn btn-neutral" title="Class reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../class-reference/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/definition-tables/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+</html>

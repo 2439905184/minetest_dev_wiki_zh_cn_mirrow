@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/hud/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>HUD - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "HUD";
+    var mkdocs_page_input_path = "hud.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">HUD</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#hud-element-types">HUD element types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#image">image</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text">text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#statbar">statbar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inventory">inventory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#waypoint">waypoint</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image_waypoint">image_waypoint</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>HUD</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hud">HUD<a class="headerlink" href="#hud" title="Permanent link">&para;</a></h1>
+<h2 id="hud-element-types">HUD element types<a class="headerlink" href="#hud-element-types" title="Permanent link">&para;</a></h2>
+<p>The position field is used for all element types.</p>
+<p>To account for differing resolutions, the position coordinates are the
+percentage of the screen, ranging in value from <code>0</code> to <code>1</code>.</p>
+<p>The name field is not yet used, but should contain a description of what the
+HUD element represents. The direction field is the direction in which something
+is drawn.</p>
+<p><code>0</code> draws from left to right, <code>1</code> draws from right to left, <code>2</code> draws from
+top to bottom, and <code>3</code> draws from bottom to top.</p>
+<p>The <code>alignment</code> field specifies how the item will be aligned. It is a table
+where <code>x</code> and <code>y</code> range from <code>-1</code> to <code>1</code>, with <code>0</code> being central. <code>-1</code> is
+moved to the left/up, and <code>1</code> is to the right/down. Fractional values can be
+used.</p>
+<p>The <code>offset</code> field specifies a pixel offset from the position. Contrary to
+position, the offset is not scaled to screen size. This allows for some
+precisely positioned items in the HUD.</p>
+<p><strong>Note</strong>: <code>offset</code> <em>will</em> adapt to screen DPI as well as user defined scaling
+factor!</p>
+<p>The <code>z_index</code> field specifies the order of HUD elements from back to front.
+Lower z-index elements are displayed behind higher z-index elements. Elements
+with same z-index are displayed in an arbitrary order. Default 0.
+Supports negative values.</p>
+<p>Below are the specific uses for fields in each type; fields not listed for that
+type are ignored.</p>
+<h3 id="image"><code>image</code><a class="headerlink" href="#image" title="Permanent link">&para;</a></h3>
+<p>Displays an image on the HUD.</p>
+<ul>
+<li><code>scale</code>: The scale of the image, with 1 being the original texture size.
+  Only the X coordinate scale is used (positive values).
+  Negative values represent that percentage of the screen it
+  should take; e.g. <code>x=-100</code> means 100% (width).</li>
+<li><code>text</code>: The name of the texture that is displayed.</li>
+<li><code>alignment</code>: The alignment of the image.</li>
+<li><code>offset</code>: offset in pixels from position.</li>
+</ul>
+<h3 id="text"><code>text</code><a class="headerlink" href="#text" title="Permanent link">&para;</a></h3>
+<p>Displays text on the HUD.</p>
+<ul>
+<li><code>scale</code>: Defines the bounding rectangle of the text.
+  A value such as <code>{x=100, y=100}</code> should work.</li>
+<li><code>text</code>: The text to be displayed in the HUD element.</li>
+<li><code>number</code>: An integer containing the RGB value of the color used to draw the
+  text. Specify <code>0xFFFFFF</code> for white text, <code>0xFF0000</code> for red, and so on.</li>
+<li><code>alignment</code>: The alignment of the text.</li>
+<li><code>offset</code>: offset in pixels from position.</li>
+</ul>
+<h3 id="statbar"><code>statbar</code><a class="headerlink" href="#statbar" title="Permanent link">&para;</a></h3>
+<p>Displays a horizontal bar made up of half-images.</p>
+<ul>
+<li><code>text</code>: The name of the texture that is used.</li>
+<li><code>number</code>: The number of half-textures that are displayed.
+  If odd, will end with a vertically center-split texture.</li>
+<li><code>direction</code></li>
+<li><code>offset</code>: offset in pixels from position.</li>
+<li><code>size</code>: If used, will force full-image size to this value (override texture
+  pack image size)</li>
+</ul>
+<h3 id="inventory"><code>inventory</code><a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>text</code>: The name of the inventory list to be displayed.</li>
+<li><code>number</code>: Number of items in the inventory to be displayed.</li>
+<li><code>item</code>: Position of item that is selected.</li>
+<li><code>direction</code></li>
+<li><code>offset</code>: offset in pixels from position.</li>
+</ul>
+<h3 id="waypoint"><code>waypoint</code><a class="headerlink" href="#waypoint" title="Permanent link">&para;</a></h3>
+<p>Displays distance to selected world position.</p>
+<ul>
+<li><code>name</code>: The name of the waypoint.</li>
+<li><code>text</code>: Distance suffix. Can be blank.</li>
+<li><code>precision</code>: Waypoint precision, integer &gt;= 0. Defaults to 10.
+  If set to 0, distance is not shown. Shown value is <code>floor(distance*precision)/precision</code>.
+  When the precision is an integer multiple of 10, there will be <code>log_10(precision)</code> digits after the decimal point.
+  <code>precision = 1000</code>, for example, will show 3 decimal places (eg: <code>0.999</code>).
+  <code>precision = 2</code> will show multiples of <code>0.5</code>; precision = 5 will show multiples of <code>0.2</code> and so on:
+  <code>precision = n</code> will show multiples of <code>1/n</code></li>
+<li><code>number:</code> An integer containing the RGB value of the color used to draw the
+  text.</li>
+<li><code>world_pos</code>: World position of the waypoint.</li>
+<li><code>offset</code>: offset in pixels from position.</li>
+<li><code>alignment</code>: The alignment of the waypoint.</li>
+</ul>
+<h3 id="image_waypoint"><code>image_waypoint</code><a class="headerlink" href="#image_waypoint" title="Permanent link">&para;</a></h3>
+<p>Same as <code>image</code>, but does not accept a <code>position</code>; the position is instead determined by <code>world_pos</code>, the world position of the waypoint.</p>
+<ul>
+<li><code>scale</code>: The scale of the image, with 1 being the original texture size.
+  Only the X coordinate scale is used (positive values).
+  Negative values represent that percentage of the screen it
+  should take; e.g. <code>x=-100</code> means 100% (width).</li>
+<li><code>text</code>: The name of the texture that is displayed.</li>
+<li><code>alignment</code>: The alignment of the image.</li>
+<li><code>world_pos</code>: World position of the waypoint.</li>
+<li><code>offset</code>: offset in pixels from position.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../representations-of-simple-things/index.html" class="btn btn-neutral float-right" title="Representations of simple things">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../map-terminology-and-coordinates/index.html" class="btn btn-neutral" title="Map terminology and coordinates"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../map-terminology-and-coordinates/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../representations-of-simple-things/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/hud/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

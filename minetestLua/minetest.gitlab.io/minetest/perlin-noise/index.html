@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/perlin-noise/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Perlin noise - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Perlin noise";
+    var mkdocs_page_input_path = "perlin-noise.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Perlin noise</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#structure-of-perlin-noise">Structure of perlin noise</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#noise-parameters">Noise Parameters</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#offset">offset</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scale">scale</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spread">spread</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#seed">seed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#octaves">octaves</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#persistence">persistence</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lacunarity">lacunarity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flags">flags</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#defaults">defaults</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eased">eased</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#absvalue">absvalue</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#format-example">Format example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Perlin noise</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="perlin-noise">Perlin noise<a class="headerlink" href="#perlin-noise" title="Permanent link">&para;</a></h1>
+<p>Perlin noise creates a continuously-varying value depending on the input values.
+Usually in Minetest the input values are either 2D or 3D co-ordinates in nodes.
+The result is used during map generation to create the terrain shape, vary heat
+and humidity to distribute biomes, vary the density of decorations or vary the
+structure of ores.</p>
+<h2 id="structure-of-perlin-noise">Structure of perlin noise<a class="headerlink" href="#structure-of-perlin-noise" title="Permanent link">&para;</a></h2>
+<p>An 'octave' is a simple noise generator that outputs a value between -1 and 1.
+The smooth wavy noise it generates has a single characteristic scale, almost
+like a 'wavelength', so on its own does not create fine detail.
+Due to this perlin noise combines several octaves to create variation on
+multiple scales. Each additional octave has a smaller 'wavelength' than the
+previous.</p>
+<p>This combination results in noise varying very roughly between -2.0 and 2.0 and
+with an average value of 0.0, so <code>scale</code> and <code>offset</code> are then used to multiply
+and offset the noise variation.</p>
+<p>The final perlin noise variation is created as follows:</p>
+<p>noise = offset + scale * (octave1 +
+                          octave2 * persistence +
+                          octave3 * persistence ^ 2 +
+                          octave4 * persistence ^ 3 +
+                          ...)</p>
+<h2 id="noise-parameters">Noise Parameters<a class="headerlink" href="#noise-parameters" title="Permanent link">&para;</a></h2>
+<p>Noise Parameters are commonly called <code>NoiseParams</code>.</p>
+<h3 id="offset"><code>offset</code><a class="headerlink" href="#offset" title="Permanent link">&para;</a></h3>
+<p>After the multiplication by <code>scale</code> this is added to the result and is the final
+step in creating the noise value.
+Can be positive or negative.</p>
+<h3 id="scale"><code>scale</code><a class="headerlink" href="#scale" title="Permanent link">&para;</a></h3>
+<p>Once all octaves have been combined, the result is multiplied by this.
+Can be positive or negative.</p>
+<h3 id="spread"><code>spread</code><a class="headerlink" href="#spread" title="Permanent link">&para;</a></h3>
+<p>For octave1, this is roughly the change of input value needed for a very large
+variation in the noise value generated by octave1. It is almost like a
+'wavelength' for the wavy noise variation.
+Each additional octave has a 'wavelength' that is smaller than the previous
+octave, to create finer detail. <code>spread</code> will therefore roughly be the typical
+size of the largest structures in the final noise variation.</p>
+<p><code>spread</code> is a vector with values for x, y, z to allow the noise variation to be
+stretched or compressed in the desired axes.
+Values are positive numbers.</p>
+<h3 id="seed"><code>seed</code><a class="headerlink" href="#seed" title="Permanent link">&para;</a></h3>
+<p>This is a whole number that determines the entire pattern of the noise
+variation. Altering it enables different noise patterns to be created.
+With other parameters equal, different seeds produce different noise patterns
+and identical seeds produce identical noise patterns.</p>
+<p>For this parameter you can randomly choose any whole number. Usually it is
+preferable for this to be different from other seeds, but sometimes it is useful
+to be able to create identical noise patterns.</p>
+<p>When used in mapgen this is actually a 'seed offset', it is added to the
+'world seed' to create the seed used by the noise, to ensure the noise has a
+different pattern in different worlds.</p>
+<h3 id="octaves"><code>octaves</code><a class="headerlink" href="#octaves" title="Permanent link">&para;</a></h3>
+<p>The number of simple noise generators that are combined.
+A whole number, 1 or more.
+Each additional octave adds finer detail to the noise but also increases the
+noise calculation load.
+3 is a typical minimum for a high quality, complex and natural-looking noise
+variation. 1 octave has a slight 'gridlike' appearence.</p>
+<p>Choose the number of octaves according to the <code>spread</code> and <code>lacunarity</code>, and the
+size of the finest detail you require. For example:
+if <code>spread</code> is 512 nodes, <code>lacunarity</code> is 2.0 and finest detail required is 16
+nodes, octaves will be 6 because the 'wavelengths' of the octaves will be
+512, 256, 128, 64, 32, 16 nodes.
+Warning: If the 'wavelength' of any octave falls below 1 an error will occur.</p>
+<h3 id="persistence"><code>persistence</code><a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h3>
+<p>Each additional octave has an amplitude that is the amplitude of the previous
+octave multiplied by <code>persistence</code>, to reduce the amplitude of finer details,
+as is often helpful and natural to do so.
+Since this controls the balance of fine detail to large-scale detail
+<code>persistence</code> can be thought of as the 'roughness' of the noise.</p>
+<p>A positive or negative non-zero number, often between 0.3 and 1.0.
+A common medium value is 0.5, such that each octave has half the amplitude of
+the previous octave.
+This may need to be tuned when altering <code>lacunarity</code>; when doing so consider
+that a common medium value is 1 / lacunarity.</p>
+<h3 id="lacunarity"><code>lacunarity</code><a class="headerlink" href="#lacunarity" title="Permanent link">&para;</a></h3>
+<p>Each additional octave has a 'wavelength' that is the 'wavelength' of the
+previous octave multiplied by 1 / lacunarity, to create finer detail.
+'lacunarity' is often 2.0 so 'wavelength' often halves per octave.</p>
+<p>A positive number no smaller than 1.0.
+Values below 2.0 create higher quality noise at the expense of requiring more
+octaves to cover a paticular range of 'wavelengths'.</p>
+<h3 id="flags"><code>flags</code><a class="headerlink" href="#flags" title="Permanent link">&para;</a></h3>
+<p>Leave this field unset for no special handling.
+Currently supported are <code>defaults</code>, <code>eased</code> and <code>absvalue</code>:</p>
+<h4 id="defaults"><code>defaults</code><a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h4>
+<p>Specify this if you would like to keep auto-selection of eased/not-eased while
+specifying some other flags.</p>
+<h4 id="eased"><code>eased</code><a class="headerlink" href="#eased" title="Permanent link">&para;</a></h4>
+<p>Maps noise gradient values onto a quintic S-curve before performing
+interpolation. This results in smooth, rolling noise.
+Disable this (<code>noeased</code>) for sharp-looking noise with a slightly gridded
+appearence.
+If no flags are specified (or defaults is), 2D noise is eased and 3D noise is
+not eased.
+Easing a 3D noise significantly increases the noise calculation load, so use
+with restraint.</p>
+<h4 id="absvalue"><code>absvalue</code><a class="headerlink" href="#absvalue" title="Permanent link">&para;</a></h4>
+<p>The absolute value of each octave's noise variation is used when combining the
+octaves. The final perlin noise variation is created as follows:</p>
+<p>noise = offset + scale * (abs(octave1) +
+                          abs(octave2) * persistence +
+                          abs(octave3) * persistence ^ 2 +
+                          abs(octave4) * persistence ^ 3 +
+                          ...)</p>
+<h3 id="format-example">Format example<a class="headerlink" href="#format-example" title="Permanent link">&para;</a></h3>
+<p>For 2D or 3D perlin noise or perlin noise maps:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">np_terrain</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">spread</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">500</span><span class="p">},</span>
+    <span class="n">seed</span> <span class="o">=</span> <span class="mi">571347</span><span class="p">,</span>
+    <span class="n">octaves</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">persist</span> <span class="o">=</span> <span class="mf">0.63</span><span class="p">,</span>
+    <span class="n">lacunarity</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="s2">&quot;defaults, absvalue&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>For 2D noise the Z component of <code>spread</code> is still defined but is ignored.
+A single noise parameter table can be used for 2D or 3D noise.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ores/index.html" class="btn btn-neutral float-right" title="Ores">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../translations/index.html" class="btn btn-neutral" title="Translations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../translations/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ores/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/perlin-noise/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

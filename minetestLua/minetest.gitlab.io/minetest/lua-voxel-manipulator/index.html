@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/lua-voxel-manipulator/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Lua Voxel Manipulator - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Lua Voxel Manipulator";
+    var mkdocs_page_input_path = "lua-voxel-manipulator.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Lua Voxel Manipulator</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#about-voxelmanip">About VoxelManip</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-voxelmanip">Using VoxelManip</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flat-array-format">Flat array format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#content-ids">Content IDs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mapgen-voxelmanip-objects">Mapgen VoxelManip objects</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-api-functions-operating-on-a-voxelmanip">Other API functions operating on a VoxelManip</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#voxelarea">VoxelArea</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_1">Methods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#y-stride-and-z-stride-of-a-flat-array">Y stride and z stride of a flat array</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Lua Voxel Manipulator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="lua-voxel-manipulator">Lua Voxel Manipulator<a class="headerlink" href="#lua-voxel-manipulator" title="Permanent link">&para;</a></h1>
+<h2 id="about-voxelmanip">About VoxelManip<a class="headerlink" href="#about-voxelmanip" title="Permanent link">&para;</a></h2>
+<p>VoxelManip is a scripting interface to the internal 'Map Voxel Manipulator'
+facility. The purpose of this object is for fast, low-level, bulk access to
+reading and writing Map content. As such, setting map nodes through VoxelManip
+will lack many of the higher level features and concepts you may be used to
+with other methods of setting nodes. For example, nodes will not have their
+construction and destruction callbacks run, and no rollback information is
+logged.</p>
+<p>It is important to note that VoxelManip is designed for speed, and <em>not</em> ease
+of use or flexibility. If your mod requires a map manipulation facility that
+will handle 100% of all edge cases, or the use of high level node placement
+features, perhaps <code>minetest.set_node()</code> is better suited for the job.</p>
+<p>In addition, VoxelManip might not be faster, or could even be slower, for your
+specific use case. VoxelManip is most effective when setting large areas of map
+at once - for example, if only setting a 3x3x3 node area, a
+<code>minetest.set_node()</code> loop may be more optimal. Always profile code using both
+methods of map manipulation to determine which is most appropriate for your
+usage.</p>
+<p>A recent simple test of setting cubic areas showed that <code>minetest.set_node()</code>
+is faster than a VoxelManip for a 3x3x3 node cube or smaller.</p>
+<h2 id="using-voxelmanip">Using VoxelManip<a class="headerlink" href="#using-voxelmanip" title="Permanent link">&para;</a></h2>
+<p>A VoxelManip object can be created any time using either:
+<code>VoxelManip([p1, p2])</code>, or <code>minetest.get_voxel_manip([p1, p2])</code>.</p>
+<p>If the optional position parameters are present for either of these routines,
+the specified region will be pre-loaded into the VoxelManip object on creation.
+Otherwise, the area of map you wish to manipulate must first be loaded into the
+VoxelManip object using <code>VoxelManip:read_from_map()</code>.</p>
+<p>Note that <code>VoxelManip:read_from_map()</code> returns two position vectors. The region
+formed by these positions indicate the minimum and maximum (respectively)
+positions of the area actually loaded in the VoxelManip, which may be larger
+than the area requested. For convenience, the loaded area coordinates can also
+be queried any time after loading map data with <code>VoxelManip:get_emerged_area()</code>.</p>
+<p>Now that the VoxelManip object is populated with map data, your mod can fetch a
+copy of this data using either of two methods. <code>VoxelManip:get_node_at()</code>,
+which retrieves an individual node in a MapNode formatted table at the position
+requested is the simplest method to use, but also the slowest.</p>
+<p>Nodes in a VoxelManip object may also be read in bulk to a flat array table
+using:</p>
+<ul>
+<li><code>VoxelManip:get_data()</code> for node content (in Content ID form, see section
+  [Content IDs]),</li>
+<li><code>VoxelManip:get_light_data()</code> for node light levels, and</li>
+<li><code>VoxelManip:get_param2_data()</code> for the node type-dependent "param2" values.</li>
+</ul>
+<p>See section [Flat array format] for more details.</p>
+<p>It is very important to understand that the tables returned by any of the above
+three functions represent a snapshot of the VoxelManip's internal state at the
+time of the call. This copy of the data will not magically update itself if
+another function modifies the internal VoxelManip state.
+Any functions that modify a VoxelManip's contents work on the VoxelManip's
+internal state unless otherwise explicitly stated.</p>
+<p>Once the bulk data has been edited to your liking, the internal VoxelManip
+state can be set using:</p>
+<ul>
+<li><code>VoxelManip:set_data()</code> for node content (in Content ID form, see section
+  [Content IDs]),</li>
+<li><code>VoxelManip:set_light_data()</code> for node light levels, and</li>
+<li><code>VoxelManip:set_param2_data()</code> for the node type-dependent <code>param2</code> values.</li>
+</ul>
+<p>The parameter to each of the above three functions can use any table at all in
+the same flat array format as produced by <code>get_data()</code> etc. and is not required
+to be a table retrieved from <code>get_data()</code>.</p>
+<p>Once the internal VoxelManip state has been modified to your liking, the
+changes can be committed back to the map by calling <code>VoxelManip:write_to_map()</code></p>
+<h3 id="flat-array-format">Flat array format<a class="headerlink" href="#flat-array-format" title="Permanent link">&para;</a></h3>
+<p>Let
+    <code>Nx = p2.X - p1.X + 1</code>,
+    <code>Ny = p2.Y - p1.Y + 1</code>, and
+    <code>Nz = p2.Z - p1.Z + 1</code>.</p>
+<p>Then, for a loaded region of p1..p2, this array ranges from <code>1</code> up to and
+including the value of the expression <code>Nx * Ny * Nz</code>.</p>
+<p>Positions offset from p1 are present in the array with the format of:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="p">...</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="p">...</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">...</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="p">...</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>   <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>   <span class="p">...</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">...</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="p">...</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">...</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="n">Nz</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="n">Nz</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="n">Nz</span><span class="p">),</span> <span class="p">...</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span><span class="p">,</span> <span class="n">Nz</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div>
+
+
+<p>and the array index for a position p contained completely in p1..p2 is:</p>
+<p><code>(p.Z - p1.Z) * Ny * Nx + (p.Y - p1.Y) * Nx + (p.X - p1.X) + 1</code></p>
+<p>Note that this is the same "flat 3D array" format as
+<code>PerlinNoiseMap:get3dMap_flat()</code>.
+VoxelArea objects (see section [<code>VoxelArea</code>]) can be used to simplify calculation
+of the index for a single point in a flat VoxelManip array.</p>
+<h3 id="content-ids">Content IDs<a class="headerlink" href="#content-ids" title="Permanent link">&para;</a></h3>
+<p>A Content ID is a unique integer identifier for a specific node type.
+These IDs are used by VoxelManip in place of the node name string for
+<code>VoxelManip:get_data()</code> and <code>VoxelManip:set_data()</code>. You can use
+<code>minetest.get_content_id()</code> to look up the Content ID for the specified node
+name, and <code>minetest.get_name_from_content_id()</code> to look up the node name string
+for a given Content ID.
+After registration of a node, its Content ID will remain the same throughout
+execution of the mod.
+Note that the node being queried needs to have already been been registered.</p>
+<p>The following builtin node types have their Content IDs defined as constants:</p>
+<ul>
+<li><code>minetest.CONTENT_UNKNOWN</code>: ID for "unknown" nodes</li>
+<li><code>minetest.CONTENT_AIR</code>:     ID for "air" nodes</li>
+<li><code>minetest.CONTENT_IGNORE</code>:  ID for "ignore" nodes</li>
+</ul>
+<h3 id="mapgen-voxelmanip-objects">Mapgen VoxelManip objects<a class="headerlink" href="#mapgen-voxelmanip-objects" title="Permanent link">&para;</a></h3>
+<p>Inside of <code>on_generated()</code> callbacks, it is possible to retrieve the same
+VoxelManip object used by the core's Map Generator (commonly abbreviated
+Mapgen). Most of the rules previously described still apply but with a few
+differences:</p>
+<ul>
+<li>The Mapgen VoxelManip object is retrieved using:
+  <code>minetest.get_mapgen_object("voxelmanip")</code></li>
+<li>This VoxelManip object already has the region of map just generated loaded
+  into it; it's not necessary to call <code>VoxelManip:read_from_map()</code> before using
+  a Mapgen VoxelManip.</li>
+<li>The <code>on_generated()</code> callbacks of some mods may place individual nodes in the
+  generated area using non-VoxelManip map modification methods. Because the
+  same Mapgen VoxelManip object is passed through each <code>on_generated()</code>
+  callback, it becomes necessary for the Mapgen VoxelManip object to maintain
+  consistency with the current map state. For this reason, calling any of the
+  following functions:
+  <code>minetest.add_node()</code>, <code>minetest.set_node()</code>, or <code>minetest.swap_node()</code>
+  will also update the Mapgen VoxelManip object's internal state active on the
+  current thread.</li>
+<li>After modifying the Mapgen VoxelManip object's internal buffer, it may be
+  necessary to update lighting information using either:
+  <code>VoxelManip:calc_lighting()</code> or <code>VoxelManip:set_lighting()</code>.</li>
+</ul>
+<h3 id="other-api-functions-operating-on-a-voxelmanip">Other API functions operating on a VoxelManip<a class="headerlink" href="#other-api-functions-operating-on-a-voxelmanip" title="Permanent link">&para;</a></h3>
+<p>If any VoxelManip contents were set to a liquid node,
+<code>VoxelManip:update_liquids()</code> must be called for these liquid nodes to begin
+flowing. It is recommended to call this function only after having written all
+buffered data back to the VoxelManip object, save for special situations where
+the modder desires to only have certain liquid nodes begin flowing.</p>
+<p>The functions <code>minetest.generate_ores()</code> and <code>minetest.generate_decorations()</code>
+will generate all registered decorations and ores throughout the full area
+inside of the specified VoxelManip object.</p>
+<p><code>minetest.place_schematic_on_vmanip()</code> is otherwise identical to
+<code>minetest.place_schematic()</code>, except instead of placing the specified schematic
+directly on the map at the specified position, it will place the schematic
+inside the VoxelManip.</p>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Attempting to read data from a VoxelManip object before map is read will
+  result in a zero-length array table for <code>VoxelManip:get_data()</code>, and an
+  "ignore" node at any position for <code>VoxelManip:get_node_at()</code>.</li>
+<li>If either a region of map has not yet been generated or is out-of-bounds of
+  the map, that region is filled with "ignore" nodes.</li>
+<li>Other mods, or the core itself, could possibly modify the area of map
+  currently loaded into a VoxelManip object. With the exception of Mapgen
+  VoxelManips (see above section), the internal buffers are not updated. For
+  this reason, it is strongly encouraged to complete the usage of a particular
+  VoxelManip object in the same callback it had been created.</li>
+<li>If a VoxelManip object will be used often, such as in an <code>on_generated()</code>
+  callback, consider passing a file-scoped table as the optional parameter to
+  <code>VoxelManip:get_data()</code>, which serves as a static buffer the function can use
+  to write map data to instead of returning a new table each call. This greatly
+  enhances performance by avoiding unnecessary memory allocations.</li>
+</ul>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>read_from_map(p1, p2)</code>:  Loads a chunk of map into the VoxelManip object
+  containing the region formed by <code>p1</code> and <code>p2</code>.<ul>
+<li>returns actual emerged <code>pmin</code>, actual emerged <code>pmax</code></li>
+</ul>
+</li>
+<li><code>write_to_map([light])</code>: Writes the data loaded from the <code>VoxelManip</code> back to
+  the map.<ul>
+<li><strong>important</strong>: data must be set using <code>VoxelManip:set_data()</code> before
+  calling this.</li>
+<li>if <code>light</code> is true, then lighting is automatically recalculated.
+  The default value is true.
+  If <code>light</code> is false, no light calculations happen, and you should correct
+  all modified blocks with <code>minetest.fix_light()</code> as soon as possible.
+  Keep in mind that modifying the map where light is incorrect can cause
+  more lighting bugs.</li>
+</ul>
+</li>
+<li><code>get_node_at(pos)</code>: Returns a <code>MapNode</code> table of the node currently loaded in
+  the <code>VoxelManip</code> at that position</li>
+<li><code>set_node_at(pos, node)</code>: Sets a specific <code>MapNode</code> in the <code>VoxelManip</code> at
+  that position.</li>
+<li><code>get_data([buffer])</code>: Retrieves the node content data loaded into the
+  <code>VoxelManip</code> object.<ul>
+<li>returns raw node data in the form of an array of node content IDs</li>
+<li>if the param <code>buffer</code> is present, this table will be used to store the
+  result instead.</li>
+</ul>
+</li>
+<li><code>set_data(data)</code>: Sets the data contents of the <code>VoxelManip</code> object</li>
+<li><code>update_map()</code>: Does nothing, kept for compatibility.</li>
+<li><code>set_lighting(light, [p1, p2])</code>: Set the lighting within the <code>VoxelManip</code> to
+  a uniform value.<ul>
+<li><code>light</code> is a table, <code>{day=&lt;0...15&gt;, night=&lt;0...15&gt;}</code></li>
+<li>To be used only by a <code>VoxelManip</code> object from
+  <code>minetest.get_mapgen_object</code>.</li>
+<li>(<code>p1</code>, <code>p2</code>) is the area in which lighting is set, defaults to the whole
+  area if left out.</li>
+</ul>
+</li>
+<li><code>get_light_data()</code>: Gets the light data read into the <code>VoxelManip</code> object<ul>
+<li>Returns an array (indices 1 to volume) of integers ranging from <code>0</code> to
+  <code>255</code>.</li>
+<li>Each value is the bitwise combination of day and night light values
+  (<code>0</code> to <code>15</code> each).</li>
+<li><code>light = day + (night * 16)</code></li>
+</ul>
+</li>
+<li><code>set_light_data(light_data)</code>: Sets the <code>param1</code> (light) contents of each node
+  in the <code>VoxelManip</code>.<ul>
+<li>expects lighting data in the same format that <code>get_light_data()</code> returns</li>
+</ul>
+</li>
+<li><code>get_param2_data([buffer])</code>: Gets the raw <code>param2</code> data read into the
+  <code>VoxelManip</code> object.<ul>
+<li>Returns an array (indices 1 to volume) of integers ranging from <code>0</code> to
+  <code>255</code>.</li>
+<li>If the param <code>buffer</code> is present, this table will be used to store the
+  result instead.</li>
+</ul>
+</li>
+<li><code>set_param2_data(param2_data)</code>: Sets the <code>param2</code> contents of each node in
+  the <code>VoxelManip</code>.</li>
+<li><code>calc_lighting([p1, p2], [propagate_shadow])</code>:  Calculate lighting within the
+  <code>VoxelManip</code>.<ul>
+<li>To be used only by a <code>VoxelManip</code> object from
+  <code>minetest.get_mapgen_object</code>.</li>
+<li>(<code>p1</code>, <code>p2</code>) is the area in which lighting is set, defaults to the whole
+  area if left out or nil. For almost all uses these should be left out
+  or nil to use the default.</li>
+<li><code>propagate_shadow</code> is an optional boolean deciding whether shadows in a
+  generated mapchunk above are propagated down into the mapchunk, defaults
+  to <code>true</code> if left out.</li>
+</ul>
+</li>
+<li><code>update_liquids()</code>: Update liquid flow</li>
+<li><code>was_modified()</code>: Returns <code>true</code> or <code>false</code> if the data in the voxel
+  manipulator had been modified since the last read from map, due to a call to
+  <code>minetest.set_data()</code> on the loaded area elsewhere.</li>
+<li><code>get_emerged_area()</code>: Returns actual emerged minimum and maximum positions.</li>
+</ul>
+<h2 id="voxelarea"><code>VoxelArea</code><a class="headerlink" href="#voxelarea" title="Permanent link">&para;</a></h2>
+<p>A helper class for voxel areas.
+It can be created via <code>VoxelArea:new{MinEdge = pmin, MaxEdge = pmax}</code>.
+The coordinates are <em>inclusive</em>, like most other things in Minetest.</p>
+<h3 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>getExtent()</code>: returns a 3D vector containing the size of the area formed by
+  <code>MinEdge</code> and <code>MaxEdge</code>.</li>
+<li><code>getVolume()</code>: returns the volume of the area formed by <code>MinEdge</code> and
+  <code>MaxEdge</code>.</li>
+<li><code>index(x, y, z)</code>: returns the index of an absolute position in a flat array
+  starting at <code>1</code>.<ul>
+<li><code>x</code>, <code>y</code> and <code>z</code> must be integers to avoid an incorrect index result.</li>
+<li>The position (x, y, z) is not checked for being inside the area volume,
+  being outside can cause an incorrect index result.</li>
+<li>Useful for things like <code>VoxelManip</code>, raw Schematic specifiers,
+  <code>PerlinNoiseMap:get2d</code>/<code>3dMap</code>, and so on.</li>
+</ul>
+</li>
+<li><code>indexp(p)</code>: same functionality as <code>index(x, y, z)</code> but takes a vector.<ul>
+<li>As with <code>index(x, y, z)</code>, the components of <code>p</code> must be integers, and <code>p</code>
+  is not checked for being inside the area volume.</li>
+</ul>
+</li>
+<li><code>position(i)</code>: returns the absolute position vector corresponding to index
+  <code>i</code>.</li>
+<li><code>contains(x, y, z)</code>: check if (<code>x</code>,<code>y</code>,<code>z</code>) is inside area formed by
+  <code>MinEdge</code> and <code>MaxEdge</code>.</li>
+<li><code>containsp(p)</code>: same as above, except takes a vector</li>
+<li><code>containsi(i)</code>: same as above, except takes an index <code>i</code></li>
+<li><code>iter(minx, miny, minz, maxx, maxy, maxz)</code>: returns an iterator that returns
+  indices.<ul>
+<li>from (<code>minx</code>,<code>miny</code>,<code>minz</code>) to (<code>maxx</code>,<code>maxy</code>,<code>maxz</code>) in the order of
+  <code>[z [y [x]]]</code>.</li>
+</ul>
+</li>
+<li><code>iterp(minp, maxp)</code>: same as above, except takes a vector</li>
+</ul>
+<h3 id="y-stride-and-z-stride-of-a-flat-array">Y stride and z stride of a flat array<a class="headerlink" href="#y-stride-and-z-stride-of-a-flat-array" title="Permanent link">&para;</a></h3>
+<p>For a particular position in a voxel area, whose flat array index is known,
+it is often useful to know the index of a neighboring or nearby position.
+The table below shows the changes of index required for 1 node movements along
+the axes in a voxel area:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Movement</span>    <span class="n">Change</span> <span class="n">of</span> <span class="n">index</span>
+<span class="o">+</span><span class="n">x</span>          <span class="o">+</span><span class="mi">1</span>
+<span class="o">-</span><span class="n">x</span>          <span class="o">-</span><span class="mi">1</span>
+<span class="o">+</span><span class="n">y</span>          <span class="o">+</span><span class="n">ystride</span>
+<span class="o">-</span><span class="n">y</span>          <span class="o">-</span><span class="n">ystride</span>
+<span class="o">+</span><span class="n">z</span>          <span class="o">+</span><span class="n">zstride</span>
+<span class="o">-</span><span class="n">z</span>          <span class="o">-</span><span class="n">zstride</span>
+</code></pre></div>
+
+
+<p>If, for example:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">area</span> <span class="o">=</span> <span class="n">VoxelArea</span><span class="p">:</span><span class="n">new</span><span class="p">{</span><span class="n">MinEdge</span> <span class="o">=</span> <span class="n">emin</span><span class="p">,</span> <span class="n">MaxEdge</span> <span class="o">=</span> <span class="n">emax</span><span class="p">}</span>
+</code></pre></div>
+
+
+<p>The values of <code>ystride</code> and <code>zstride</code> can be obtained using <code>area.ystride</code> and
+<code>area.zstride</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mapgen-objects/index.html" class="btn btn-neutral float-right" title="Mapgen objects">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../schematics/index.html" class="btn btn-neutral" title="Schematics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../schematics/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mapgen-objects/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/lua-voxel-manipulator/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+</html>

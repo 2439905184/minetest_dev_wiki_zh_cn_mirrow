@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/minetest-namespace-reference/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>'minetest' namespace reference - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "'minetest' namespace reference";
+    var mkdocs_page_input_path = "minetest-namespace-reference.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">'minetest' namespace reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#utilities">Utilities</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logging">Logging</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registration-functions">Registration functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#environment">Environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gameplay">Gameplay</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#global-callback-registration-functions">Global callback registration functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-related">Setting-related</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#authentication">Authentication</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chat">Chat</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#environment-access">Environment access</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mod-channels">Mod channels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inventory">Inventory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#formspec">Formspec</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#item-handling">Item handling</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rollback">Rollback</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#defaults-for-the-on_place-and-on_drop-item-definition-functions">Defaults for the on_place and on_drop item definition functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#defaults-for-the-on_punch-and-on_dig-node-definition-callbacks">Defaults for the on_punch and on_dig node definition callbacks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sounds">Sounds</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timing">Timing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#server">Server</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bans">Bans</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#particles">Particles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#schematics">Schematics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#http-requests">HTTP Requests</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#storage-api">Storage API</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#misc">Misc.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#global-objects">Global objects</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#global-tables">Global tables</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#registered-definition-tables">Registered definition tables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#registered-callback-tables">Registered callback tables</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>'minetest' namespace reference</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="minetest-namespace-reference">'minetest' namespace reference<a class="headerlink" href="#minetest-namespace-reference" title="Permanent link">&para;</a></h1>
+<h2 id="utilities">Utilities<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.get_current_modname()</code>: returns the currently loading mod's name,
+  when loading a mod.</li>
+<li><code>minetest.get_modpath(modname)</code>: returns e.g.
+  <code>"/home/user/.minetest/usermods/modname"</code>.<ul>
+<li>Useful for loading additional <code>.lua</code> modules or static data from mod</li>
+</ul>
+</li>
+<li><code>minetest.get_modnames()</code>: returns a list of installed mods<ul>
+<li>Return a list of installed mods, sorted alphabetically</li>
+</ul>
+</li>
+<li><code>minetest.get_worldpath()</code>: returns e.g. <code>"/home/user/.minetest/world"</code><ul>
+<li>Useful for storing custom data</li>
+</ul>
+</li>
+<li><code>minetest.is_singleplayer()</code></li>
+<li>
+<p><code>minetest.features</code>: Table containing API feature flags</p>
+<p>{
+      glasslike_framed = true,  -- 0.4.7
+      nodebox_as_selectionbox = true,  -- 0.4.7
+      get_all_craft_recipes_works = true,  -- 0.4.7
+      -- The transparency channel of textures can optionally be used on
+      -- nodes (0.4.7)
+      use_texture_alpha = true,
+      -- Tree and grass ABMs are no longer done from C++ (0.4.8)
+      no_legacy_abms = true,
+      -- Texture grouping is possible using parentheses (0.4.11)
+      texture_names_parens = true,
+      -- Unique Area ID for AreaStore:insert_area (0.4.14)
+      area_store_custom_ids = true,
+      -- add_entity supports passing initial staticdata to on_activate
+      -- (0.4.16)
+      add_entity_with_staticdata = true,
+      -- Chat messages are no longer predicted (0.4.16)
+      no_chat_message_prediction = true,
+      -- The transparency channel of textures can optionally be used on
+      -- objects (ie: players and lua entities) (5.0.0)
+      object_use_texture_alpha = true,
+      -- Object selectionbox is settable independently from collisionbox
+      -- (5.0.0)
+      object_independent_selectionbox = true,
+      -- Specifies whether binary data can be uploaded or downloaded using
+      -- the HTTP API (5.1.0)
+      httpfetch_binary_data = true,
+      -- Whether formspec_version[<version>] may be used (5.1.0)
+      formspec_version_element = true,
+      -- Whether AreaStore's IDs are kept on save/load (5.1.0)
+      area_store_persistent_ids = true,
+      -- Whether minetest.find_path is functional (5.2.0)
+      pathfinder_works = true,
+  }</p>
+</li>
+<li>
+<p><code>minetest.has_feature(arg)</code>: returns <code>boolean, missing_features</code></p>
+<ul>
+<li><code>arg</code>: string or table in format <code>{foo=true, bar=true}</code></li>
+<li><code>missing_features</code>: <code>{foo=true, bar=true}</code></li>
+</ul>
+</li>
+<li>
+<p><code>minetest.get_player_information(player_name)</code>: Table containing information
+  about a player. Example return value:</p>
+<p>{
+      address = "127.0.0.1",     -- IP address of client
+      ip_version = 4,            -- IPv4 / IPv6
+      min_rtt = 0.01,            -- minimum round trip time
+      max_rtt = 0.2,             -- maximum round trip time
+      avg_rtt = 0.02,            -- average round trip time
+      min_jitter = 0.01,         -- minimum packet time jitter
+      max_jitter = 0.5,          -- maximum packet time jitter
+      avg_jitter = 0.03,         -- average packet time jitter
+      connection_uptime = 200,   -- seconds since client connected
+      protocol_version = 32,     -- protocol version used by client
+      formspec_version = 2,      -- supported formspec version
+      -- following information is available on debug build only!!!
+      -- DO NOT USE IN MODS
+      --ser_vers = 26,             -- serialization version used by client
+      --major = 0,                 -- major version number
+      --minor = 4,                 -- minor version number
+      --patch = 10,                -- patch version number
+      --vers_string = "0.4.9-git", -- full version string
+      --state = "Active"           -- current client state
+  }</p>
+</li>
+<li>
+<p><code>minetest.mkdir(path)</code>: returns success.</p>
+<ul>
+<li>Creates a directory specified by <code>path</code>, creating parent directories
+  if they don't exist.</li>
+</ul>
+</li>
+<li><code>minetest.get_dir_list(path, [is_dir])</code>: returns list of entry names<ul>
+<li>is_dir is one of:<ul>
+<li>nil: return all entries,</li>
+<li>true: return only subdirectory names, or</li>
+<li>false: return only file names.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.safe_file_write(path, content)</code>: returns boolean indicating success<ul>
+<li>Replaces contents of file at path with new contents in a safe (atomic)
+  way. Use this instead of below code when writing e.g. database files:
+  <code>local f = io.open(path, "wb"); f:write(content); f:close()</code></li>
+</ul>
+</li>
+<li><code>minetest.get_version()</code>: returns a table containing components of the
+   engine version.  Components:<ul>
+<li><code>project</code>: Name of the project, eg, "Minetest"</li>
+<li><code>string</code>: Simple version, eg, "1.2.3-dev"</li>
+<li><code>hash</code>: Full git version (only set if available),
+  eg, "1.2.3-dev-01234567-dirty".
+  Use this for informational purposes only. The information in the returned
+  table does not represent the capabilities of the engine, nor is it
+  reliable or verifiable. Compatible forks will have a different name and
+  version entirely. To check for the presence of engine features, test
+  whether the functions exported by the wanted features exist. For example:
+  <code>if minetest.check_for_falling then ... end</code>.</li>
+</ul>
+</li>
+<li><code>minetest.sha1(data, [raw])</code>: returns the sha1 hash of data<ul>
+<li><code>data</code>: string of data to hash</li>
+<li><code>raw</code>: return raw bytes instead of hex digits, default: false</li>
+</ul>
+</li>
+</ul>
+<h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.debug(...)</code><ul>
+<li>Equivalent to <code>minetest.log(table.concat({...}, "\t"))</code></li>
+</ul>
+</li>
+<li><code>minetest.log([level,] text)</code><ul>
+<li><code>level</code> is one of <code>"none"</code>, <code>"error"</code>, <code>"warning"</code>, <code>"action"</code>,
+  <code>"info"</code>, or <code>"verbose"</code>.  Default is <code>"none"</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="registration-functions">Registration functions<a class="headerlink" href="#registration-functions" title="Permanent link">&para;</a></h2>
+<p>Call these functions only at load time!</p>
+<h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>minetest.register_node(name, node definition)</code></li>
+<li><code>minetest.register_craftitem(name, item definition)</code></li>
+<li><code>minetest.register_tool(name, item definition)</code></li>
+<li><code>minetest.override_item(name, redefinition)</code><ul>
+<li>Overrides fields of an item registered with register_node/tool/craftitem.</li>
+<li>Note: Item must already be defined, (opt)depend on the mod defining it.</li>
+<li>Example: <code>minetest.override_item("default:mese",
+  {light_source=minetest.LIGHT_MAX})</code></li>
+</ul>
+</li>
+<li><code>minetest.unregister_item(name)</code><ul>
+<li>Unregisters the item from the engine, and deletes the entry with key
+  <code>name</code> from <code>minetest.registered_items</code> and from the associated item table
+  according to its nature: <code>minetest.registered_nodes</code>, etc.</li>
+</ul>
+</li>
+<li><code>minetest.register_entity(name, entity definition)</code></li>
+<li><code>minetest.register_abm(abm definition)</code></li>
+<li><code>minetest.register_lbm(lbm definition)</code></li>
+<li><code>minetest.register_alias(alias, original_name)</code><ul>
+<li>Also use this to set the 'mapgen aliases' needed in a game for the core
+  mapgens. See [Mapgen aliases] section above.</li>
+</ul>
+</li>
+<li><code>minetest.register_alias_force(alias, original_name)</code></li>
+<li><code>minetest.register_ore(ore definition)</code><ul>
+<li>Returns an integer object handle uniquely identifying the registered
+  ore on success.</li>
+<li>The order of ore registrations determines the order of ore generation.</li>
+</ul>
+</li>
+<li><code>minetest.register_biome(biome definition)</code><ul>
+<li>Returns an integer object handle uniquely identifying the registered
+  biome on success. To get the biome ID, use <code>minetest.get_biome_id</code>.</li>
+</ul>
+</li>
+<li><code>minetest.unregister_biome(name)</code><ul>
+<li>Unregisters the biome from the engine, and deletes the entry with key
+  <code>name</code> from <code>minetest.registered_biomes</code>.</li>
+<li>Warning: This alters the biome to biome ID correspondences, so any
+  decorations or ores using the 'biomes' field must afterwards be cleared
+  and re-registered.</li>
+</ul>
+</li>
+<li><code>minetest.register_decoration(decoration definition)</code><ul>
+<li>Returns an integer object handle uniquely identifying the registered
+  decoration on success. To get the decoration ID, use
+  <code>minetest.get_decoration_id</code>.</li>
+<li>The order of decoration registrations determines the order of decoration
+  generation.</li>
+</ul>
+</li>
+<li><code>minetest.register_schematic(schematic definition)</code><ul>
+<li>Returns an integer object handle uniquely identifying the registered
+  schematic on success.</li>
+<li>If the schematic is loaded from a file, the <code>name</code> field is set to the
+  filename.</li>
+<li>If the function is called when loading the mod, and <code>name</code> is a relative
+  path, then the current mod path will be prepended to the schematic
+  filename.</li>
+</ul>
+</li>
+<li><code>minetest.clear_registered_biomes()</code><ul>
+<li>Clears all biomes currently registered.</li>
+<li>Warning: Clearing and re-registering biomes alters the biome to biome ID
+  correspondences, so any decorations or ores using the 'biomes' field must
+  afterwards be cleared and re-registered.</li>
+</ul>
+</li>
+<li><code>minetest.clear_registered_decorations()</code><ul>
+<li>Clears all decorations currently registered.</li>
+</ul>
+</li>
+<li><code>minetest.clear_registered_ores()</code><ul>
+<li>Clears all ores currently registered.</li>
+</ul>
+</li>
+<li><code>minetest.clear_registered_schematics()</code><ul>
+<li>Clears all schematics currently registered.</li>
+</ul>
+</li>
+</ul>
+<h3 id="gameplay">Gameplay<a class="headerlink" href="#gameplay" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>minetest.register_craft(recipe)</code><ul>
+<li>Check recipe table syntax for different types below.</li>
+</ul>
+</li>
+<li><code>minetest.clear_craft(recipe)</code><ul>
+<li>Will erase existing craft based either on output item or on input recipe.</li>
+<li>Specify either output or input only. If you specify both, input will be
+  ignored. For input use the same recipe table syntax as for
+  <code>minetest.register_craft(recipe)</code>. For output specify only the item,
+  without a quantity.</li>
+<li>Returns false if no erase candidate could be found, otherwise returns true.</li>
+<li><strong>Warning</strong>! The type field ("shaped", "cooking" or any other) will be
+  ignored if the recipe contains output. Erasing is then done independently
+  from the crafting method.</li>
+</ul>
+</li>
+<li><code>minetest.register_chatcommand(cmd, chatcommand definition)</code></li>
+<li><code>minetest.override_chatcommand(name, redefinition)</code><ul>
+<li>Overrides fields of a chatcommand registered with <code>register_chatcommand</code>.</li>
+</ul>
+</li>
+<li><code>minetest.unregister_chatcommand(name)</code><ul>
+<li>Unregisters a chatcommands registered with <code>register_chatcommand</code>.</li>
+</ul>
+</li>
+<li><code>minetest.register_privilege(name, definition)</code><ul>
+<li><code>definition</code> can be a description or a definition table (see [Privilege
+  definition]).</li>
+<li>If it is a description, the priv will be granted to singleplayer and admin
+  by default.</li>
+<li>To allow players with <code>basic_privs</code> to grant, see the <code>basic_privs</code>
+  minetest.conf setting.</li>
+</ul>
+</li>
+<li><code>minetest.register_authentication_handler(authentication handler definition)</code><ul>
+<li>Registers an auth handler that overrides the builtin one.</li>
+<li>This function can be called by a single mod once only.</li>
+</ul>
+</li>
+</ul>
+<h2 id="global-callback-registration-functions">Global callback registration functions<a class="headerlink" href="#global-callback-registration-functions" title="Permanent link">&para;</a></h2>
+<p>Call these functions only at load time!</p>
+<ul>
+<li><code>minetest.register_globalstep(function(dtime))</code><ul>
+<li>Called every server step, usually interval of 0.1s</li>
+</ul>
+</li>
+<li><code>minetest.register_on_mods_loaded(function())</code><ul>
+<li>Called after mods have finished loading and before the media is cached or the
+  aliases handled.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_shutdown(function())</code><ul>
+<li>Called before server shutdown</li>
+<li><strong>Warning</strong>: If the server terminates abnormally (i.e. crashes), the
+  registered callbacks <strong>will likely not be run</strong>. Data should be saved at
+  semi-frequent intervals as well as on server shutdown.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_placenode(function(pos, newnode, placer, oldnode, itemstack, pointed_thing))</code><ul>
+<li>Called when a node has been placed</li>
+<li>If return <code>true</code> no item is taken from <code>itemstack</code></li>
+<li><code>placer</code> may be any valid ObjectRef or nil.</li>
+<li><strong>Not recommended</strong>; use <code>on_construct</code> or <code>after_place_node</code> in node
+  definition whenever possible.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_dignode(function(pos, oldnode, digger))</code><ul>
+<li>Called when a node has been dug.</li>
+<li><strong>Not recommended</strong>; Use <code>on_destruct</code> or <code>after_dig_node</code> in node
+  definition whenever possible.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_punchnode(function(pos, node, puncher, pointed_thing))</code><ul>
+<li>Called when a node is punched</li>
+</ul>
+</li>
+<li><code>minetest.register_on_generated(function(minp, maxp, blockseed))</code><ul>
+<li>Called after generating a piece of world. Modifying nodes inside the area
+  is a bit faster than usually.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_newplayer(function(ObjectRef))</code><ul>
+<li>Called after a new player has been created</li>
+</ul>
+</li>
+<li><code>minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, tool_capabilities, dir, damage))</code><ul>
+<li>Called when a player is punched</li>
+<li>Note: This callback is invoked even if the punched player is dead.</li>
+<li><code>player</code>: ObjectRef - Player that was punched</li>
+<li><code>hitter</code>: ObjectRef - Player that hit</li>
+<li><code>time_from_last_punch</code>: Meant for disallowing spamming of clicks
+  (can be nil).</li>
+<li><code>tool_capabilities</code>: Capability table of used tool (can be nil)</li>
+<li><code>dir</code>: Unit vector of direction of punch. Always defined. Points from
+  the puncher to the punched.</li>
+<li><code>damage</code>: Number that represents the damage calculated by the engine</li>
+<li>should return <code>true</code> to prevent the default damage mechanism</li>
+</ul>
+</li>
+<li><code>minetest.register_on_player_hpchange(function(player, hp_change, reason), modifier)</code><ul>
+<li>Called when the player gets damaged or healed</li>
+<li><code>player</code>: ObjectRef of the player</li>
+<li><code>hp_change</code>: the amount of change. Negative when it is damage.</li>
+<li><code>reason</code>: a PlayerHPChangeReason table.<ul>
+<li>The <code>type</code> field will have one of the following values:<ul>
+<li><code>set_hp</code>: A mod or the engine called <code>set_hp</code> without
+            giving a type - use this for custom damage types.</li>
+<li><code>punch</code>: Was punched. <code>reason.object</code> will hold the puncher, or nil if none.</li>
+<li><code>fall</code></li>
+<li><code>node_damage</code>: <code>damage_per_second</code> from a neighbouring node.
+                 <code>reason.node</code> will hold the node name or nil.</li>
+<li><code>drown</code></li>
+<li><code>respawn</code></li>
+</ul>
+</li>
+<li>Any of the above types may have additional fields from mods.</li>
+<li><code>reason.from</code> will be <code>mod</code> or <code>engine</code>.</li>
+</ul>
+</li>
+<li><code>modifier</code>: when true, the function should return the actual <code>hp_change</code>.
+   Note: modifiers only get a temporary <code>hp_change</code> that can be modified by later modifiers.
+   Modifiers can return true as a second argument to stop the execution of further functions.
+   Non-modifiers receive the final HP change calculated by the modifiers.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_dieplayer(function(ObjectRef, reason))</code><ul>
+<li>Called when a player dies</li>
+<li><code>reason</code>: a PlayerHPChangeReason table, see register_on_player_hpchange</li>
+</ul>
+</li>
+<li><code>minetest.register_on_respawnplayer(function(ObjectRef))</code><ul>
+<li>Called when player is to be respawned</li>
+<li>Called <em>before</em> repositioning of player occurs</li>
+<li>return true in func to disable regular player placement</li>
+</ul>
+</li>
+<li><code>minetest.register_on_prejoinplayer(function(name, ip))</code><ul>
+<li>Called before a player joins the game</li>
+<li>If it returns a string, the player is disconnected with that string as
+  reason.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_joinplayer(function(ObjectRef))</code><ul>
+<li>Called when a player joins the game</li>
+</ul>
+</li>
+<li><code>minetest.register_on_leaveplayer(function(ObjectRef, timed_out))</code><ul>
+<li>Called when a player leaves the game</li>
+<li><code>timed_out</code>: True for timeout, false for other reasons.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_auth_fail(function(name, ip))</code><ul>
+<li>Called when a client attempts to log into an account but supplies the
+  wrong password.</li>
+<li><code>ip</code>: The IP address of the client.</li>
+<li><code>name</code>: The account the client attempted to log into.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_cheat(function(ObjectRef, cheat))</code><ul>
+<li>Called when a player cheats</li>
+<li><code>cheat</code>: <code>{type=&lt;cheat_type&gt;}</code>, where <code>&lt;cheat_type&gt;</code> is one of:<ul>
+<li><code>moved_too_fast</code></li>
+<li><code>interacted_too_far</code></li>
+<li><code>interacted_while_dead</code></li>
+<li><code>finished_unknown_dig</code></li>
+<li><code>dug_unbreakable</code></li>
+<li><code>dug_too_fast</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.register_on_chat_message(function(name, message))</code><ul>
+<li>Called always when a player says something</li>
+<li>Return <code>true</code> to mark the message as handled, which means that it will
+  not be sent to other players.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_player_receive_fields(function(player, formname, fields))</code><ul>
+<li>Called when the server received input from <code>player</code> in a formspec with
+  the given <code>formname</code>. Specifically, this is called on any of the
+  following events:<ul>
+<li>a button was pressed,</li>
+<li>Enter was pressed while the focus was on a text field</li>
+<li>a checkbox was toggled,</li>
+<li>something was selecteed in a drop-down list,</li>
+<li>a different tab was selected,</li>
+<li>selection was changed in a textlist or table,</li>
+<li>an entry was double-clicked in a textlist or table,</li>
+<li>a scrollbar was moved, or</li>
+<li>the form was actively closed by the player.</li>
+</ul>
+</li>
+<li>Fields are sent for formspec elements which define a field. <code>fields</code>
+  is a table containing each formspecs element value (as string), with
+  the <code>name</code> parameter as index for each. The value depends on the
+  formspec element type:<ul>
+<li><code>animated_image</code>: Returns the index of the current frame.</li>
+<li><code>button</code> and variants: If pressed, contains the user-facing button
+  text as value. If not pressed, is <code>nil</code></li>
+<li><code>field</code>, <code>textarea</code> and variants: Text in the field</li>
+<li><code>dropdown</code>: Text of selected item</li>
+<li><code>tabheader</code>: Tab index, starting with <code>"1"</code> (only if tab changed)</li>
+<li><code>checkbox</code>: <code>"true"</code> if checked, <code>"false"</code> if unchecked</li>
+<li><code>textlist</code>: See <code>minetest.explode_textlist_event</code></li>
+<li><code>table</code>: See <code>minetest.explode_table_event</code></li>
+<li><code>scrollbar</code>: See <code>minetest.explode_scrollbar_event</code></li>
+<li>Special case: <code>["quit"]="true"</code> is sent when the user actively
+  closed the form by mouse click, keypress or through a button_exit[]
+  element.</li>
+<li>Special case: <code>["key_enter"]="true"</code> is sent when the user pressed
+  the Enter key and the focus was either nowhere (causing the formspec
+  to be closed) or on a button. If the focus was on a text field,
+  additionally, the index <code>key_enter_field</code> contains the name of the
+  text field. See also: <code>field_close_on_enter</code>.</li>
+</ul>
+</li>
+<li>Newest functions are called first</li>
+<li>If function returns <code>true</code>, remaining functions are not called</li>
+</ul>
+</li>
+<li><code>minetest.register_on_craft(function(itemstack, player, old_craft_grid, craft_inv))</code><ul>
+<li>Called when <code>player</code> crafts something</li>
+<li><code>itemstack</code> is the output</li>
+<li><code>old_craft_grid</code> contains the recipe (Note: the one in the inventory is
+  cleared).</li>
+<li><code>craft_inv</code> is the inventory with the crafting grid</li>
+<li>Return either an <code>ItemStack</code>, to replace the output, or <code>nil</code>, to not
+  modify it.</li>
+</ul>
+</li>
+<li><code>minetest.register_craft_predict(function(itemstack, player, old_craft_grid, craft_inv))</code><ul>
+<li>The same as before, except that it is called before the player crafts, to
+  make craft prediction, and it should not change anything.</li>
+</ul>
+</li>
+<li><code>minetest.register_allow_player_inventory_action(function(player, action, inventory, inventory_info))</code><ul>
+<li>Determinates how much of a stack may be taken, put or moved to a
+  player inventory.</li>
+<li><code>player</code> (type <code>ObjectRef</code>) is the player who modified the inventory
+  <code>inventory</code> (type <code>InvRef</code>).</li>
+<li>List of possible <code>action</code> (string) values and their
+  <code>inventory_info</code> (table) contents:<ul>
+<li><code>move</code>: <code>{from_list=string, to_list=string, from_index=number, to_index=number, count=number}</code></li>
+<li><code>put</code>:  <code>{listname=string, index=number, stack=ItemStack}</code></li>
+<li><code>take</code>: Same as <code>put</code></li>
+</ul>
+</li>
+<li>Return a numeric value to limit the amount of items to be taken, put or
+  moved. A value of <code>-1</code> for <code>take</code> will make the source stack infinite.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_player_inventory_action(function(player, action, inventory, inventory_info))</code><ul>
+<li>Called after a take, put or move event from/to/in a player inventory</li>
+<li>Function arguments: see <code>minetest.register_allow_player_inventory_action</code></li>
+<li>Does not accept or handle any return value.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_protection_violation(function(pos, name))</code><ul>
+<li>Called by <code>builtin</code> and mods when a player violates protection at a
+  position (eg, digs a node or punches a protected entity).</li>
+<li>The registered functions can be called using
+  <code>minetest.record_protection_violation</code>.</li>
+<li>The provided function should check that the position is protected by the
+  mod calling this function before it prints a message, if it does, to
+  allow for multiple protection mods.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_item_eat(function(hp_change, replace_with_item, itemstack, user, pointed_thing))</code><ul>
+<li>Called when an item is eaten, by <code>minetest.item_eat</code></li>
+<li>Return <code>itemstack</code> to cancel the default item eat response (i.e.: hp increase).</li>
+</ul>
+</li>
+<li><code>minetest.register_on_priv_grant(function(name, granter, priv))</code><ul>
+<li>Called when <code>granter</code> grants the priv <code>priv</code> to <code>name</code>.</li>
+<li>Note that the callback will be called twice if it's done by a player,
+  once with granter being the player name, and again with granter being nil.</li>
+</ul>
+</li>
+<li><code>minetest.register_on_priv_revoke(function(name, revoker, priv))</code><ul>
+<li>Called when <code>revoker</code> revokes the priv <code>priv</code> from <code>name</code>.</li>
+<li>Note that the callback will be called twice if it's done by a player,
+  once with revoker being the player name, and again with revoker being nil.</li>
+</ul>
+</li>
+<li><code>minetest.register_can_bypass_userlimit(function(name, ip))</code><ul>
+<li>Called when <code>name</code> user connects with <code>ip</code>.</li>
+<li>Return <code>true</code> to by pass the player limit</li>
+</ul>
+</li>
+<li><code>minetest.register_on_modchannel_message(function(channel_name, sender, message))</code><ul>
+<li>Called when an incoming mod channel message is received</li>
+<li>You should have joined some channels to receive events.</li>
+<li>If message comes from a server mod, <code>sender</code> field is an empty string.</li>
+</ul>
+</li>
+</ul>
+<h2 id="setting-related">Setting-related<a class="headerlink" href="#setting-related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.settings</code>: Settings object containing all of the settings from the
+  main config file (<code>minetest.conf</code>).</li>
+<li><code>minetest.setting_get_pos(name)</code>: Loads a setting from the main settings and
+  parses it as a position (in the format <code>(1,2,3)</code>). Returns a position or nil.</li>
+</ul>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.string_to_privs(str[, delim])</code>:<ul>
+<li>Converts string representation of privs into table form</li>
+<li><code>delim</code>: String separating the privs. Defaults to <code>","</code>.</li>
+<li>Returns <code>{ priv1 = true, ... }</code></li>
+</ul>
+</li>
+<li><code>minetest.privs_to_string(privs[, delim])</code>:<ul>
+<li>Returns the string representation of <code>privs</code></li>
+<li><code>delim</code>: String to delimit privs. Defaults to <code>","</code>.</li>
+</ul>
+</li>
+<li><code>minetest.get_player_privs(name) -&gt; {priv1=true,...}</code></li>
+<li>
+<p><code>minetest.check_player_privs(player_or_name, ...)</code>:
+  returns <code>bool, missing_privs</code></p>
+<ul>
+<li>A quickhand for checking privileges.</li>
+<li><code>player_or_name</code>: Either a Player object or the name of a player.</li>
+<li><code>...</code> is either a list of strings, e.g. <code>"priva", "privb"</code> or
+  a table, e.g. <code>{ priva = true, privb = true }</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.check_password_entry(name, entry, password)</code></p>
+<ul>
+<li>Returns true if the "password entry" for a player with name matches given
+  password, false otherwise.</li>
+<li>The "password entry" is the password representation generated by the
+  engine as returned as part of a <code>get_auth()</code> call on the auth handler.</li>
+<li>Only use this function for making it possible to log in via password from
+  external protocols such as IRC, other uses are frowned upon.</li>
+</ul>
+</li>
+<li><code>minetest.get_password_hash(name, raw_password)</code><ul>
+<li>Convert a name-password pair to a password hash that Minetest can use.</li>
+<li>The returned value alone is not a good basis for password checks based
+  on comparing the password hash in the database with the password hash
+  from the function, with an externally provided password, as the hash
+  in the db might use the new SRP verifier format.</li>
+<li>For this purpose, use <code>minetest.check_password_entry</code> instead.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.get_player_ip(name)</code>: returns an IP address string for the player
+  <code>name</code>.</p>
+<ul>
+<li>The player needs to be online for this to be successful.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.get_auth_handler()</code>: Return the currently active auth handler</p>
+<ul>
+<li>See the [Authentication handler definition]</li>
+<li>Use this to e.g. get the authentication data for a player:
+  <code>local auth_data = minetest.get_auth_handler().get_auth(playername)</code></li>
+</ul>
+</li>
+<li><code>minetest.notify_authentication_modified(name)</code><ul>
+<li>Must be called by the authentication handler for privilege changes.</li>
+<li><code>name</code>: string; if omitted, all auth data should be considered modified</li>
+</ul>
+</li>
+<li><code>minetest.set_player_password(name, password_hash)</code>: Set password hash of
+  player <code>name</code>.</li>
+<li><code>minetest.set_player_privs(name, {priv1=true,...})</code>: Set privileges of player
+  <code>name</code>.</li>
+<li><code>minetest.auth_reload()</code><ul>
+<li>See <code>reload()</code> in authentication handler definition</li>
+</ul>
+</li>
+</ul>
+<p><code>minetest.set_player_password</code>, <code>minetest.set_player_privs</code>,
+<code>minetest.get_player_privs</code> and <code>minetest.auth_reload</code> call the authentication
+handler.</p>
+<h2 id="chat">Chat<a class="headerlink" href="#chat" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.chat_send_all(text)</code></li>
+<li><code>minetest.chat_send_player(name, text)</code></li>
+<li><code>minetest.format_chat_message(name, message)</code><ul>
+<li>Used by the server to format a chat message, based on the setting <code>chat_message_format</code>.
+  Refer to the documentation of the setting for a list of valid placeholders.</li>
+<li>Takes player name and message, and returns the formatted string to be sent to players.</li>
+<li>Can be redefined by mods if required, for things like colored names or messages.</li>
+<li><strong>Only</strong> the first occurrence of each placeholder will be replaced.</li>
+</ul>
+</li>
+</ul>
+<h2 id="environment-access">Environment access<a class="headerlink" href="#environment-access" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.set_node(pos, node)</code></li>
+<li><code>minetest.add_node(pos, node)</code>: alias to <code>minetest.set_node</code><ul>
+<li>Set node at position <code>pos</code></li>
+<li><code>node</code>: table <code>{name=string, param1=number, param2=number}</code></li>
+<li>If param1 or param2 is omitted, it's set to <code>0</code>.</li>
+<li>e.g. <code>minetest.set_node({x=0, y=10, z=0}, {name="default:wood"})</code></li>
+</ul>
+</li>
+<li><code>minetest.bulk_set_node({pos1, pos2, pos3, ...}, node)</code><ul>
+<li>Set node on all positions set in the first argument.</li>
+<li>e.g. <code>minetest.bulk_set_node({{x=0, y=1, z=1}, {x=1, y=2, z=2}}, {name="default:stone"})</code></li>
+<li>For node specification or position syntax see <code>minetest.set_node</code> call</li>
+<li>Faster than set_node due to single call, but still considerably slower
+  than Lua Voxel Manipulators (LVM) for large numbers of nodes.
+  Unlike LVMs, this will call node callbacks. It also allows setting nodes
+  in spread out positions which would cause LVMs to waste memory.
+  For setting a cube, this is 1.3x faster than set_node whereas LVM is 20
+  times faster.</li>
+</ul>
+</li>
+<li><code>minetest.swap_node(pos, node)</code><ul>
+<li>Set node at position, but don't remove metadata</li>
+</ul>
+</li>
+<li><code>minetest.remove_node(pos)</code><ul>
+<li>By default it does the same as <code>minetest.set_node(pos, {name="air"})</code></li>
+</ul>
+</li>
+<li><code>minetest.get_node(pos)</code><ul>
+<li>Returns the node at the given position as table in the format
+  <code>{name="node_name", param1=0, param2=0}</code>,
+  returns <code>{name="ignore", param1=0, param2=0}</code> for unloaded areas.</li>
+</ul>
+</li>
+<li><code>minetest.get_node_or_nil(pos)</code><ul>
+<li>Same as <code>get_node</code> but returns <code>nil</code> for unloaded areas.</li>
+</ul>
+</li>
+<li><code>minetest.get_node_light(pos, timeofday)</code><ul>
+<li>Gets the light value at the given position. Note that the light value
+  "inside" the node at the given position is returned, so you usually want
+  to get the light value of a neighbor.</li>
+<li><code>pos</code>: The position where to measure the light.</li>
+<li><code>timeofday</code>: <code>nil</code> for current time, <code>0</code> for night, <code>0.5</code> for day</li>
+<li>Returns a number between <code>0</code> and <code>15</code> or <code>nil</code></li>
+</ul>
+</li>
+<li><code>minetest.place_node(pos, node)</code><ul>
+<li>Place node with the same effects that a player would cause</li>
+</ul>
+</li>
+<li><code>minetest.dig_node(pos)</code><ul>
+<li>Dig node with the same effects that a player would cause</li>
+<li>Returns <code>true</code> if successful, <code>false</code> on failure (e.g. protected location)</li>
+</ul>
+</li>
+<li><code>minetest.punch_node(pos)</code><ul>
+<li>Punch node with the same effects that a player would cause</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.spawn_falling_node(pos)</code></p>
+<ul>
+<li>Change node into falling node</li>
+<li>Returns <code>true</code> if successful, <code>false</code> on failure</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.find_nodes_with_meta(pos1, pos2)</code></p>
+<ul>
+<li>Get a table of positions of nodes that have metadata within a region
+  {pos1, pos2}.</li>
+</ul>
+</li>
+<li><code>minetest.get_meta(pos)</code><ul>
+<li>Get a <code>NodeMetaRef</code> at that position</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.get_node_timer(pos)</code></p>
+<ul>
+<li>Get <code>NodeTimerRef</code></li>
+</ul>
+</li>
+<li>
+<p><code>minetest.add_entity(pos, name, [staticdata])</code>: Spawn Lua-defined entity at
+  position.</p>
+<ul>
+<li>Returns <code>ObjectRef</code>, or <code>nil</code> if failed</li>
+</ul>
+</li>
+<li><code>minetest.add_item(pos, item)</code>: Spawn item<ul>
+<li>Returns <code>ObjectRef</code>, or <code>nil</code> if failed</li>
+</ul>
+</li>
+<li><code>minetest.get_player_by_name(name)</code>: Get an <code>ObjectRef</code> to a player</li>
+<li><code>minetest.get_objects_inside_radius(pos, radius)</code>: returns a list of
+  ObjectRefs.<ul>
+<li><code>radius</code>: using an euclidean metric</li>
+</ul>
+</li>
+<li><code>minetest.set_timeofday(val)</code><ul>
+<li><code>val</code> is between <code>0</code> and <code>1</code>; <code>0</code> for midnight, <code>0.5</code> for midday</li>
+</ul>
+</li>
+<li><code>minetest.get_timeofday()</code></li>
+<li><code>minetest.get_gametime()</code>: returns the time, in seconds, since the world was
+  created.</li>
+<li><code>minetest.get_day_count()</code>: returns number days elapsed since world was
+  created.<ul>
+<li>accounts for time changes.</li>
+</ul>
+</li>
+<li><code>minetest.find_node_near(pos, radius, nodenames, [search_center])</code>: returns
+  pos or <code>nil</code>.<ul>
+<li><code>radius</code>: using a maximum metric</li>
+<li><code>nodenames</code>: e.g. <code>{"ignore", "group:tree"}</code> or <code>"default:dirt"</code></li>
+<li><code>search_center</code> is an optional boolean (default: <code>false</code>)
+  If true <code>pos</code> is also checked for the nodes</li>
+</ul>
+</li>
+<li><code>minetest.find_nodes_in_area(pos1, pos2, nodenames)</code>: returns a list of
+  positions.<ul>
+<li><code>nodenames</code>: e.g. <code>{"ignore", "group:tree"}</code> or <code>"default:dirt"</code></li>
+<li>First return value: Table with all node positions</li>
+<li>Second return value: Table with the count of each node with the node name
+  as index.</li>
+<li>Area volume is limited to 4,096,000 nodes</li>
+</ul>
+</li>
+<li><code>minetest.find_nodes_in_area_under_air(pos1, pos2, nodenames)</code>: returns a
+  list of positions.<ul>
+<li><code>nodenames</code>: e.g. <code>{"ignore", "group:tree"}</code> or <code>"default:dirt"</code></li>
+<li>Return value: Table with all node positions with a node air above</li>
+<li>Area volume is limited to 4,096,000 nodes</li>
+</ul>
+</li>
+<li><code>minetest.get_perlin(noiseparams)</code></li>
+<li><code>minetest.get_perlin(seeddiff, octaves, persistence, spread)</code><ul>
+<li>Return world-specific perlin noise (<code>int(worldseed)+seeddiff</code>)</li>
+</ul>
+</li>
+<li><code>minetest.get_voxel_manip([pos1, pos2])</code><ul>
+<li>Return voxel manipulator object.</li>
+<li>Loads the manipulator from the map if positions are passed.</li>
+</ul>
+</li>
+<li><code>minetest.set_gen_notify(flags, {deco_ids})</code><ul>
+<li>Set the types of on-generate notifications that should be collected.</li>
+<li><code>flags</code> is a flag field with the available flags:<ul>
+<li>dungeon</li>
+<li>temple</li>
+<li>cave_begin</li>
+<li>cave_end</li>
+<li>large_cave_begin</li>
+<li>large_cave_end</li>
+<li>decoration</li>
+</ul>
+</li>
+<li>The second parameter is a list of IDs of decorations which notification
+  is requested for.</li>
+</ul>
+</li>
+<li><code>minetest.get_gen_notify()</code><ul>
+<li>Returns a flagstring and a table with the <code>deco_id</code>s.</li>
+</ul>
+</li>
+<li><code>minetest.get_decoration_id(decoration_name)</code><ul>
+<li>Returns the decoration ID number for the provided decoration name string,
+  or <code>nil</code> on failure.</li>
+</ul>
+</li>
+<li><code>minetest.get_mapgen_object(objectname)</code><ul>
+<li>Return requested mapgen object if available (see [Mapgen objects])</li>
+</ul>
+</li>
+<li><code>minetest.get_heat(pos)</code><ul>
+<li>Returns the heat at the position, or <code>nil</code> on failure.</li>
+</ul>
+</li>
+<li><code>minetest.get_humidity(pos)</code><ul>
+<li>Returns the humidity at the position, or <code>nil</code> on failure.</li>
+</ul>
+</li>
+<li><code>minetest.get_biome_data(pos)</code><ul>
+<li>Returns a table containing:<ul>
+<li><code>biome</code> the biome id of the biome at that position</li>
+<li><code>heat</code> the heat at the position</li>
+<li><code>humidity</code> the humidity at the position</li>
+</ul>
+</li>
+<li>Or returns <code>nil</code> on failure.</li>
+</ul>
+</li>
+<li><code>minetest.get_biome_id(biome_name)</code><ul>
+<li>Returns the biome id, as used in the biomemap Mapgen object and returned
+  by <code>minetest.get_biome_data(pos)</code>, for a given biome_name string.</li>
+</ul>
+</li>
+<li><code>minetest.get_biome_name(biome_id)</code><ul>
+<li>Returns the biome name string for the provided biome id, or <code>nil</code> on
+  failure.</li>
+<li>If no biomes have been registered, such as in mgv6, returns <code>default</code>.</li>
+</ul>
+</li>
+<li><code>minetest.get_mapgen_params()</code><ul>
+<li>Deprecated: use <code>minetest.get_mapgen_setting(name)</code> instead.</li>
+<li>Returns a table containing:<ul>
+<li><code>mgname</code></li>
+<li><code>seed</code></li>
+<li><code>chunksize</code></li>
+<li><code>water_level</code></li>
+<li><code>flags</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.set_mapgen_params(MapgenParams)</code><ul>
+<li>Deprecated: use <code>minetest.set_mapgen_setting(name, value, override)</code>
+  instead.</li>
+<li>Set map generation parameters.</li>
+<li>Function cannot be called after the registration period; only
+  initialization and <code>on_mapgen_init</code>.</li>
+<li>Takes a table as an argument with the fields:<ul>
+<li><code>mgname</code></li>
+<li><code>seed</code></li>
+<li><code>chunksize</code></li>
+<li><code>water_level</code></li>
+<li><code>flags</code></li>
+</ul>
+</li>
+<li>Leave field unset to leave that parameter unchanged.</li>
+<li><code>flags</code> contains a comma-delimited string of flags to set, or if the
+  prefix <code>"no"</code> is attached, clears instead.</li>
+<li><code>flags</code> is in the same format and has the same options as <code>mg_flags</code> in
+  <code>minetest.conf</code>.</li>
+</ul>
+</li>
+<li><code>minetest.get_mapgen_setting(name)</code><ul>
+<li>Gets the <em>active</em> mapgen setting (or nil if none exists) in string
+  format with the following order of precedence:
+    1) Settings loaded from map_meta.txt or overrides set during mod
+       execution.
+    2) Settings set by mods without a metafile override
+    3) Settings explicitly set in the user config file, minetest.conf
+    4) Settings set as the user config default</li>
+</ul>
+</li>
+<li><code>minetest.get_mapgen_setting_noiseparams(name)</code><ul>
+<li>Same as above, but returns the value as a NoiseParams table if the
+  setting <code>name</code> exists and is a valid NoiseParams.</li>
+</ul>
+</li>
+<li><code>minetest.set_mapgen_setting(name, value, [override_meta])</code><ul>
+<li>Sets a mapgen param to <code>value</code>, and will take effect if the corresponding
+  mapgen setting is not already present in map_meta.txt.</li>
+<li><code>override_meta</code> is an optional boolean (default: <code>false</code>). If this is set
+  to true, the setting will become the active setting regardless of the map
+  metafile contents.</li>
+<li>Note: to set the seed, use <code>"seed"</code>, not <code>"fixed_map_seed"</code>.</li>
+</ul>
+</li>
+<li><code>minetest.set_mapgen_setting_noiseparams(name, value, [override_meta])</code><ul>
+<li>Same as above, except value is a NoiseParams table.</li>
+</ul>
+</li>
+<li><code>minetest.set_noiseparams(name, noiseparams, set_default)</code><ul>
+<li>Sets the noiseparams setting of <code>name</code> to the noiseparams table specified
+  in <code>noiseparams</code>.</li>
+<li><code>set_default</code> is an optional boolean (default: <code>true</code>) that specifies
+  whether the setting should be applied to the default config or current
+  active config.</li>
+</ul>
+</li>
+<li><code>minetest.get_noiseparams(name)</code><ul>
+<li>Returns a table of the noiseparams for name.</li>
+</ul>
+</li>
+<li><code>minetest.generate_ores(vm, pos1, pos2)</code><ul>
+<li>Generate all registered ores within the VoxelManip <code>vm</code> and in the area
+  from <code>pos1</code> to <code>pos2</code>.</li>
+<li><code>pos1</code> and <code>pos2</code> are optional and default to mapchunk minp and maxp.</li>
+</ul>
+</li>
+<li><code>minetest.generate_decorations(vm, pos1, pos2)</code><ul>
+<li>Generate all registered decorations within the VoxelManip <code>vm</code> and in the
+  area from <code>pos1</code> to <code>pos2</code>.</li>
+<li><code>pos1</code> and <code>pos2</code> are optional and default to mapchunk minp and maxp.</li>
+</ul>
+</li>
+<li><code>minetest.clear_objects([options])</code><ul>
+<li>Clear all objects in the environment</li>
+<li>Takes an optional table as an argument with the field <code>mode</code>.<ul>
+<li>mode = <code>"full"</code> : Load and go through every mapblock, clearing
+                    objects (default).</li>
+<li>mode = <code>"quick"</code>: Clear objects immediately in loaded mapblocks,
+                    clear objects in unloaded mapblocks only when the
+                    mapblocks are next activated.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.load_area(pos1[, pos2])</code><ul>
+<li>Load the mapblocks containing the area from <code>pos1</code> to <code>pos2</code>.
+  <code>pos2</code> defaults to <code>pos1</code> if not specified.</li>
+<li>This function does not trigger map generation.</li>
+</ul>
+</li>
+<li><code>minetest.emerge_area(pos1, pos2, [callback], [param])</code><ul>
+<li>Queue all blocks in the area from <code>pos1</code> to <code>pos2</code>, inclusive, to be
+  asynchronously fetched from memory, loaded from disk, or if inexistent,
+  generates them.</li>
+<li>If <code>callback</code> is a valid Lua function, this will be called for each block
+  emerged.</li>
+<li>The function signature of callback is:
+  <code>function EmergeAreaCallback(blockpos, action, calls_remaining, param)</code><ul>
+<li><code>blockpos</code> is the <em>block</em> coordinates of the block that had been
+  emerged.</li>
+<li><code>action</code> could be one of the following constant values:<ul>
+<li><code>minetest.EMERGE_CANCELLED</code></li>
+<li><code>minetest.EMERGE_ERRORED</code></li>
+<li><code>minetest.EMERGE_FROM_MEMORY</code></li>
+<li><code>minetest.EMERGE_FROM_DISK</code></li>
+<li><code>minetest.EMERGE_GENERATED</code></li>
+</ul>
+</li>
+<li><code>calls_remaining</code> is the number of callbacks to be expected after
+  this one.</li>
+<li><code>param</code> is the user-defined parameter passed to emerge_area (or
+  nil if the parameter was absent).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.delete_area(pos1, pos2)</code><ul>
+<li>delete all mapblocks in the area from pos1 to pos2, inclusive</li>
+</ul>
+</li>
+<li><code>minetest.line_of_sight(pos1, pos2)</code>: returns <code>boolean, pos</code><ul>
+<li>Checks if there is anything other than air between pos1 and pos2.</li>
+<li>Returns false if something is blocking the sight.</li>
+<li>Returns the position of the blocking node when <code>false</code></li>
+<li><code>pos1</code>: First position</li>
+<li><code>pos2</code>: Second position</li>
+</ul>
+</li>
+<li><code>minetest.raycast(pos1, pos2, objects, liquids)</code>: returns <code>Raycast</code><ul>
+<li>Creates a <code>Raycast</code> object.</li>
+<li><code>pos1</code>: start of the ray</li>
+<li><code>pos2</code>: end of the ray</li>
+<li><code>objects</code>: if false, only nodes will be returned. Default is <code>true</code>.</li>
+<li><code>liquids</code>: if false, liquid nodes won't be returned. Default is <code>false</code>.</li>
+</ul>
+</li>
+<li><code>minetest.find_path(pos1,pos2,searchdistance,max_jump,max_drop,algorithm)</code><ul>
+<li>returns table containing path that can be walked on</li>
+<li>returns a table of 3D points representing a path from <code>pos1</code> to <code>pos2</code> or
+  <code>nil</code> on failure.</li>
+<li>Reasons for failure:<ul>
+<li>No path exists at all</li>
+<li>No path exists within <code>searchdistance</code> (see below)</li>
+<li>Start or end pos is buried in land</li>
+</ul>
+</li>
+<li><code>pos1</code>: start position</li>
+<li><code>pos2</code>: end position</li>
+<li><code>searchdistance</code>: maximum distance from the search positions to search in.
+  In detail: Path must be completely inside a cuboid. The minimum
+  <code>searchdistance</code> of 1 will confine search between <code>pos1</code> and <code>pos2</code>.
+  Larger values will increase the size of this cuboid in all directions</li>
+<li><code>max_jump</code>: maximum height difference to consider walkable</li>
+<li><code>max_drop</code>: maximum height difference to consider droppable</li>
+<li><code>algorithm</code>: One of <code>"A*_noprefetch"</code> (default), <code>"A*"</code>, <code>"Dijkstra"</code>.
+  Difference between <code>"A*"</code> and <code>"A*_noprefetch"</code> is that
+  <code>"A*"</code> will pre-calculate the cost-data, the other will calculate it
+  on-the-fly</li>
+</ul>
+</li>
+<li><code>minetest.spawn_tree (pos, {treedef})</code><ul>
+<li>spawns L-system tree at given <code>pos</code> with definition in <code>treedef</code> table</li>
+</ul>
+</li>
+<li><code>minetest.transforming_liquid_add(pos)</code><ul>
+<li>add node to liquid update queue</li>
+</ul>
+</li>
+<li><code>minetest.get_node_max_level(pos)</code><ul>
+<li>get max available level for leveled node</li>
+</ul>
+</li>
+<li><code>minetest.get_node_level(pos)</code><ul>
+<li>get level of leveled node (water, snow)</li>
+</ul>
+</li>
+<li><code>minetest.set_node_level(pos, level)</code><ul>
+<li>set level of leveled node, default <code>level</code> equals <code>1</code></li>
+<li>if <code>totallevel &gt; maxlevel</code>, returns rest (<code>total-max</code>).</li>
+</ul>
+</li>
+<li><code>minetest.add_node_level(pos, level)</code><ul>
+<li>increase level of leveled node by level, default <code>level</code> equals <code>1</code></li>
+<li>if <code>totallevel &gt; maxlevel</code>, returns rest (<code>total-max</code>)</li>
+<li>can be negative for decreasing</li>
+</ul>
+</li>
+<li><code>minetest.fix_light(pos1, pos2)</code>: returns <code>true</code>/<code>false</code><ul>
+<li>resets the light in a cuboid-shaped part of
+  the map and removes lighting bugs.</li>
+<li>Loads the area if it is not loaded.</li>
+<li><code>pos1</code> is the corner of the cuboid with the least coordinates
+  (in node coordinates), inclusive.</li>
+<li><code>pos2</code> is the opposite corner of the cuboid, inclusive.</li>
+<li>The actual updated cuboid might be larger than the specified one,
+  because only whole map blocks can be updated.
+  The actual updated area consists of those map blocks that intersect
+  with the given cuboid.</li>
+<li>However, the neighborhood of the updated area might change
+  as well, as light can spread out of the cuboid, also light
+  might be removed.</li>
+<li>returns <code>false</code> if the area is not fully generated,
+  <code>true</code> otherwise</li>
+</ul>
+</li>
+<li><code>minetest.check_single_for_falling(pos)</code><ul>
+<li>causes an unsupported <code>group:falling_node</code> node to fall and causes an
+  unattached <code>group:attached_node</code> node to fall.</li>
+<li>does not spread these updates to neighbours.</li>
+</ul>
+</li>
+<li><code>minetest.check_for_falling(pos)</code><ul>
+<li>causes an unsupported <code>group:falling_node</code> node to fall and causes an
+  unattached <code>group:attached_node</code> node to fall.</li>
+<li>spread these updates to neighbours and can cause a cascade
+  of nodes to fall.</li>
+</ul>
+</li>
+<li><code>minetest.get_spawn_level(x, z)</code><ul>
+<li>Returns a player spawn y co-ordinate for the provided (x, z)
+  co-ordinates, or <code>nil</code> for an unsuitable spawn point.</li>
+<li>For most mapgens a 'suitable spawn point' is one with y between
+  <code>water_level</code> and <code>water_level + 16</code>, and in mgv7 well away from rivers,
+  so <code>nil</code> will be returned for many (x, z) co-ordinates.</li>
+<li>The spawn level returned is for a player spawn in unmodified terrain.</li>
+<li>The spawn level is intentionally above terrain level to cope with
+  full-node biome 'dust' nodes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="mod-channels">Mod channels<a class="headerlink" href="#mod-channels" title="Permanent link">&para;</a></h2>
+<p>You can find mod channels communication scheme in <code>doc/mod_channels.png</code>.</p>
+<ul>
+<li><code>minetest.mod_channel_join(channel_name)</code><ul>
+<li>Server joins channel <code>channel_name</code>, and creates it if necessary. You
+  should listen for incoming messages with
+  <code>minetest.register_on_modchannel_message</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="inventory">Inventory<a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h2>
+<p><code>minetest.get_inventory(location)</code>: returns an <code>InvRef</code></p>
+<ul>
+<li><code>location</code> = e.g.<ul>
+<li><code>{type="player", name="celeron55"}</code></li>
+<li><code>{type="node", pos={x=, y=, z=}}</code></li>
+<li><code>{type="detached", name="creative"}</code></li>
+</ul>
+</li>
+<li><code>minetest.create_detached_inventory(name, callbacks, [player_name])</code>: returns
+  an <code>InvRef</code>.<ul>
+<li><code>callbacks</code>: See [Detached inventory callbacks]</li>
+<li><code>player_name</code>: Make detached inventory available to one player
+  exclusively, by default they will be sent to every player (even if not
+  used).
+  Note that this parameter is mostly just a workaround and will be removed
+  in future releases.</li>
+<li>Creates a detached inventory. If it already exists, it is cleared.</li>
+</ul>
+</li>
+<li><code>minetest.remove_detached_inventory(name)</code><ul>
+<li>Returns a <code>boolean</code> indicating whether the removal succeeded.</li>
+</ul>
+</li>
+<li><code>minetest.do_item_eat(hp_change, replace_with_item, itemstack, user, pointed_thing)</code>:
+  returns left over ItemStack.<ul>
+<li>See <code>minetest.item_eat</code> and <code>minetest.register_on_item_eat</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="formspec">Formspec<a class="headerlink" href="#formspec" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.show_formspec(playername, formname, formspec)</code><ul>
+<li><code>playername</code>: name of player to show formspec</li>
+<li><code>formname</code>: name passed to <code>on_player_receive_fields</code> callbacks.
+  It should follow the <code>"modname:&lt;whatever&gt;"</code> naming convention</li>
+<li><code>formspec</code>: formspec to display</li>
+</ul>
+</li>
+<li><code>minetest.close_formspec(playername, formname)</code><ul>
+<li><code>playername</code>: name of player to close formspec</li>
+<li><code>formname</code>: has to exactly match the one given in <code>show_formspec</code>, or the
+  formspec will not close.</li>
+<li>calling <code>show_formspec(playername, formname, "")</code> is equal to this
+  expression.</li>
+<li>to close a formspec regardless of the formname, call
+  <code>minetest.close_formspec(playername, "")</code>.
+  <strong>USE THIS ONLY WHEN ABSOLUTELY NECESSARY!</strong></li>
+</ul>
+</li>
+<li><code>minetest.formspec_escape(string)</code>: returns a string<ul>
+<li>escapes the characters "[", "]", "\", "," and ";", which can not be used
+  in formspecs.</li>
+</ul>
+</li>
+<li><code>minetest.explode_table_event(string)</code>: returns a table<ul>
+<li>returns e.g. <code>{type="CHG", row=1, column=2}</code></li>
+<li><code>type</code> is one of:<ul>
+<li><code>"INV"</code>: no row selected</li>
+<li><code>"CHG"</code>: selected</li>
+<li><code>"DCL"</code>: double-click</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.explode_textlist_event(string)</code>: returns a table<ul>
+<li>returns e.g. <code>{type="CHG", index=1}</code></li>
+<li><code>type</code> is one of:<ul>
+<li><code>"INV"</code>: no row selected</li>
+<li><code>"CHG"</code>: selected</li>
+<li><code>"DCL"</code>: double-click</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.explode_scrollbar_event(string)</code>: returns a table<ul>
+<li>returns e.g. <code>{type="CHG", value=500}</code></li>
+<li><code>type</code> is one of:<ul>
+<li><code>"INV"</code>: something failed</li>
+<li><code>"CHG"</code>: has been changed</li>
+<li><code>"VAL"</code>: not changed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="item-handling">Item handling<a class="headerlink" href="#item-handling" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.inventorycube(img1, img2, img3)</code><ul>
+<li>Returns a string for making an image of a cube (useful as an item image)</li>
+</ul>
+</li>
+<li><code>minetest.get_pointed_thing_position(pointed_thing, above)</code><ul>
+<li>Returns the position of a <code>pointed_thing</code> or <code>nil</code> if the <code>pointed_thing</code>
+  does not refer to a node or entity.</li>
+<li>If the optional <code>above</code> parameter is true and the <code>pointed_thing</code> refers
+  to a node, then it will return the <code>above</code> position of the <code>pointed_thing</code>.</li>
+</ul>
+</li>
+<li><code>minetest.dir_to_facedir(dir, is6d)</code><ul>
+<li>Convert a vector to a facedir value, used in <code>param2</code> for
+  <code>paramtype2="facedir"</code>.</li>
+<li>passing something non-<code>nil</code>/<code>false</code> for the optional second parameter
+  causes it to take the y component into account.</li>
+</ul>
+</li>
+<li><code>minetest.facedir_to_dir(facedir)</code><ul>
+<li>Convert a facedir back into a vector aimed directly out the "back" of a
+  node.</li>
+</ul>
+</li>
+<li><code>minetest.dir_to_wallmounted(dir)</code><ul>
+<li>Convert a vector to a wallmounted value, used for
+  <code>paramtype2="wallmounted"</code>.</li>
+</ul>
+</li>
+<li><code>minetest.wallmounted_to_dir(wallmounted)</code><ul>
+<li>Convert a wallmounted value back into a vector aimed directly out the
+  "back" of a node.</li>
+</ul>
+</li>
+<li><code>minetest.dir_to_yaw(dir)</code><ul>
+<li>Convert a vector into a yaw (angle)</li>
+</ul>
+</li>
+<li><code>minetest.yaw_to_dir(yaw)</code><ul>
+<li>Convert yaw (angle) to a vector</li>
+</ul>
+</li>
+<li><code>minetest.is_colored_paramtype(ptype)</code><ul>
+<li>Returns a boolean. Returns <code>true</code> if the given <code>paramtype2</code> contains
+  color information (<code>color</code>, <code>colorwallmounted</code> or <code>colorfacedir</code>).</li>
+</ul>
+</li>
+<li><code>minetest.strip_param2_color(param2, paramtype2)</code><ul>
+<li>Removes everything but the color information from the
+  given <code>param2</code> value.</li>
+<li>Returns <code>nil</code> if the given <code>paramtype2</code> does not contain color
+  information.</li>
+</ul>
+</li>
+<li><code>minetest.get_node_drops(node, toolname)</code><ul>
+<li>Returns list of itemstrings that are dropped by <code>node</code> when dug
+  with <code>toolname</code>.</li>
+<li><code>node</code>: node as table or node name</li>
+<li><code>toolname</code>: name of the tool item (can be <code>nil</code>)</li>
+</ul>
+</li>
+<li><code>minetest.get_craft_result(input)</code>: returns <code>output, decremented_input</code><ul>
+<li><code>input.method</code> = <code>"normal"</code> or <code>"cooking"</code> or <code>"fuel"</code></li>
+<li><code>input.width</code> = for example <code>3</code></li>
+<li><code>input.items</code> = for example
+  <code>{stack1, stack2, stack3, stack4, stack 5, stack 6, stack 7, stack 8, stack 9}</code></li>
+<li><code>output.item</code> = <code>ItemStack</code>, if unsuccessful: empty <code>ItemStack</code></li>
+<li><code>output.time</code> = a number, if unsuccessful: <code>0</code></li>
+<li><code>output.replacements</code> = List of replacement <code>ItemStack</code>s that couldn't be
+  placed in <code>decremented_input.items</code>. Replacements can be placed in
+  <code>decremented_input</code> if the stack of the replaced item has a count of 1.</li>
+<li><code>decremented_input</code> = like <code>input</code></li>
+</ul>
+</li>
+<li><code>minetest.get_craft_recipe(output)</code>: returns input<ul>
+<li>returns last registered recipe for output item (node)</li>
+<li><code>output</code> is a node or item type such as <code>"default:torch"</code></li>
+<li><code>input.method</code> = <code>"normal"</code> or <code>"cooking"</code> or <code>"fuel"</code></li>
+<li><code>input.width</code> = for example <code>3</code></li>
+<li><code>input.items</code> = for example
+  <code>{stack1, stack2, stack3, stack4, stack 5, stack 6, stack 7, stack 8, stack 9}</code><ul>
+<li><code>input.items</code> = <code>nil</code> if no recipe found</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.get_all_craft_recipes(query item)</code>: returns a table or <code>nil</code><ul>
+<li>returns indexed table with all registered recipes for query item (node)
+  or <code>nil</code> if no recipe was found.</li>
+<li>recipe entry table:<ul>
+<li><code>method</code>: 'normal' or 'cooking' or 'fuel'</li>
+<li><code>width</code>: 0-3, 0 means shapeless recipe</li>
+<li><code>items</code>: indexed [1-9] table with recipe items</li>
+<li><code>output</code>: string with item name and quantity</li>
+</ul>
+</li>
+<li>
+<p>Example query for <code>"default:gold_ingot"</code> will return table:</p>
+<p>{
+      [1]={method = "cooking", width = 3, output = "default:gold_ingot",
+      items = {1 = "default:gold_lump"}},
+      [2]={method = "normal", width = 1, output = "default:gold_ingot 9",
+      items = {1 = "default:goldblock"}}
+  }
+* <code>minetest.handle_node_drops(pos, drops, digger)</code>
+    * <code>drops</code>: list of itemstrings
+    * Handles drops from nodes after digging: Default action is to put them
+      into digger's inventory.
+    * Can be overridden to get different functionality (e.g. dropping items on
+      ground)
+* <code>minetest.itemstring_with_palette(item, palette_index)</code>: returns an item
+  string.
+    * Creates an item string which contains palette index information
+      for hardware colorization. You can use the returned string
+      as an output in a craft recipe.
+    * <code>item</code>: the item stack which becomes colored. Can be in string,
+      table and native form.
+    * <code>palette_index</code>: this index is added to the item stack
+* <code>minetest.itemstring_with_color(item, colorstring)</code>: returns an item string
+    * Creates an item string which contains static color information
+      for hardware colorization. Use this method if you wish to colorize
+      an item that does not own a palette. You can use the returned string
+      as an output in a craft recipe.
+    * <code>item</code>: the item stack which becomes colored. Can be in string,
+      table and native form.
+    * <code>colorstring</code>: the new color of the item stack</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="rollback">Rollback<a class="headerlink" href="#rollback" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.rollback_get_node_actions(pos, range, seconds, limit)</code>:
+  returns <code>{{actor, pos, time, oldnode, newnode}, ...}</code><ul>
+<li>Find who has done something to a node, or near a node</li>
+<li><code>actor</code>: <code>"player:&lt;name&gt;"</code>, also <code>"liquid"</code>.</li>
+</ul>
+</li>
+<li><code>minetest.rollback_revert_actions_by(actor, seconds)</code>: returns
+  <code>boolean, log_messages</code>.<ul>
+<li>Revert latest actions of someone</li>
+<li><code>actor</code>: <code>"player:&lt;name&gt;"</code>, also <code>"liquid"</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="defaults-for-the-on_place-and-on_drop-item-definition-functions">Defaults for the <code>on_place</code> and <code>on_drop</code> item definition functions<a class="headerlink" href="#defaults-for-the-on_place-and-on_drop-item-definition-functions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.item_place_node(itemstack, placer, pointed_thing[, param2, prevent_after_place])</code><ul>
+<li>Place item as a node</li>
+<li><code>param2</code> overrides <code>facedir</code> and wallmounted <code>param2</code></li>
+<li><code>prevent_after_place</code>: if set to <code>true</code>, <code>after_place_node</code> is not called
+  for the newly placed node to prevent a callback and placement loop</li>
+<li>returns <code>itemstack, position</code></li>
+<li><code>position</code>: the location the node was placed to. <code>nil</code> if nothing was placed.</li>
+</ul>
+</li>
+<li><code>minetest.item_place_object(itemstack, placer, pointed_thing)</code><ul>
+<li>Place item as-is</li>
+<li>returns the leftover itemstack</li>
+<li><strong>Note</strong>: This function is deprecated and will never be called.</li>
+</ul>
+</li>
+<li><code>minetest.item_place(itemstack, placer, pointed_thing[, param2])</code><ul>
+<li>Wrapper that calls <code>minetest.item_place_node</code> if appropriate</li>
+<li>Calls <code>on_rightclick</code> of <code>pointed_thing.under</code> if defined instead</li>
+<li><strong>Note</strong>: is not called when wielded item overrides <code>on_place</code></li>
+<li><code>param2</code> overrides facedir and wallmounted <code>param2</code></li>
+<li>returns <code>itemstack, position</code></li>
+<li><code>position</code>: the location the node was placed to. <code>nil</code> if nothing was placed.</li>
+</ul>
+</li>
+<li><code>minetest.item_drop(itemstack, dropper, pos)</code><ul>
+<li>Drop the item</li>
+<li>returns the leftover itemstack</li>
+</ul>
+</li>
+<li><code>minetest.item_eat(hp_change[, replace_with_item])</code><ul>
+<li>Returns <code>function(itemstack, user, pointed_thing)</code> as a
+  function wrapper for <code>minetest.do_item_eat</code>.</li>
+<li><code>replace_with_item</code> is the itemstring which is added to the inventory.
+  If the player is eating a stack, then replace_with_item goes to a
+  different spot.</li>
+</ul>
+</li>
+</ul>
+<h2 id="defaults-for-the-on_punch-and-on_dig-node-definition-callbacks">Defaults for the <code>on_punch</code> and <code>on_dig</code> node definition callbacks<a class="headerlink" href="#defaults-for-the-on_punch-and-on_dig-node-definition-callbacks" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.node_punch(pos, node, puncher, pointed_thing)</code><ul>
+<li>Calls functions registered by <code>minetest.register_on_punchnode()</code></li>
+</ul>
+</li>
+<li><code>minetest.node_dig(pos, node, digger)</code><ul>
+<li>Checks if node can be dug, puts item into inventory, removes node</li>
+<li>Calls functions registered by <code>minetest.registered_on_dignodes()</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="sounds">Sounds<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.sound_play(spec, parameters, [ephemeral])</code>: returns a handle<ul>
+<li><code>spec</code> is a <code>SimpleSoundSpec</code></li>
+<li><code>parameters</code> is a sound parameter table</li>
+<li><code>ephemeral</code> is a boolean (default: false)
+  Ephemeral sounds will not return a handle and can't be stopped or faded.
+  It is recommend to use this for short sounds that happen in response to
+  player actions (e.g. door closing).</li>
+</ul>
+</li>
+<li><code>minetest.sound_stop(handle)</code><ul>
+<li><code>handle</code> is a handle returned by <code>minetest.sound_play</code></li>
+</ul>
+</li>
+<li><code>minetest.sound_fade(handle, step, gain)</code><ul>
+<li><code>handle</code> is a handle returned by <code>minetest.sound_play</code></li>
+<li><code>step</code> determines how fast a sound will fade.
+  Negative step will lower the sound volume, positive step will increase
+  the sound volume.</li>
+<li><code>gain</code> the target gain for the fade.</li>
+</ul>
+</li>
+</ul>
+<h2 id="timing">Timing<a class="headerlink" href="#timing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.after(time, func, ...)</code><ul>
+<li>Call the function <code>func</code> after <code>time</code> seconds, may be fractional</li>
+<li>Optional: Variable number of arguments that are passed to <code>func</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.request_shutdown([message],[reconnect],[delay])</code>: request for
+  server shutdown. Will display <code>message</code> to clients.<ul>
+<li><code>reconnect</code> == true displays a reconnect button</li>
+<li><code>delay</code> adds an optional delay (in seconds) before shutdown.
+  Negative delay cancels the current active shutdown.
+  Zero delay triggers an immediate shutdown.</li>
+</ul>
+</li>
+<li><code>minetest.cancel_shutdown_requests()</code>: cancel current delayed shutdown</li>
+<li><code>minetest.get_server_status(name, joined)</code><ul>
+<li>Returns the server status string when a player joins or when the command
+  <code>/status</code> is called. Returns <code>nil</code> or an empty string when the message is
+  disabled.</li>
+<li><code>joined</code>: Boolean value, indicates whether the function was called when
+  a player joined.</li>
+<li>This function may be overwritten by mods to customize the status message.</li>
+</ul>
+</li>
+<li><code>minetest.get_server_uptime()</code>: returns the server uptime in seconds</li>
+<li><code>minetest.remove_player(name)</code>: remove player from database (if they are not
+  connected).<ul>
+<li>As auth data is not removed, minetest.player_exists will continue to
+  return true. Call the below method as well if you want to remove auth
+  data too.</li>
+<li>Returns a code (0: successful, 1: no such player, 2: player is connected)</li>
+</ul>
+</li>
+<li><code>minetest.remove_player_auth(name)</code>: remove player authentication data<ul>
+<li>Returns boolean indicating success (false if player nonexistant)</li>
+</ul>
+</li>
+</ul>
+<h2 id="bans">Bans<a class="headerlink" href="#bans" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.get_ban_list()</code>: returns a list of all bans formatted as string</li>
+<li><code>minetest.get_ban_description(ip_or_name)</code>: returns list of bans matching
+  IP address or name formatted as string</li>
+<li><code>minetest.ban_player(name)</code>: ban the IP of a currently connected player<ul>
+<li>Returns boolean indicating success</li>
+</ul>
+</li>
+<li><code>minetest.unban_player_or_ip(ip_or_name)</code>: remove ban record matching
+  IP address or name</li>
+<li><code>minetest.kick_player(name, [reason])</code>: disconnect a player with an optional
+  reason.<ul>
+<li>Returns boolean indicating success (false if player nonexistant)</li>
+</ul>
+</li>
+</ul>
+<h2 id="particles">Particles<a class="headerlink" href="#particles" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>minetest.add_particle(particle definition)</code></p>
+<ul>
+<li>Deprecated: <code>minetest.add_particle(pos, velocity, acceleration,
+  expirationtime, size, collisiondetection, texture, playername)</code></li>
+</ul>
+</li>
+<li>
+<p><code>minetest.add_particlespawner(particlespawner definition)</code></p>
+<ul>
+<li>Add a <code>ParticleSpawner</code>, an object that spawns an amount of particles
+  over <code>time</code> seconds.</li>
+<li>Returns an <code>id</code>, and -1 if adding didn't succeed</li>
+<li>Deprecated: <code>minetest.add_particlespawner(amount, time,
+  minpos, maxpos,
+  minvel, maxvel,
+  minacc, maxacc,
+  minexptime, maxexptime,
+  minsize, maxsize,
+  collisiondetection, texture, playername)</code></li>
+</ul>
+</li>
+<li>
+<p><code>minetest.delete_particlespawner(id, player)</code></p>
+<ul>
+<li>Delete <code>ParticleSpawner</code> with <code>id</code> (return value from
+  <code>minetest.add_particlespawner</code>).</li>
+<li>If playername is specified, only deletes on the player's client,
+  otherwise on all clients.</li>
+</ul>
+</li>
+</ul>
+<h2 id="schematics">Schematics<a class="headerlink" href="#schematics" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>minetest.create_schematic(p1, p2, probability_list, filename, slice_prob_list)</code></p>
+<ul>
+<li>Create a schematic from the volume of map specified by the box formed by
+  p1 and p2.</li>
+<li>Apply the specified probability and per-node force-place to the specified
+  nodes according to the <code>probability_list</code>.<ul>
+<li><code>probability_list</code> is an array of tables containing two fields, <code>pos</code>
+  and <code>prob</code>.<ul>
+<li><code>pos</code> is the 3D vector specifying the absolute coordinates of the
+  node being modified,</li>
+<li><code>prob</code> is an integer value from <code>0</code> to <code>255</code> that encodes
+  probability and per-node force-place. Probability has levels
+  0-127, then 128 may be added to encode per-node force-place.
+  For probability stated as 0-255, divide by 2 and round down to
+  get values 0-127, then add 128 to apply per-node force-place.</li>
+<li>If there are two or more entries with the same pos value, the
+  last entry is used.</li>
+<li>If <code>pos</code> is not inside the box formed by <code>p1</code> and <code>p2</code>, it is
+  ignored.</li>
+<li>If <code>probability_list</code> equals <code>nil</code>, no probabilities are applied.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Apply the specified probability to the specified horizontal slices
+  according to the <code>slice_prob_list</code>.<ul>
+<li><code>slice_prob_list</code> is an array of tables containing two fields, <code>ypos</code>
+  and <code>prob</code>.<ul>
+<li><code>ypos</code> indicates the y position of the slice with a probability
+  applied, the lowest slice being <code>ypos = 0</code>.</li>
+<li>If slice probability list equals <code>nil</code>, no slice probabilities
+  are applied.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Saves schematic in the Minetest Schematic format to filename.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.place_schematic(pos, schematic, rotation, replacements, force_placement, flags)</code></p>
+<ul>
+<li>Place the schematic specified by schematic (see [Schematic specifier]) at
+  <code>pos</code>.</li>
+<li><code>rotation</code> can equal <code>"0"</code>, <code>"90"</code>, <code>"180"</code>, <code>"270"</code>, or <code>"random"</code>.</li>
+<li>If the <code>rotation</code> parameter is omitted, the schematic is not rotated.</li>
+<li><code>replacements</code> = <code>{["old_name"] = "convert_to", ...}</code></li>
+<li><code>force_placement</code> is a boolean indicating whether nodes other than <code>air</code>
+  and <code>ignore</code> are replaced by the schematic.</li>
+<li>Returns nil if the schematic could not be loaded.</li>
+<li><strong>Warning</strong>: Once you have loaded a schematic from a file, it will be
+  cached. Future calls will always use the cached version and the
+  replacement list defined for it, regardless of whether the file or the
+  replacement list parameter have changed. The only way to load the file
+  anew is to restart the server.</li>
+<li><code>flags</code> is a flag field with the available flags:<ul>
+<li>place_center_x</li>
+<li>place_center_y</li>
+<li>place_center_z</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.place_schematic_on_vmanip(vmanip, pos, schematic, rotation, replacement, force_placement, flags)</code>:</p>
+<ul>
+<li>This function is analogous to minetest.place_schematic, but places a
+  schematic onto the specified VoxelManip object <code>vmanip</code> instead of the
+  map.</li>
+<li>Returns false if any part of the schematic was cut-off due to the
+  VoxelManip not containing the full area required, and true if the whole
+  schematic was able to fit.</li>
+<li>Returns nil if the schematic could not be loaded.</li>
+<li>After execution, any external copies of the VoxelManip contents are
+  invalidated.</li>
+<li><code>flags</code> is a flag field with the available flags:<ul>
+<li>place_center_x</li>
+<li>place_center_y</li>
+<li>place_center_z</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.serialize_schematic(schematic, format, options)</code></p>
+<ul>
+<li>Return the serialized schematic specified by schematic
+  (see [Schematic specifier])</li>
+<li>in the <code>format</code> of either "mts" or "lua".</li>
+<li>"mts" - a string containing the binary MTS data used in the MTS file
+  format.</li>
+<li>"lua" - a string containing Lua code representing the schematic in table
+  format.</li>
+<li><code>options</code> is a table containing the following optional parameters:<ul>
+<li>If <code>lua_use_comments</code> is true and <code>format</code> is "lua", the Lua code
+  generated will have (X, Z) position comments for every X row
+  generated in the schematic data for easier reading.</li>
+<li>If <code>lua_num_indent_spaces</code> is a nonzero number and <code>format</code> is "lua",
+  the Lua code generated will use that number of spaces as indentation
+  instead of a tab character.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.read_schematic(schematic, options)</code></p>
+<ul>
+<li>Returns a Lua table representing the schematic (see: [Schematic specifier])</li>
+<li><code>schematic</code> is the schematic to read (see: [Schematic specifier])</li>
+<li><code>options</code> is a table containing the following optional parameters:<ul>
+<li><code>write_yslice_prob</code>: string value:<ul>
+<li><code>none</code>: no <code>write_yslice_prob</code> table is inserted,</li>
+<li><code>low</code>: only probabilities that are not 254 or 255 are written in
+  the <code>write_ylisce_prob</code> table,</li>
+<li><code>all</code>: write all probabilities to the <code>write_yslice_prob</code> table.</li>
+<li>The default for this option is <code>all</code>.</li>
+<li>Any invalid value will be interpreted as <code>all</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="http-requests">HTTP Requests<a class="headerlink" href="#http-requests" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.request_http_api()</code>:<ul>
+<li>returns <code>HTTPApiTable</code> containing http functions if the calling mod has
+  been granted access by being listed in the <code>secure.http_mods</code> or
+  <code>secure.trusted_mods</code> setting, otherwise returns <code>nil</code>.</li>
+<li>The returned table contains the functions <code>fetch</code>, <code>fetch_async</code> and
+  <code>fetch_async_get</code> described below.</li>
+<li>Only works at init time and must be called from the mod's main scope
+  (not from a function).</li>
+<li>Function only exists if minetest server was built with cURL support.</li>
+<li><strong>DO NOT ALLOW ANY OTHER MODS TO ACCESS THE RETURNED TABLE, STORE IT IN
+  A LOCAL VARIABLE!</strong></li>
+</ul>
+</li>
+<li><code>HTTPApiTable.fetch(HTTPRequest req, callback)</code><ul>
+<li>Performs given request asynchronously and calls callback upon completion</li>
+<li>callback: <code>function(HTTPRequestResult res)</code></li>
+<li>Use this HTTP function if you are unsure, the others are for advanced use</li>
+</ul>
+</li>
+<li><code>HTTPApiTable.fetch_async(HTTPRequest req)</code>: returns handle<ul>
+<li>Performs given request asynchronously and returns handle for
+  <code>HTTPApiTable.fetch_async_get</code></li>
+</ul>
+</li>
+<li><code>HTTPApiTable.fetch_async_get(handle)</code>: returns HTTPRequestResult<ul>
+<li>Return response data for given asynchronous HTTP request</li>
+</ul>
+</li>
+</ul>
+<h2 id="storage-api">Storage API<a class="headerlink" href="#storage-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.get_mod_storage()</code>:<ul>
+<li>returns reference to mod private <code>StorageRef</code></li>
+<li>must be called during mod load time</li>
+</ul>
+</li>
+</ul>
+<h2 id="misc">Misc.<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.get_connected_players()</code>: returns list of <code>ObjectRefs</code></li>
+<li><code>minetest.is_player(obj)</code>: boolean, whether <code>obj</code> is a player</li>
+<li><code>minetest.player_exists(name)</code>: boolean, whether player exists
+  (regardless of online status)</li>
+<li><code>minetest.hud_replace_builtin(name, hud_definition)</code><ul>
+<li>Replaces definition of a builtin hud element</li>
+<li><code>name</code>: <code>"breath"</code> or <code>"health"</code></li>
+<li><code>hud_definition</code>: definition to replace builtin definition</li>
+</ul>
+</li>
+<li><code>minetest.send_join_message(player_name)</code><ul>
+<li>This function can be overridden by mods to change the join message.</li>
+</ul>
+</li>
+<li><code>minetest.send_leave_message(player_name, timed_out)</code><ul>
+<li>This function can be overridden by mods to change the leave message.</li>
+</ul>
+</li>
+<li><code>minetest.hash_node_position(pos)</code>: returns an 48-bit integer<ul>
+<li><code>pos</code>: table {x=number, y=number, z=number},</li>
+<li>Gives a unique hash number for a node position (16+16+16=48bit)</li>
+</ul>
+</li>
+<li><code>minetest.get_position_from_hash(hash)</code>: returns a position<ul>
+<li>Inverse transform of <code>minetest.hash_node_position</code></li>
+</ul>
+</li>
+<li><code>minetest.get_item_group(name, group)</code>: returns a rating<ul>
+<li>Get rating of a group of an item. (<code>0</code> means: not in group)</li>
+</ul>
+</li>
+<li><code>minetest.get_node_group(name, group)</code>: returns a rating<ul>
+<li>Deprecated: An alias for the former.</li>
+</ul>
+</li>
+<li><code>minetest.raillike_group(name)</code>: returns a rating<ul>
+<li>Returns rating of the connect_to_raillike group corresponding to name</li>
+<li>If name is not yet the name of a connect_to_raillike group, a new group
+  id is created, with that name.</li>
+</ul>
+</li>
+<li><code>minetest.get_content_id(name)</code>: returns an integer<ul>
+<li>Gets the internal content ID of <code>name</code></li>
+</ul>
+</li>
+<li><code>minetest.get_name_from_content_id(content_id)</code>: returns a string<ul>
+<li>Gets the name of the content with that content ID</li>
+</ul>
+</li>
+<li><code>minetest.parse_json(string[, nullvalue])</code>: returns something<ul>
+<li>Convert a string containing JSON data into the Lua equivalent</li>
+<li><code>nullvalue</code>: returned in place of the JSON null; defaults to <code>nil</code></li>
+<li>On success returns a table, a string, a number, a boolean or <code>nullvalue</code></li>
+<li>On failure outputs an error message and returns <code>nil</code></li>
+<li>Example: <code>parse_json("[10, {\"a\":false}]")</code>, returns <code>{10, {a = false}}</code></li>
+</ul>
+</li>
+<li><code>minetest.write_json(data[, styled])</code>: returns a string or <code>nil</code> and an error
+  message.<ul>
+<li>Convert a Lua table into a JSON string</li>
+<li>styled: Outputs in a human-readable format if this is set, defaults to
+  false.</li>
+<li>Unserializable things like functions and userdata will cause an error.</li>
+<li><strong>Warning</strong>: JSON is more strict than the Lua table format.<ol>
+<li>You can only use strings and positive integers of at least one as
+   keys.</li>
+<li>You can not mix string and integer keys.
+   This is due to the fact that JSON has two distinct array and object
+   values.</li>
+</ol>
+</li>
+<li>Example: <code>write_json({10, {a = false}})</code>,
+  returns <code>"[10, {\"a\": false}]"</code></li>
+</ul>
+</li>
+<li><code>minetest.serialize(table)</code>: returns a string<ul>
+<li>Convert a table containing tables, strings, numbers, booleans and <code>nil</code>s
+  into string form readable by <code>minetest.deserialize</code></li>
+<li>Example: <code>serialize({foo='bar'})</code>, returns <code>'return { ["foo"] = "bar" }'</code></li>
+</ul>
+</li>
+<li><code>minetest.deserialize(string[, safe])</code>: returns a table<ul>
+<li>Convert a string returned by <code>minetest.serialize</code> into a table</li>
+<li><code>string</code> is loaded in an empty sandbox environment.</li>
+<li>Will load functions if safe is false or omitted. Although these functions
+  cannot directly access the global environment, they could bypass this
+  restriction with maliciously crafted Lua bytecode if mod security is
+  disabled.</li>
+<li>This function should not be used on untrusted data, regardless of the
+ value of <code>safe</code>. It is fine to serialize then deserialize user-provided
+ data, but directly providing user input to deserialize is always unsafe.</li>
+<li>Example: <code>deserialize('return { ["foo"] = "bar" }')</code>,
+  returns <code>{foo='bar'}</code></li>
+<li>Example: <code>deserialize('print("foo")')</code>, returns <code>nil</code>
+  (function call fails), returns
+  <code>error:[string "print("foo")"]:1: attempt to call global 'print' (a nil value)</code></li>
+</ul>
+</li>
+<li><code>minetest.compress(data, method, ...)</code>: returns <code>compressed_data</code><ul>
+<li>Compress a string of data.</li>
+<li><code>method</code> is a string identifying the compression method to be used.</li>
+<li>Supported compression methods:<ul>
+<li>Deflate (zlib): <code>"deflate"</code></li>
+</ul>
+</li>
+<li><code>...</code> indicates method-specific arguments. Currently defined arguments
+  are:<ul>
+<li>Deflate: <code>level</code> - Compression level, <code>0</code>-<code>9</code> or <code>nil</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>minetest.decompress(compressed_data, method, ...)</code>: returns data<ul>
+<li>Decompress a string of data (using ZLib).</li>
+<li>See documentation on <code>minetest.compress()</code> for supported compression
+  methods.</li>
+<li><code>...</code> indicates method-specific arguments. Currently, no methods use this</li>
+</ul>
+</li>
+<li><code>minetest.rgba(red, green, blue[, alpha])</code>: returns a string<ul>
+<li>Each argument is a 8 Bit unsigned integer</li>
+<li>Returns the ColorString from rgb or rgba values</li>
+<li>Example: <code>minetest.rgba(10, 20, 30, 40)</code>, returns <code>"#0A141E28"</code></li>
+</ul>
+</li>
+<li><code>minetest.encode_base64(string)</code>: returns string encoded in base64<ul>
+<li>Encodes a string in base64.</li>
+</ul>
+</li>
+<li><code>minetest.decode_base64(string)</code>: returns string<ul>
+<li>Decodes a string encoded in base64.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.is_protected(pos, name)</code>: returns boolean</p>
+<ul>
+<li>Returning <code>true</code> restricts the player <code>name</code> from modifying (i.e. digging,
+   placing) the node at position <code>pos</code>.</li>
+<li><code>name</code> will be <code>""</code> for non-players or unknown players.</li>
+<li>This function should be overridden by protection mods. It is highly
+  recommended to grant access to players with the <code>protection_bypass</code> privilege.</li>
+<li>Cache and call the old version of this function if the position is
+  not protected by the mod. This will allow using multiple protection mods.</li>
+<li>
+<p>Example:</p>
+<p>local old_is_protected = minetest.is_protected
+  function minetest.is_protected(pos, name)
+      if mymod:position_protected_from(pos, name) then
+          return true
+      end
+      return old_is_protected(pos, name)
+  end
+* <code>minetest.record_protection_violation(pos, name)</code>
+    * This function calls functions registered with
+      <code>minetest.register_on_protection_violation</code>.
+* <code>minetest.is_area_protected(pos1, pos2, player_name, interval)</code>
+    * Returns the position of the first node that <code>player_name</code> may not modify
+      in the specified cuboid between <code>pos1</code> and <code>pos2</code>.
+    * Returns <code>false</code> if no protections were found.
+    * Applies <code>is_protected()</code> to a 3D lattice of points in the defined volume.
+      The points are spaced evenly throughout the volume and have a spacing
+      similar to, but no larger than, <code>interval</code>.
+    * All corners and edges of the defined volume are checked.
+    * <code>interval</code> defaults to 4.
+    * <code>interval</code> should be carefully chosen and maximised to avoid an excessive
+      number of points being checked.
+    * Like <code>minetest.is_protected</code>, this function may be extended or
+      overwritten by mods to provide a faster implementation to check the
+      cuboid for intersections.
+* <code>minetest.rotate_and_place(itemstack, placer, pointed_thing[, infinitestacks,
+  orient_flags, prevent_after_place])</code>
+    * Attempt to predict the desired orientation of the facedir-capable node
+      defined by <code>itemstack</code>, and place it accordingly (on-wall, on the floor,
+      or hanging from the ceiling).
+    * <code>infinitestacks</code>: if <code>true</code>, the itemstack is not changed. Otherwise the
+      stacks are handled normally.
+    * <code>orient_flags</code>: Optional table containing extra tweaks to the placement code:
+* <code>invert_wall</code>:   if <code>true</code>, place wall-orientation on the ground and
+  ground-orientation on the wall.
+* <code>force_wall</code> :   if <code>true</code>, always place the node in wall orientation.
+* <code>force_ceiling</code>: if <code>true</code>, always place on the ceiling.
+* <code>force_floor</code>:   if <code>true</code>, always place the node on the floor.
+* <code>force_facedir</code>: if <code>true</code>, forcefully reset the facedir to north
+  when placing on the floor or ceiling.
+* The first four options are mutually-exclusive; the last in the list
+  takes precedence over the first.
+    * <code>prevent_after_place</code> is directly passed to <code>minetest.item_place_node</code>
+    * Returns the new itemstack after placement
+* <code>minetest.rotate_node(itemstack, placer, pointed_thing)</code>
+    * calls <code>rotate_and_place()</code> with <code>infinitestacks</code> set according to the state
+      of the creative mode setting, checks for "sneak" to set the <code>invert_wall</code>
+      parameter and <code>prevent_after_place</code> set to <code>true</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.calculate_knockback(player, hitter, time_from_last_punch,
+  tool_capabilities, dir, distance, damage)</code></p>
+<ul>
+<li>Returns the amount of knockback applied on the punched player.</li>
+<li>Arguments are equivalent to <code>register_on_punchplayer</code>, except the following:<ul>
+<li><code>distance</code>: distance between puncher and punched player</li>
+</ul>
+</li>
+<li>This function can be overriden by mods that wish to modify this behaviour.</li>
+<li>You may want to cache and call the old function to allow multiple mods to
+  change knockback behaviour.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.forceload_block(pos[, transient])</code></p>
+<ul>
+<li>forceloads the position <code>pos</code>.</li>
+<li>returns <code>true</code> if area could be forceloaded</li>
+<li>If <code>transient</code> is <code>false</code> or absent, the forceload will be persistent
+  (saved between server runs). If <code>true</code>, the forceload will be transient
+  (not saved between server runs).</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.forceload_free_block(pos[, transient])</code></p>
+<ul>
+<li>stops forceloading the position <code>pos</code></li>
+<li>If <code>transient</code> is <code>false</code> or absent, frees a persistent forceload.
+  If <code>true</code>, frees a transient forceload.</li>
+</ul>
+</li>
+<li>
+<p><code>minetest.request_insecure_environment()</code>: returns an environment containing
+  insecure functions if the calling mod has been listed as trusted in the
+  <code>secure.trusted_mods</code> setting or security is disabled, otherwise returns
+  <code>nil</code>.</p>
+<ul>
+<li>Only works at init time and must be called from the mod's main scope
+  (ie: the init.lua of the mod, not from another Lua file or within a function).</li>
+<li><strong>DO NOT ALLOW ANY OTHER MODS TO ACCESS THE RETURNED ENVIRONMENT, STORE
+  IT IN A LOCAL VARIABLE!</strong></li>
+</ul>
+</li>
+<li>
+<p><code>minetest.global_exists(name)</code></p>
+<ul>
+<li>Checks if a global variable has been set, without triggering a warning.</li>
+</ul>
+</li>
+</ul>
+<h2 id="global-objects">Global objects<a class="headerlink" href="#global-objects" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>minetest.env</code>: <code>EnvRef</code> of the server environment and world.<ul>
+<li>Any function in the minetest namespace can be called using the syntax
+  <code>minetest.env:somefunction(somearguments)</code>
+  instead of <code>minetest.somefunction(somearguments)</code></li>
+<li>Deprecated, but support is not to be dropped soon</li>
+</ul>
+</li>
+</ul>
+<h2 id="global-tables">Global tables<a class="headerlink" href="#global-tables" title="Permanent link">&para;</a></h2>
+<h3 id="registered-definition-tables">Registered definition tables<a class="headerlink" href="#registered-definition-tables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>minetest.registered_items</code><ul>
+<li>Map of registered items, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.registered_nodes</code><ul>
+<li>Map of registered node definitions, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.registered_craftitems</code><ul>
+<li>Map of registered craft item definitions, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.registered_tools</code><ul>
+<li>Map of registered tool definitions, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.registered_entities</code><ul>
+<li>Map of registered entity prototypes, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.object_refs</code><ul>
+<li>Map of object references, indexed by active object id</li>
+</ul>
+</li>
+<li><code>minetest.luaentities</code><ul>
+<li>Map of Lua entities, indexed by active object id</li>
+</ul>
+</li>
+<li><code>minetest.registered_abms</code><ul>
+<li>List of ABM definitions</li>
+</ul>
+</li>
+<li><code>minetest.registered_lbms</code><ul>
+<li>List of LBM definitions</li>
+</ul>
+</li>
+<li><code>minetest.registered_aliases</code><ul>
+<li>Map of registered aliases, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.registered_ores</code><ul>
+<li>Map of registered ore definitions, indexed by the <code>name</code> field.</li>
+<li>If <code>name</code> is nil, the key is the object handle returned by
+  <code>minetest.register_ore</code>.</li>
+</ul>
+</li>
+<li><code>minetest.registered_biomes</code><ul>
+<li>Map of registered biome definitions, indexed by the <code>name</code> field.</li>
+<li>If <code>name</code> is nil, the key is the object handle returned by
+  <code>minetest.register_biome</code>.</li>
+</ul>
+</li>
+<li><code>minetest.registered_decorations</code><ul>
+<li>Map of registered decoration definitions, indexed by the <code>name</code> field.</li>
+<li>If <code>name</code> is nil, the key is the object handle returned by
+  <code>minetest.register_decoration</code>.</li>
+</ul>
+</li>
+<li><code>minetest.registered_schematics</code><ul>
+<li>Map of registered schematic definitions, indexed by the <code>name</code> field.</li>
+<li>If <code>name</code> is nil, the key is the object handle returned by
+  <code>minetest.register_schematic</code>.</li>
+</ul>
+</li>
+<li><code>minetest.registered_chatcommands</code><ul>
+<li>Map of registered chat command definitions, indexed by name</li>
+</ul>
+</li>
+<li><code>minetest.registered_privileges</code><ul>
+<li>Map of registered privilege definitions, indexed by name</li>
+</ul>
+</li>
+</ul>
+<h3 id="registered-callback-tables">Registered callback tables<a class="headerlink" href="#registered-callback-tables" title="Permanent link">&para;</a></h3>
+<p>All callbacks registered with [Global callback registration functions] are added
+to corresponding <code>minetest.registered_*</code> tables.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../class-reference/index.html" class="btn btn-neutral float-right" title="Class reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../l-system-trees/index.html" class="btn btn-neutral" title="L-system trees"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../l-system-trees/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../class-reference/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/minetest-namespace-reference/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+</html>

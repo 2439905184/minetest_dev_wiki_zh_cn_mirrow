@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/aliases/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Aliases - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Aliases";
+    var mkdocs_page_input_path = "aliases.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Aliases</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mapgen-aliases">Mapgen aliases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aliases-for-non-v6-mapgens">Aliases for non-V6 mapgens</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#essential-aliases">Essential aliases</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#optional-aliases">Optional aliases</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aliases-needed-for-mapgen-v6">Aliases needed for Mapgen V6</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-the-node-used-in-mapgen-singlenode">Setting the node used in Mapgen Singlenode</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Aliases</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="aliases">Aliases<a class="headerlink" href="#aliases" title="Permanent link">&para;</a></h1>
+<p>Aliases of itemnames can be added by using
+<code>minetest.register_alias(alias, original_name)</code> or
+<code>minetest.register_alias_force(alias, original_name)</code>.</p>
+<p>This adds an alias <code>alias</code> for the item called <code>original_name</code>.
+From now on, you can use <code>alias</code> to refer to the item <code>original_name</code>.</p>
+<p>The only difference between <code>minetest.register_alias</code> and
+<code>minetest.register_alias_force</code> is that if an item named <code>alias</code> already exists,
+<code>minetest.register_alias</code> will do nothing while
+<code>minetest.register_alias_force</code> will unregister it.</p>
+<p>This can be used for maintaining backwards compatibility.</p>
+<p>This can also set quick access names for things, e.g. if
+you have an item called <code>epiclylongmodname:stuff</code>, you could do</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">register_alias</span><span class="p">(</span><span class="s2">&quot;stuff&quot;</span><span class="p">,</span> <span class="s2">&quot;epiclylongmodname:stuff&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>and be able to use <code>/giveme stuff</code>.</p>
+<h2 id="mapgen-aliases">Mapgen aliases<a class="headerlink" href="#mapgen-aliases" title="Permanent link">&para;</a></h2>
+<p>In a game, a certain number of these must be set to tell core mapgens which
+of the game's nodes are to be used for core mapgen generation. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">register_alias</span><span class="p">(</span><span class="s2">&quot;mapgen_stone&quot;</span><span class="p">,</span> <span class="s2">&quot;default:stone&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3 id="aliases-for-non-v6-mapgens">Aliases for non-V6 mapgens<a class="headerlink" href="#aliases-for-non-v6-mapgens" title="Permanent link">&para;</a></h3>
+<h4 id="essential-aliases">Essential aliases<a class="headerlink" href="#essential-aliases" title="Permanent link">&para;</a></h4>
+<ul>
+<li>mapgen_stone</li>
+<li>mapgen_water_source</li>
+<li>mapgen_river_water_source</li>
+</ul>
+<p><code>mapgen_river_water_source</code> is required for mapgens with sloping rivers where
+it is necessary to have a river liquid node with a short <code>liquid_range</code> and
+<code>liquid_renewable = false</code> to avoid flooding.</p>
+<h4 id="optional-aliases">Optional aliases<a class="headerlink" href="#optional-aliases" title="Permanent link">&para;</a></h4>
+<ul>
+<li>mapgen_lava_source</li>
+</ul>
+<p>Fallback lava node used if cave liquids are not defined in biome definitions.
+Deprecated for non-V6 mapgens, define cave liquids in biome definitions instead.</p>
+<ul>
+<li>mapgen_cobble</li>
+</ul>
+<p>Fallback node used if dungeon nodes are not defined in biome definitions.
+Deprecated for non-V6 mapgens, define dungeon nodes in biome definitions instead.</p>
+<h3 id="aliases-needed-for-mapgen-v6">Aliases needed for Mapgen V6<a class="headerlink" href="#aliases-needed-for-mapgen-v6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>mapgen_stone</li>
+<li>mapgen_water_source</li>
+<li>mapgen_lava_source</li>
+<li>mapgen_dirt</li>
+<li>mapgen_dirt_with_grass</li>
+<li>mapgen_sand</li>
+<li>mapgen_gravel</li>
+<li>mapgen_desert_stone</li>
+<li>mapgen_desert_sand</li>
+<li>mapgen_dirt_with_snow</li>
+<li>mapgen_snowblock</li>
+<li>mapgen_snow</li>
+<li>
+<p>mapgen_ice</p>
+</li>
+<li>
+<p>mapgen_tree</p>
+</li>
+<li>mapgen_leaves</li>
+<li>mapgen_apple</li>
+<li>mapgen_jungletree</li>
+<li>mapgen_jungleleaves</li>
+<li>mapgen_junglegrass</li>
+<li>mapgen_pine_tree</li>
+<li>
+<p>mapgen_pine_needles</p>
+</li>
+<li>
+<p>mapgen_cobble</p>
+</li>
+<li>mapgen_stair_cobble</li>
+<li>mapgen_mossycobble</li>
+<li>mapgen_stair_desert_stone</li>
+</ul>
+<h3 id="setting-the-node-used-in-mapgen-singlenode">Setting the node used in Mapgen Singlenode<a class="headerlink" href="#setting-the-node-used-in-mapgen-singlenode" title="Permanent link">&para;</a></h3>
+<p>By default the world is filled with air nodes. To set a different node use, for
+example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">minetest</span><span class="p">.</span><span class="n">register_alias</span><span class="p">(</span><span class="s2">&quot;mapgen_singlenode&quot;</span><span class="p">,</span> <span class="s2">&quot;default:stone&quot;</span><span class="p">)</span>
+</code></pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../textures/index.html" class="btn btn-neutral float-right" title="Textures">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../mods/index.html" class="btn btn-neutral" title="Mods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../mods/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../textures/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/aliases/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

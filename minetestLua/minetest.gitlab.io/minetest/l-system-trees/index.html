@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/l-system-trees/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>L-system trees - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "L-system trees";
+    var mkdocs_page_input_path = "l-system-trees.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">L-system trees</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tree-definition">Tree definition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-for-special-l-system-symbols-used-in-axioms">Key for special L-System symbols used in axioms</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>L-system trees</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="l-system-trees">L-system trees<a class="headerlink" href="#l-system-trees" title="Permanent link">&para;</a></h1>
+<h2 id="tree-definition">Tree definition<a class="headerlink" href="#tree-definition" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">treedef</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">axiom</span><span class="p">,</span>         <span class="c1">--string  initial tree axiom</span>
+    <span class="n">rules_a</span><span class="p">,</span>       <span class="c1">--string  rules set A</span>
+    <span class="n">rules_b</span><span class="p">,</span>       <span class="c1">--string  rules set B</span>
+    <span class="n">rules_c</span><span class="p">,</span>       <span class="c1">--string  rules set C</span>
+    <span class="n">rules_d</span><span class="p">,</span>       <span class="c1">--string  rules set D</span>
+    <span class="n">trunk</span><span class="p">,</span>         <span class="c1">--string  trunk node name</span>
+    <span class="n">leaves</span><span class="p">,</span>        <span class="c1">--string  leaves node name</span>
+    <span class="n">leaves2</span><span class="p">,</span>       <span class="c1">--string  secondary leaves node name</span>
+    <span class="n">leaves2_chance</span><span class="p">,</span><span class="c1">--num     chance (0-100) to replace leaves with leaves2</span>
+    <span class="n">angle</span><span class="p">,</span>         <span class="c1">--num     angle in deg</span>
+    <span class="n">iterations</span><span class="p">,</span>    <span class="c1">--num     max # of iterations, usually 2 -5</span>
+    <span class="n">random_level</span><span class="p">,</span>  <span class="c1">--num     factor to lower nr of iterations, usually 0 - 3</span>
+    <span class="n">trunk_type</span><span class="p">,</span>    <span class="c1">--string  single/double/crossed) type of trunk: 1 node,</span>
+                   <span class="c1">--        2x2 nodes or 3x3 in cross shape</span>
+    <span class="n">thin_branches</span><span class="p">,</span> <span class="c1">--boolean true -&gt; use thin (1 node) branches</span>
+    <span class="n">fruit</span><span class="p">,</span>         <span class="c1">--string  fruit node name</span>
+    <span class="n">fruit_chance</span><span class="p">,</span>  <span class="c1">--num     chance (0-100) to replace leaves with fruit node</span>
+    <span class="n">seed</span><span class="p">,</span>          <span class="c1">--num     random seed, if no seed is provided, the engine</span>
+                             <span class="n">will</span> <span class="n">create</span> <span class="n">one</span><span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h2 id="key-for-special-l-system-symbols-used-in-axioms">Key for special L-System symbols used in axioms<a class="headerlink" href="#key-for-special-l-system-symbols-used-in-axioms" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>G</code>: move forward one unit with the pen up</li>
+<li><code>F</code>: move forward one unit with the pen down drawing trunks and branches</li>
+<li><code>f</code>: move forward one unit with the pen down drawing leaves (100% chance)</li>
+<li><code>T</code>: move forward one unit with the pen down drawing trunks only</li>
+<li><code>R</code>: move forward one unit with the pen down placing fruit</li>
+<li><code>A</code>: replace with rules set A</li>
+<li><code>B</code>: replace with rules set B</li>
+<li><code>C</code>: replace with rules set C</li>
+<li><code>D</code>: replace with rules set D</li>
+<li><code>a</code>: replace with rules set A, chance 90%</li>
+<li><code>b</code>: replace with rules set B, chance 80%</li>
+<li><code>c</code>: replace with rules set C, chance 70%</li>
+<li><code>d</code>: replace with rules set D, chance 60%</li>
+<li><code>+</code>: yaw the turtle right by <code>angle</code> parameter</li>
+<li><code>-</code>: yaw the turtle left by <code>angle</code> parameter</li>
+<li><code>&amp;</code>: pitch the turtle down by <code>angle</code> parameter</li>
+<li><code>^</code>: pitch the turtle up by <code>angle</code> parameter</li>
+<li><code>/</code>: roll the turtle to the right by <code>angle</code> parameter</li>
+<li><code>*</code>: roll the turtle to the left by <code>angle</code> parameter</li>
+<li><code>[</code>: save in stack current state info</li>
+<li><code>]</code>: recover from stack state info</li>
+</ul>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>Spawn a small apple tree:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">230</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mi">4</span><span class="p">}</span>
+<span class="n">apple_tree</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">axiom</span><span class="o">=</span><span class="s2">&quot;FFFFFAFFBF&quot;</span><span class="p">,</span>
+    <span class="n">rules_a</span><span class="o">=</span><span class="s2">&quot;[&amp;&amp;&amp;FFFFF&amp;&amp;FFFF][&amp;&amp;&amp;++++FFFFF&amp;&amp;FFFF][&amp;&amp;&amp;----FFFFF&amp;&amp;FFFF]&quot;</span><span class="p">,</span>
+    <span class="n">rules_b</span><span class="o">=</span><span class="s2">&quot;[&amp;&amp;&amp;++FFFFF&amp;&amp;FFFF][&amp;&amp;&amp;--FFFFF&amp;&amp;FFFF][&amp;&amp;&amp;------FFFFF&amp;&amp;FFFF]&quot;</span><span class="p">,</span>
+    <span class="n">trunk</span><span class="o">=</span><span class="s2">&quot;default:tree&quot;</span><span class="p">,</span>
+    <span class="n">leaves</span><span class="o">=</span><span class="s2">&quot;default:leaves&quot;</span><span class="p">,</span>
+    <span class="n">angle</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">iterations</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">random_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">trunk_type</span><span class="o">=</span><span class="s2">&quot;single&quot;</span><span class="p">,</span>
+    <span class="n">thin_branches</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+    <span class="n">fruit_chance</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">fruit</span><span class="o">=</span><span class="s2">&quot;default:apple&quot;</span>
+<span class="p">}</span>
+<span class="n">minetest</span><span class="p">.</span><span class="n">spawn_tree</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">apple_tree</span><span class="p">)</span>
+</code></pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../minetest-namespace-reference/index.html" class="btn btn-neutral float-right" title="'minetest' namespace reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../registered-entities/index.html" class="btn btn-neutral" title="Registered entities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../registered-entities/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../minetest-namespace-reference/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/l-system-trees/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:50 GMT -->
+</html>

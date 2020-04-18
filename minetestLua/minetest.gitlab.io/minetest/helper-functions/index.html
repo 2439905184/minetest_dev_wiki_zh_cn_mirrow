@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/helper-functions/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Helper functions - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Helper functions";
+    var mkdocs_page_input_path = "helper-functions.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sounds/index.html">Sounds</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Helper functions</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Helper functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="helper-functions">Helper functions<a class="headerlink" href="#helper-functions" title="Permanent link">&para;</a></h1>
+<ul>
+<li><code>dump2(obj, name, dumped)</code>: returns a string which makes <code>obj</code>
+  human-readable, handles reference loops.<ul>
+<li><code>obj</code>: arbitrary variable</li>
+<li><code>name</code>: string, default: <code>"_"</code></li>
+<li><code>dumped</code>: table, default: <code>{}</code></li>
+</ul>
+</li>
+<li><code>dump(obj, dumped)</code>: returns a string which makes <code>obj</code> human-readable<ul>
+<li><code>obj</code>: arbitrary variable</li>
+<li><code>dumped</code>: table, default: <code>{}</code></li>
+</ul>
+</li>
+<li><code>math.hypot(x, y)</code><ul>
+<li>Get the hypotenuse of a triangle with legs x and y.
+  Useful for distance calculation.</li>
+</ul>
+</li>
+<li><code>math.sign(x, tolerance)</code>: returns <code>-1</code>, <code>0</code> or <code>1</code><ul>
+<li>Get the sign of a number.</li>
+<li>tolerance: number, default: <code>0.0</code></li>
+<li>If the absolute value of <code>x</code> is within the <code>tolerance</code> or <code>x</code> is NaN,
+  <code>0</code> is returned.</li>
+</ul>
+</li>
+<li><code>math.factorial(x)</code>: returns the factorial of <code>x</code></li>
+<li><code>string.split(str, separator, include_empty, max_splits, sep_is_pattern)</code><ul>
+<li><code>separator</code>: string, default: <code>","</code></li>
+<li><code>include_empty</code>: boolean, default: <code>false</code></li>
+<li><code>max_splits</code>: number, if it's negative, splits aren't limited,
+  default: <code>-1</code></li>
+<li><code>sep_is_pattern</code>: boolean, it specifies whether separator is a plain
+  string or a pattern (regex), default: <code>false</code></li>
+<li>e.g. <code>"a,b":split","</code> returns <code>{"a","b"}</code></li>
+</ul>
+</li>
+<li><code>string:trim()</code>: returns the string without whitespace pre- and suffixes<ul>
+<li>e.g. <code>"\n \t\tfoo bar\t ":trim()</code> returns <code>"foo bar"</code></li>
+</ul>
+</li>
+<li><code>minetest.wrap_text(str, limit, as_table)</code>: returns a string or table<ul>
+<li>Adds newlines to the string to keep it within the specified character
+  limit</li>
+<li>Note that the returned lines may be longer than the limit since it only
+  splits at word borders.</li>
+<li><code>limit</code>: number, maximal amount of characters in one line</li>
+<li><code>as_table</code>: boolean, if set to true, a table of lines instead of a string
+  is returned, default: <code>false</code></li>
+</ul>
+</li>
+<li><code>minetest.pos_to_string(pos, decimal_places)</code>: returns string <code>"(X,Y,Z)"</code><ul>
+<li><code>pos</code>: table {x=X, y=Y, z=Z}</li>
+<li>Converts the position <code>pos</code> to a human-readable, printable string</li>
+<li><code>decimal_places</code>: number, if specified, the x, y and z values of
+  the position are rounded to the given decimal place.</li>
+</ul>
+</li>
+<li><code>minetest.string_to_pos(string)</code>: returns a position or <code>nil</code><ul>
+<li>Same but in reverse.</li>
+<li>If the string can't be parsed to a position, nothing is returned.</li>
+</ul>
+</li>
+<li><code>minetest.string_to_area("(X1, Y1, Z1) (X2, Y2, Z2)")</code>: returns two positions<ul>
+<li>Converts a string representing an area box into two positions</li>
+</ul>
+</li>
+<li><code>minetest.formspec_escape(string)</code>: returns a string<ul>
+<li>escapes the characters "[", "]", "\", "," and ";", which can not be used
+  in formspecs.</li>
+</ul>
+</li>
+<li><code>minetest.is_yes(arg)</code><ul>
+<li>returns true if passed 'y', 'yes', 'true' or a number that isn't zero.</li>
+</ul>
+</li>
+<li><code>minetest.is_nan(arg)</code><ul>
+<li>returns true when the passed number represents NaN.</li>
+</ul>
+</li>
+<li><code>minetest.get_us_time()</code><ul>
+<li>returns time with microsecond precision. May not return wall time.</li>
+</ul>
+</li>
+<li><code>table.copy(table)</code>: returns a table<ul>
+<li>returns a deep copy of <code>table</code></li>
+</ul>
+</li>
+<li><code>table.indexof(list, val)</code>: returns the smallest numerical index containing
+      the value <code>val</code> in the table <code>list</code>. Non-numerical indices are ignored.
+      If <code>val</code> could not be found, <code>-1</code> is returned. <code>list</code> must not have
+      negative indices.</li>
+<li><code>table.insert_all(table, other_table)</code>:<ul>
+<li>Appends all values in <code>other_table</code> to <code>table</code> - uses <code>#table + 1</code> to
+  find new indices.</li>
+</ul>
+</li>
+<li><code>table.key_value_swap(t)</code>: returns a table with keys and values swapped<ul>
+<li>If multiple keys in <code>t</code> map to the same value, the result is undefined.</li>
+</ul>
+</li>
+<li><code>table.shuffle(table, [from], [to], [random_func])</code>:<ul>
+<li>Shuffles elements <code>from</code> to <code>to</code> in <code>table</code> in place</li>
+<li><code>from</code> defaults to <code>1</code></li>
+<li><code>to</code> defaults to <code>#table</code></li>
+<li><code>random_func</code> defaults to <code>math.random</code>. This function receives two
+  integers as arguments and should return a random integer inclusively
+  between them.</li>
+</ul>
+</li>
+<li><code>minetest.pointed_thing_to_face_pos(placer, pointed_thing)</code>: returns a
+  position.<ul>
+<li>returns the exact position on the surface of a pointed node</li>
+</ul>
+</li>
+<li><code>minetest.get_dig_params(groups, tool_capabilities)</code>: Simulates a tool
+    that digs a node.
+    Returns a table with the following fields:<ul>
+<li><code>diggable</code>: <code>true</code> if node can be dug, <code>false</code> otherwise.</li>
+<li><code>time</code>: Time it would take to dig the node.</li>
+<li><code>wear</code>: How much wear would be added to the tool.
+<code>time</code> and <code>wear</code> are meaningless if node's not diggable
+Parameters:</li>
+<li><code>groups</code>: Table of the node groups of the node that would be dug</li>
+<li><code>tool_capabilities</code>: Tool capabilities table of the tool</li>
+</ul>
+</li>
+<li><code>minetest.get_hit_params(groups, tool_capabilities [, time_from_last_punch])</code>:
+    Simulates an item that punches an object.
+    Returns a table with the following fields:<ul>
+<li><code>hp</code>: How much damage the punch would cause.</li>
+<li><code>wear</code>: How much wear would be added to the tool.
+Parameters:</li>
+<li><code>groups</code>: Damage groups of the object</li>
+<li><code>tool_capabilities</code>: Tool capabilities table of the item</li>
+<li><code>time_from_last_punch</code>: time in seconds since last punch action</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../translations/index.html" class="btn btn-neutral float-right" title="Translations">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../spatial-vectors/index.html" class="btn btn-neutral" title="Spatial Vectors"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../spatial-vectors/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../translations/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/helper-functions/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>

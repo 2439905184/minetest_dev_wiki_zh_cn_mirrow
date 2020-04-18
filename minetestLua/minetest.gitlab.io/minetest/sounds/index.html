@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- Mirrored from minetest.gitlab.io/minetest/sounds/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Sounds - Minetest API Documentation</title>
+  <link rel="stylesheet" href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../css/code_styles.css" rel="stylesheet" />
+  <link href="../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sounds";
+    var mkdocs_page_input_path = "sounds.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Minetest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../external.html?link=https://minetest.gitlab.io/minetest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../games/index.html">Games</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mods/index.html">Mods</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aliases/index.html">Aliases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../textures/index.html">Textures</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Sounds</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#simplesoundspec">SimpleSoundSpec</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#special-sound-files">Special sound files</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-definitions/index.html">Registered definitions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodes/index.html">Nodes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../map-terminology-and-coordinates/index.html">Map terminology and coordinates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hud/index.html">HUD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../representations-of-simple-things/index.html">Representations of simple things</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flag-specifier-format/index.html">Flag Specifier Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../items/index.html">Items</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../groups/index.html">Groups</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../entity-damage-mechanism/index.html">Entity damage mechanism</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Metadata</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formspec/index.html">Formspec</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../inventory/index.html">Inventory</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../colors/index.html">Colors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../escape-sequences/index.html">Escape sequences</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../spatial-vectors/index.html">Spatial Vectors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../helper-functions/index.html">Helper functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../translations/index.html">Translations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../perlin-noise/index.html">Perlin noise</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ores/index.html">Ores</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../decoration-types/index.html">Decoration types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../schematics/index.html">Schematics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../lua-voxel-manipulator/index.html">Lua Voxel Manipulator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mapgen-objects/index.html">Mapgen objects</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registered-entities/index.html">Registered entities</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../l-system-trees/index.html">L-system trees</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../minetest-namespace-reference/index.html">'minetest' namespace reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../class-reference/index.html">Class reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../definition-tables/index.html">Definition tables</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Minetest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Sounds</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sounds">Sounds<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h1>
+<p>Only Ogg Vorbis files are supported.</p>
+<p>For positional playing of sounds, only single-channel (mono) files are
+supported. Otherwise OpenAL will play them non-positionally.</p>
+<p>Mods should generally prefix their sounds with <code>modname_</code>, e.g. given
+the mod name "<code>foomod</code>", a sound could be called:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">foomod_foosound</span><span class="p">.</span><span class="n">ogg</span>
+</code></pre></div>
+
+
+<p>Sounds are referred to by their name with a dot, a single digit and the
+file extension stripped out. When a sound is played, the actual sound file
+is chosen randomly from the matching sounds.</p>
+<p>When playing the sound <code>foomod_foosound</code>, the sound is chosen randomly
+from the available ones of the following files:</p>
+<ul>
+<li><code>foomod_foosound.ogg</code></li>
+<li><code>foomod_foosound.0.ogg</code></li>
+<li><code>foomod_foosound.1.ogg</code></li>
+<li>(...)</li>
+<li><code>foomod_foosound.9.ogg</code></li>
+</ul>
+<p>Examples of sound parameter tables:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- Play locationless on all clients</span>
+<span class="p">{</span>
+    <span class="n">gain</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>   <span class="c1">-- default</span>
+    <span class="n">fade</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>   <span class="c1">-- default, change to a value &gt; 0 to fade the sound in</span>
+    <span class="n">pitch</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1">-- default</span>
+<span class="p">}</span>
+<span class="c1">-- Play locationless to one player</span>
+<span class="p">{</span>
+    <span class="n">to_player</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span>
+    <span class="n">gain</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>   <span class="c1">-- default</span>
+    <span class="n">fade</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>   <span class="c1">-- default, change to a value &gt; 0 to fade the sound in</span>
+    <span class="n">pitch</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1">-- default</span>
+<span class="p">}</span>
+<span class="c1">-- Play locationless to one player, looped</span>
+<span class="p">{</span>
+    <span class="n">to_player</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span>
+    <span class="n">gain</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1">-- default</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="c1">-- Play at a location</span>
+<span class="p">{</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="n">gain</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1">-- default</span>
+    <span class="n">max_hear_distance</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>  <span class="c1">-- default, uses an euclidean metric</span>
+<span class="p">}</span>
+<span class="c1">-- Play connected to an object, looped</span>
+<span class="p">{</span>
+    <span class="n">object</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">an</span> <span class="n">ObjectRef</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">gain</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1">-- default</span>
+    <span class="n">max_hear_distance</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>  <span class="c1">-- default, uses an euclidean metric</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="c1">-- Play at a location, heard by anyone *but* the given player</span>
+<span class="p">{</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="n">max_hear_distance</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span>
+    <span class="n">exclude_player</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Looped sounds must either be connected to an object or played locationless to
+one player using <code>to_player = name</code>.</p>
+<p>A positional sound will only be heard by players that are within
+<code>max_hear_distance</code> of the sound position, at the start of the sound.</p>
+<p><code>exclude_player = name</code> can be applied to locationless, positional and object-
+bound sounds to exclude a single player from hearing them.</p>
+<h2 id="simplesoundspec"><code>SimpleSoundSpec</code><a class="headerlink" href="#simplesoundspec" title="Permanent link">&para;</a></h2>
+<p>Specifies a sound name, gain (=volume) and pitch.
+This is either a string or a table.</p>
+<p>In string form, you just specify the sound name or
+the empty string for no sound.</p>
+<p>Table form has the following fields:</p>
+<ul>
+<li><code>name</code>: Sound name</li>
+<li><code>gain</code>: Volume (<code>1.0</code> = 100%)</li>
+<li><code>pitch</code>: Pitch (<code>1.0</code> = 100%)</li>
+</ul>
+<p><code>gain</code> and <code>pitch</code> are optional and default to <code>1.0</code>.</p>
+<p>Examples:</p>
+<ul>
+<li><code>""</code>: No sound</li>
+<li><code>{}</code>: No sound</li>
+<li><code>"default_place_node"</code>: Play e.g. <code>default_place_node.ogg</code></li>
+<li><code>{name = "default_place_node"}</code>: Same as above</li>
+<li><code>{name = "default_place_node", gain = 0.5}</code>: 50% volume</li>
+<li><code>{name = "default_place_node", gain = 0.9, pitch = 1.1}</code>: 90% volume, 110% pitch</li>
+</ul>
+<h2 id="special-sound-files">Special sound files<a class="headerlink" href="#special-sound-files" title="Permanent link">&para;</a></h2>
+<p>These sound files are played back by the engine if provided.</p>
+<ul>
+<li><code>player_damage</code>: Played when the local player takes damage (gain = 0.5)</li>
+<li><code>player_falling_damage</code>: Played when the local player takes
+   damage by falling (gain = 0.5)</li>
+<li><code>player_jump</code>: Played when the local player jumps</li>
+<li><code>default_dig_&lt;groupname&gt;</code>: Default node digging sound
+   (see node sound definition for details)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../registered-definitions/index.html" class="btn btn-neutral float-right" title="Registered definitions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../textures/index.html" class="btn btn-neutral" title="Textures"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="../../../external.html?link=https://www.mkdocs.org/">MkDocs</a> using a <a href="../../../external.html?link=https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="../../../external.html?link=https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../textures/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../registered-definitions/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../index.html';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from minetest.gitlab.io/minetest/sounds/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 12 Apr 2020 02:25:49 GMT -->
+</html>
